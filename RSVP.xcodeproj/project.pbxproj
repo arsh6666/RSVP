@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC3EF4311F2BB89F008D3BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4301F2BB89F008D3BFD /* main.m */; };
+		FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */; };
+		FC3EF4371F2BB89F008D3BFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4361F2BB89F008D3BFD /* ViewController.m */; };
+		FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4381F2BB89F008D3BFD /* Main.storyboard */; };
+		FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */; };
+		FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */; };
+		FC3EF44A1F2BB89F008D3BFD /* RSVPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4491F2BB89F008D3BFD /* RSVPTests.m */; };
+		FC3EF4551F2BB89F008D3BFD /* RSVPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4541F2BB89F008D3BFD /* RSVPUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC3EF4461F2BB89F008D3BFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3EF4241F2BB89F008D3BFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3EF42B1F2BB89F008D3BFD;
+			remoteInfo = RSVP;
+		};
+		FC3EF4511F2BB89F008D3BFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3EF4241F2BB89F008D3BFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3EF42B1F2BB89F008D3BFD;
+			remoteInfo = RSVP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC3EF42C1F2BB89F008D3BFD /* RSVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3EF4301F2BB89F008D3BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC3EF4321F2BB89F008D3BFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC3EF4351F2BB89F008D3BFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC3EF4361F2BB89F008D3BFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC3EF4391F2BB89F008D3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC3EF43E1F2BB89F008D3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC3EF4401F2BB89F008D3BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3EF4451F2BB89F008D3BFD /* RSVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3EF4491F2BB89F008D3BFD /* RSVPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSVPTests.m; sourceTree = "<group>"; };
+		FC3EF44B1F2BB89F008D3BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3EF4501F2BB89F008D3BFD /* RSVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3EF4541F2BB89F008D3BFD /* RSVPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSVPUITests.m; sourceTree = "<group>"; };
+		FC3EF4561F2BB89F008D3BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC3EF4291F2BB89F008D3BFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3EF4421F2BB89F008D3BFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3EF44D1F2BB89F008D3BFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC3EF4231F2BB89F008D3BFD = {
+			isa = PBXGroup;
+			children = (
+				FC3EF42E1F2BB89F008D3BFD /* RSVP */,
+				FC3EF4481F2BB89F008D3BFD /* RSVPTests */,
+				FC3EF4531F2BB89F008D3BFD /* RSVPUITests */,
+				FC3EF42D1F2BB89F008D3BFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC3EF42D1F2BB89F008D3BFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF42C1F2BB89F008D3BFD /* RSVP.app */,
+				FC3EF4451F2BB89F008D3BFD /* RSVPTests.xctest */,
+				FC3EF4501F2BB89F008D3BFD /* RSVPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC3EF42E1F2BB89F008D3BFD /* RSVP */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4321F2BB89F008D3BFD /* AppDelegate.h */,
+				FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */,
+				FC3EF4351F2BB89F008D3BFD /* ViewController.h */,
+				FC3EF4361F2BB89F008D3BFD /* ViewController.m */,
+				FC3EF4381F2BB89F008D3BFD /* Main.storyboard */,
+				FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */,
+				FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */,
+				FC3EF4401F2BB89F008D3BFD /* Info.plist */,
+				FC3EF42F1F2BB89F008D3BFD /* Supporting Files */,
+			);
+			path = RSVP;
+			sourceTree = "<group>";
+		};
+		FC3EF42F1F2BB89F008D3BFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4301F2BB89F008D3BFD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC3EF4481F2BB89F008D3BFD /* RSVPTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4491F2BB89F008D3BFD /* RSVPTests.m */,
+				FC3EF44B1F2BB89F008D3BFD /* Info.plist */,
+			);
+			path = RSVPTests;
+			sourceTree = "<group>";
+		};
+		FC3EF4531F2BB89F008D3BFD /* RSVPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4541F2BB89F008D3BFD /* RSVPUITests.m */,
+				FC3EF4561F2BB89F008D3BFD /* Info.plist */,
+			);
+			path = RSVPUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC3EF42B1F2BB89F008D3BFD /* RSVP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3EF4591F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVP" */;
+			buildPhases = (
+				FC3EF4281F2BB89F008D3BFD /* Sources */,
+				FC3EF4291F2BB89F008D3BFD /* Frameworks */,
+				FC3EF42A1F2BB89F008D3BFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSVP;
+			productName = RSVP;
+			productReference = FC3EF42C1F2BB89F008D3BFD /* RSVP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC3EF4441F2BB89F008D3BFD /* RSVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3EF45C1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPTests" */;
+			buildPhases = (
+				FC3EF4411F2BB89F008D3BFD /* Sources */,
+				FC3EF4421F2BB89F008D3BFD /* Frameworks */,
+				FC3EF4431F2BB89F008D3BFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3EF4471F2BB89F008D3BFD /* PBXTargetDependency */,
+			);
+			name = RSVPTests;
+			productName = RSVPTests;
+			productReference = FC3EF4451F2BB89F008D3BFD /* RSVPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC3EF44F1F2BB89F008D3BFD /* RSVPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3EF45F1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPUITests" */;
+			buildPhases = (
+				FC3EF44C1F2BB89F008D3BFD /* Sources */,
+				FC3EF44D1F2BB89F008D3BFD /* Frameworks */,
+				FC3EF44E1F2BB89F008D3BFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3EF4521F2BB89F008D3BFD /* PBXTargetDependency */,
+			);
+			name = RSVPUITests;
+			productName = RSVPUITests;
+			productReference = FC3EF4501F2BB89F008D3BFD /* RSVPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC3EF4241F2BB89F008D3BFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Arshdeep Singh";
+				TargetAttributes = {
+					FC3EF42B1F2BB89F008D3BFD = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 96D398C43S;
+						ProvisioningStyle = Automatic;
+					};
+					FC3EF4441F2BB89F008D3BFD = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 96D398C43S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC3EF42B1F2BB89F008D3BFD;
+					};
+					FC3EF44F1F2BB89F008D3BFD = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 96D398C43S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC3EF42B1F2BB89F008D3BFD;
+					};
+				};
+			};
+			buildConfigurationList = FC3EF4271F2BB89F008D3BFD /* Build configuration list for PBXProject "RSVP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC3EF4231F2BB89F008D3BFD;
+			productRefGroup = FC3EF42D1F2BB89F008D3BFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC3EF42B1F2BB89F008D3BFD /* RSVP */,
+				FC3EF4441F2BB89F008D3BFD /* RSVPTests */,
+				FC3EF44F1F2BB89F008D3BFD /* RSVPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC3EF42A1F2BB89F008D3BFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */,
+				FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */,
+				FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3EF4431F2BB89F008D3BFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3EF44E1F2BB89F008D3BFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC3EF4281F2BB89F008D3BFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3EF4371F2BB89F008D3BFD /* ViewController.m in Sources */,
+				FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */,
+				FC3EF4311F2BB89F008D3BFD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3EF4411F2BB89F008D3BFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3EF44A1F2BB89F008D3BFD /* RSVPTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3EF44C1F2BB89F008D3BFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3EF4551F2BB89F008D3BFD /* RSVPUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC3EF4471F2BB89F008D3BFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3EF42B1F2BB89F008D3BFD /* RSVP */;
+			targetProxy = FC3EF4461F2BB89F008D3BFD /* PBXContainerItemProxy */;
+		};
+		FC3EF4521F2BB89F008D3BFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3EF42B1F2BB89F008D3BFD /* RSVP */;
+			targetProxy = FC3EF4511F2BB89F008D3BFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC3EF4381F2BB89F008D3BFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC3EF4391F2BB89F008D3BFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC3EF43E1F2BB89F008D3BFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC3EF4571F2BB89F008D3BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC3EF4581F2BB89F008D3BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3EF45A1F2BB89F008D3BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 96D398C43S;
+				INFOPLIST_FILE = RSVP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC3EF45B1F2BB89F008D3BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 96D398C43S;
+				INFOPLIST_FILE = RSVP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC3EF45D1F2BB89F008D3BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 96D398C43S;
+				INFOPLIST_FILE = RSVPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSVP.app/RSVP";
+			};
+			name = Debug;
+		};
+		FC3EF45E1F2BB89F008D3BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 96D398C43S;
+				INFOPLIST_FILE = RSVPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSVP.app/RSVP";
+			};
+			name = Release;
+		};
+		FC3EF4601F2BB89F008D3BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 96D398C43S;
+				INFOPLIST_FILE = RSVPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RSVP;
+			};
+			name = Debug;
+		};
+		FC3EF4611F2BB89F008D3BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 96D398C43S;
+				INFOPLIST_FILE = RSVPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RSVP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC3EF4271F2BB89F008D3BFD /* Build configuration list for PBXProject "RSVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3EF4571F2BB89F008D3BFD /* Debug */,
+				FC3EF4581F2BB89F008D3BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3EF4591F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3EF45A1F2BB89F008D3BFD /* Debug */,
+				FC3EF45B1F2BB89F008D3BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC3EF45C1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3EF45D1F2BB89F008D3BFD /* Debug */,
+				FC3EF45E1F2BB89F008D3BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC3EF45F1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3EF4601F2BB89F008D3BFD /* Debug */,
+				FC3EF4611F2BB89F008D3BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC3EF4241F2BB89F008D3BFD /* Project object */;
+}
