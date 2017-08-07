@@ -18,6 +18,17 @@
 #import "HomeViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "BidderVC.h"
+#import "BidVC.h"
+#import "ParkInVC.h"
+#import "PaymentVC.h"
+#import "ForgotPasswordVC.h"
+#import "VehicalDetail.h"
+#import "BillingDetailVC.h"
+#import "BlockVC.h"
+#import "BidderCell.h"
+#import "MapViewController.h"
+#import <RESideMenu/RESideMenu.h>
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

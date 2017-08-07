@@ -24,6 +24,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)menuButtonAction:(id)sender {
+    [self.sideMenuViewController presentLeftMenuViewController];
+}
 
 /*
 #pragma mark - Navigation

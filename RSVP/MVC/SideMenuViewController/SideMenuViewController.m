@@ -57,6 +57,32 @@
         
     }
     
+    if (indexPath.row == 1) {
+        
+        MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+        [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+        [self.sideMenuViewController hideMenuViewController];
+        
+    }
+    
+    if (indexPath.row == 2) {
+        
+        ParkInVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ParkInVC"];
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:vc];
+        [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+        [self.sideMenuViewController hideMenuViewController];
+        
+    }
+    
+    if (indexPath.row == 3) {
+        
+        BlockVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"BlockVC"];
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+        [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+        [self.sideMenuViewController hideMenuViewController];
+        
+    }
     
     
     

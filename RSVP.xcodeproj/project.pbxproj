@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37175B141F38D0D400D6E535 /* BillingDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B131F38D0D400D6E535 /* BillingDetailVC.m */; };
+		37175B191F38D13900D6E535 /* ParkInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B181F38D13900D6E535 /* ParkInVC.m */; };
+		37175B1C1F38D15600D6E535 /* BlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B1B1F38D15600D6E535 /* BlockVC.m */; };
+		37175B1F1F38D1DB00D6E535 /* ForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B1E1F38D1DB00D6E535 /* ForgotPasswordVC.m */; };
+		37175B231F38D24100D6E535 /* BidderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B221F38D24100D6E535 /* BidderVC.m */; };
+		37175B271F38D26400D6E535 /* BidVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B261F38D26400D6E535 /* BidVC.m */; };
+		37175B2D1F38E37800D6E535 /* BidderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B2C1F38E37800D6E535 /* BidderCell.m */; };
+		37175B2F1F38EA3900D6E535 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37175B2E1F38EA3900D6E535 /* menu-icon.png */; };
+		378AE4481F3890A30037EE8B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE4471F3890A30037EE8B /* star.png */; };
+		378AE44A1F3891260037EE8B /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE4491F3891260037EE8B /* man.png */; };
+		378AE44C1F3891770037EE8B /* parking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378AE44B1F3891770037EE8B /* parking.jpg */; };
+		378AE44E1F38A61C0037EE8B /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE44D1F38A61C0037EE8B /* pencil.png */; };
+		378AE4511F38A7CA0037EE8B /* VehicalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 378AE4501F38A7CA0037EE8B /* VehicalDetail.m */; };
+		378AE4561F38A8540037EE8B /* PaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 378AE4551F38A8540037EE8B /* PaymentVC.m */; };
 		811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4143DBFD729961195176AC80 /* libPods-RSVP.a */; };
 		CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */; };
 		F3E85453C9B0CDAD0155734C /* libPods-RSVPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */; };
@@ -62,6 +76,29 @@
 
 /* Begin PBXFileReference section */
 		2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.debug.xcconfig"; sourceTree = "<group>"; };
+		37175B121F38D0D400D6E535 /* BillingDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillingDetailVC.h; path = BillingDetailVC/BillingDetailVC.h; sourceTree = "<group>"; };
+		37175B131F38D0D400D6E535 /* BillingDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillingDetailVC.m; path = BillingDetailVC/BillingDetailVC.m; sourceTree = "<group>"; };
+		37175B171F38D13900D6E535 /* ParkInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkInVC.h; path = ParkInVC/ParkInVC.h; sourceTree = "<group>"; };
+		37175B181F38D13900D6E535 /* ParkInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkInVC.m; path = ParkInVC/ParkInVC.m; sourceTree = "<group>"; };
+		37175B1A1F38D15600D6E535 /* BlockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockVC.h; path = BlockVC/BlockVC.h; sourceTree = "<group>"; };
+		37175B1B1F38D15600D6E535 /* BlockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockVC.m; path = BlockVC/BlockVC.m; sourceTree = "<group>"; };
+		37175B1D1F38D1DB00D6E535 /* ForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotPasswordVC.h; path = ForgotPasswordVC/ForgotPasswordVC.h; sourceTree = "<group>"; };
+		37175B1E1F38D1DB00D6E535 /* ForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPasswordVC.m; path = ForgotPasswordVC/ForgotPasswordVC.m; sourceTree = "<group>"; };
+		37175B211F38D24100D6E535 /* BidderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BidderVC.h; path = BidderVC/BidderVC.h; sourceTree = "<group>"; };
+		37175B221F38D24100D6E535 /* BidderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BidderVC.m; path = BidderVC/BidderVC.m; sourceTree = "<group>"; };
+		37175B251F38D26400D6E535 /* BidVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BidVC.h; path = BidVC/BidVC.h; sourceTree = "<group>"; };
+		37175B261F38D26400D6E535 /* BidVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BidVC.m; path = BidVC/BidVC.m; sourceTree = "<group>"; };
+		37175B2B1F38E37800D6E535 /* BidderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BidderCell.h; path = BidderCell/BidderCell.h; sourceTree = "<group>"; };
+		37175B2C1F38E37800D6E535 /* BidderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BidderCell.m; path = BidderCell/BidderCell.m; sourceTree = "<group>"; };
+		37175B2E1F38EA3900D6E535 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		378AE4471F3890A30037EE8B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		378AE4491F3891260037EE8B /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
+		378AE44B1F3891770037EE8B /* parking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = parking.jpg; sourceTree = "<group>"; };
+		378AE44D1F38A61C0037EE8B /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		378AE44F1F38A7CA0037EE8B /* VehicalDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VehicalDetail.h; path = VahicalDetailVC/VehicalDetail.h; sourceTree = "<group>"; };
+		378AE4501F38A7CA0037EE8B /* VehicalDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VehicalDetail.m; path = VahicalDetailVC/VehicalDetail.m; sourceTree = "<group>"; };
+		378AE4541F38A8540037EE8B /* PaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentVC.h; path = PaymentVC/PaymentVC.h; sourceTree = "<group>"; };
+		378AE4551F38A8540037EE8B /* PaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentVC.m; path = PaymentVC/PaymentVC.m; sourceTree = "<group>"; };
 		4143DBFD729961195176AC80 /* libPods-RSVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFA6E3516E671F9563A106 /* Pods-RSVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +187,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37175B111F38D09500D6E535 /* BillingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				37175B121F38D0D400D6E535 /* BillingDetailVC.h */,
+				37175B131F38D0D400D6E535 /* BillingDetailVC.m */,
+			);
+			name = BillingDetail;
+			sourceTree = "<group>";
+		};
+		37175B151F38D0FF00D6E535 /* ParkInVC */ = {
+			isa = PBXGroup;
+			children = (
+				37175B171F38D13900D6E535 /* ParkInVC.h */,
+				37175B181F38D13900D6E535 /* ParkInVC.m */,
+			);
+			name = ParkInVC;
+			sourceTree = "<group>";
+		};
+		37175B161F38D10C00D6E535 /* BlockVC */ = {
+			isa = PBXGroup;
+			children = (
+				37175B1A1F38D15600D6E535 /* BlockVC.h */,
+				37175B1B1F38D15600D6E535 /* BlockVC.m */,
+			);
+			name = BlockVC;
+			sourceTree = "<group>";
+		};
+		37175B201F38D1E200D6E535 /* ForgotPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				37175B1D1F38D1DB00D6E535 /* ForgotPasswordVC.h */,
+				37175B1E1F38D1DB00D6E535 /* ForgotPasswordVC.m */,
+			);
+			name = ForgotPasswordVC;
+			sourceTree = "<group>";
+		};
+		37175B241F38D24700D6E535 /* BidderVC */ = {
+			isa = PBXGroup;
+			children = (
+				37175B211F38D24100D6E535 /* BidderVC.h */,
+				37175B221F38D24100D6E535 /* BidderVC.m */,
+			);
+			name = BidderVC;
+			sourceTree = "<group>";
+		};
+		37175B281F38D26C00D6E535 /* BidVC */ = {
+			isa = PBXGroup;
+			children = (
+				37175B251F38D26400D6E535 /* BidVC.h */,
+				37175B261F38D26400D6E535 /* BidVC.m */,
+			);
+			name = BidVC;
+			sourceTree = "<group>";
+		};
+		37175B2A1F38E34E00D6E535 /* BidderCell */ = {
+			isa = PBXGroup;
+			children = (
+				37175B2B1F38E37800D6E535 /* BidderCell.h */,
+				37175B2C1F38E37800D6E535 /* BidderCell.m */,
+			);
+			name = BidderCell;
+			sourceTree = "<group>";
+		};
+		378AE4521F38A7D50037EE8B /* VehicleDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				378AE44F1F38A7CA0037EE8B /* VehicalDetail.h */,
+				378AE4501F38A7CA0037EE8B /* VehicalDetail.m */,
+			);
+			name = VehicleDetailVC;
+			sourceTree = "<group>";
+		};
+		378AE4531F38A8230037EE8B /* PaymentVC */ = {
+			isa = PBXGroup;
+			children = (
+				378AE4541F38A8540037EE8B /* PaymentVC.h */,
+				378AE4551F38A8540037EE8B /* PaymentVC.m */,
+			);
+			name = PaymentVC;
+			sourceTree = "<group>";
+		};
 		D6A9D55A180D33459A0643DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +365,7 @@
 		FC3EF4621F2BBC45008D3BFD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				37175B2A1F38E34E00D6E535 /* BidderCell */,
 				FC3EF49C1F2BDBEB008D3BFD /* SideMenuTableViewCell */,
 			);
 			path = Cell;
@@ -255,9 +374,14 @@
 		FC3EF4631F2BBC45008D3BFD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				378AE4491F3891260037EE8B /* man.png */,
+				378AE4471F3890A30037EE8B /* star.png */,
+				37175B2E1F38EA3900D6E535 /* menu-icon.png */,
 				FC3EF4AA1F2BF34B008D3BFD /* Msg.png */,
 				FC3EF4A61F2BF1A7008D3BFD /* pass.png */,
+				378AE44B1F3891770037EE8B /* parking.jpg */,
 				FC3EF4A71F2BF1A7008D3BFD /* user.png */,
+				378AE44D1F38A61C0037EE8B /* pencil.png */,
 				FC3EF4A41F2BE723008D3BFD /* iconBack.png */,
 				FC3EF49A1F2BD4EB008D3BFD /* menuBtn.png */,
 				FC3EF4801F2BCB2B008D3BFD /* img2.png */,
@@ -294,6 +418,14 @@
 				FC3EF48C1F2BD0D6008D3BFD /* SignUpViewController */,
 				FC3EF4881F2BD029008D3BFD /* LoginViewController */,
 				FC3EF4841F2BD002008D3BFD /* SideMenuViewController */,
+				378AE4521F38A7D50037EE8B /* VehicleDetailVC */,
+				37175B111F38D09500D6E535 /* BillingDetail */,
+				37175B151F38D0FF00D6E535 /* ParkInVC */,
+				37175B161F38D10C00D6E535 /* BlockVC */,
+				378AE4531F38A8230037EE8B /* PaymentVC */,
+				37175B201F38D1E200D6E535 /* ForgotPasswordVC */,
+				37175B241F38D24700D6E535 /* BidderVC */,
+				37175B281F38D26C00D6E535 /* BidVC */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -508,14 +640,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378AE4481F3890A30037EE8B /* star.png in Resources */,
 				FC3EF47C1F2BC785008D3BFD /* 29ltbukralight.otf in Resources */,
 				FC3EF4AB1F2BF34B008D3BFD /* Msg.png in Resources */,
+				378AE44A1F3891260037EE8B /* man.png in Resources */,
+				37175B2F1F38EA3900D6E535 /* menu-icon.png in Resources */,
 				FC3EF4831F2BCB2B008D3BFD /* signUp.png in Resources */,
 				FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */,
 				FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */,
 				FC3EF4A51F2BE723008D3BFD /* iconBack.png in Resources */,
 				FC3EF47A1F2BC785008D3BFD /* 29ltbukrabold.otf in Resources */,
 				FC3EF4A81F2BF1A7008D3BFD /* pass.png in Resources */,
+				378AE44E1F38A61C0037EE8B /* pencil.png in Resources */,
 				FC3EF47F1F2BC903008D3BFD /* login.png in Resources */,
 				FC3EF47B1F2BC785008D3BFD /* 29ltbukrabolditalic.otf in Resources */,
 				FC3EF49B1F2BD4EB008D3BFD /* menuBtn.png in Resources */,
@@ -524,6 +660,7 @@
 				FC3EF47D1F2BC785008D3BFD /* 29ltbukraregular.otf in Resources */,
 				FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */,
 				FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */,
+				378AE44C1F3891770037EE8B /* parking.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +693,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */ = {
@@ -586,7 +723,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		679D029362722BC91899E1C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -601,7 +738,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		886B0042051094AD9C1E0E3D /* [CP] Embed Pods Frameworks */ = {
@@ -689,14 +826,23 @@
 				FC3EF48B1F2BD0C5008D3BFD /* LoginViewController.m in Sources */,
 				FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */,
 				FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */,
+				37175B191F38D13900D6E535 /* ParkInVC.m in Sources */,
+				37175B1F1F38D1DB00D6E535 /* ForgotPasswordVC.m in Sources */,
 				FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */,
 				FC3EF4711F2BBC45008D3BFD /* Utils.m in Sources */,
 				FC3EF4701F2BBC45008D3BFD /* UIImage+animatedGIF.m in Sources */,
 				FC3EF49F1F2BDC08008D3BFD /* SideMenuTableViewCell.m in Sources */,
+				37175B231F38D24100D6E535 /* BidderVC.m in Sources */,
+				378AE4511F38A7CA0037EE8B /* VehicalDetail.m in Sources */,
+				37175B1C1F38D15600D6E535 /* BlockVC.m in Sources */,
+				37175B141F38D0D400D6E535 /* BillingDetailVC.m in Sources */,
 				FC3EF4871F2BD01C008D3BFD /* SideMenuViewController.m in Sources */,
+				37175B271F38D26400D6E535 /* BidVC.m in Sources */,
 				FC3EF4931F2BD169008D3BFD /* MapViewController.m in Sources */,
 				FC3EF4311F2BB89F008D3BFD /* main.m in Sources */,
+				378AE4561F38A8540037EE8B /* PaymentVC.m in Sources */,
 				FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */,
+				37175B2D1F38E37800D6E535 /* BidderCell.m in Sources */,
 				FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

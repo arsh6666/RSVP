@@ -1,15 +1,18 @@
 PODS:
+  - IQKeyboardManager (4.0.11)
   - RESideMenu (4.0.7)
   - SingleLineInput (1.0.7)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - RESideMenu
   - SingleLineInput
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 83eae5318483a34eb2069ef413d195b97605232e
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
 
-PODFILE CHECKSUM: e55fb7a3bf83c7eedf4bf577eb66eff04aba4e49
+PODFILE CHECKSUM: 957789e0029d4fec1f832866000ec11bb10d518f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.1.1
