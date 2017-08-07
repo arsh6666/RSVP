@@ -16,6 +16,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    [[SingleLineTextField appearance] setLineDisabledColor:[UIColor cyanColor]];
+    [[SingleLineTextField appearance] setLineNormalColor:[UIColor grayColor]];
+    [[SingleLineTextField appearance] setLineSelectedColor:[UIColor whiteColor]];
+    [[SingleLineTextField appearance] setInputPlaceHolderColor:[UIColor whiteColor]];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -47,5 +55,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+AppDelegate *appDelegate (void)
+{
+    return [[UIApplication sharedApplication]delegate];
+}
 
 @end

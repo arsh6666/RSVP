@@ -7,14 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4143DBFD729961195176AC80 /* libPods-RSVP.a */; };
+		CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */; };
+		F3E85453C9B0CDAD0155734C /* libPods-RSVPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */; };
 		FC3EF4311F2BB89F008D3BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4301F2BB89F008D3BFD /* main.m */; };
 		FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */; };
-		FC3EF4371F2BB89F008D3BFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4361F2BB89F008D3BFD /* ViewController.m */; };
 		FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4381F2BB89F008D3BFD /* Main.storyboard */; };
 		FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */; };
 		FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */; };
 		FC3EF44A1F2BB89F008D3BFD /* RSVPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4491F2BB89F008D3BFD /* RSVPTests.m */; };
 		FC3EF4551F2BB89F008D3BFD /* RSVPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4541F2BB89F008D3BFD /* RSVPUITests.m */; };
+		FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4671F2BBC45008D3BFD /* iCarousel.m */; };
+		FC3EF4701F2BBC45008D3BFD /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF46C1F2BBC45008D3BFD /* UIImage+animatedGIF.m */; };
+		FC3EF4711F2BBC45008D3BFD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF46E1F2BBC45008D3BFD /* Utils.m */; };
+		FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4721F2BBE34008D3BFD /* img1.jpg */; };
+		FC3EF47A1F2BC785008D3BFD /* 29ltbukrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4761F2BC785008D3BFD /* 29ltbukrabold.otf */; };
+		FC3EF47B1F2BC785008D3BFD /* 29ltbukrabolditalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4771F2BC785008D3BFD /* 29ltbukrabolditalic.otf */; };
+		FC3EF47C1F2BC785008D3BFD /* 29ltbukralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4781F2BC785008D3BFD /* 29ltbukralight.otf */; };
+		FC3EF47D1F2BC785008D3BFD /* 29ltbukraregular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4791F2BC785008D3BFD /* 29ltbukraregular.otf */; };
+		FC3EF47F1F2BC903008D3BFD /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF47E1F2BC903008D3BFD /* login.png */; };
+		FC3EF4821F2BCB2B008D3BFD /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4801F2BCB2B008D3BFD /* img2.png */; };
+		FC3EF4831F2BCB2B008D3BFD /* signUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4811F2BCB2B008D3BFD /* signUp.png */; };
+		FC3EF4871F2BD01C008D3BFD /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4861F2BD01C008D3BFD /* SideMenuViewController.m */; };
+		FC3EF48B1F2BD0C5008D3BFD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF48A1F2BD0C5008D3BFD /* LoginViewController.m */; };
+		FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF48E1F2BD126008D3BFD /* SignUpViewController.m */; };
+		FC3EF4931F2BD169008D3BFD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4921F2BD169008D3BFD /* MapViewController.m */; };
+		FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4961F2BD270008D3BFD /* DEMORootViewController.m */; };
+		FC3EF4991F2BD41B008D3BFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3EF4981F2BD41B008D3BFD /* MapKit.framework */; };
+		FC3EF49B1F2BD4EB008D3BFD /* menuBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF49A1F2BD4EB008D3BFD /* menuBtn.png */; };
+		FC3EF49F1F2BDC08008D3BFD /* SideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF49E1F2BDC08008D3BFD /* SideMenuTableViewCell.m */; };
+		FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4A21F2BDDF1008D3BFD /* HomeViewController.m */; };
+		FC3EF4A51F2BE723008D3BFD /* iconBack.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A41F2BE723008D3BFD /* iconBack.png */; };
+		FC3EF4A81F2BF1A7008D3BFD /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A61F2BF1A7008D3BFD /* pass.png */; };
+		FC3EF4A91F2BF1A7008D3BFD /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A71F2BF1A7008D3BFD /* user.png */; };
+		FC3EF4AB1F2BF34B008D3BFD /* Msg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4AA1F2BF34B008D3BFD /* Msg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +61,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.debug.xcconfig"; sourceTree = "<group>"; };
+		4143DBFD729961195176AC80 /* libPods-RSVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DFA6E3516E671F9563A106 /* Pods-RSVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A211F6819E2EBB1EBDC5ACCC /* Pods-RSVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B753B9767D936FFA4A66B4 /* Pods-RSVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.release.xcconfig"; sourceTree = "<group>"; };
+		D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2A054CCD00A1F9AA7CF406 /* Pods-RSVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC3EF42C1F2BB89F008D3BFD /* RSVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EF4301F2BB89F008D3BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC3EF4321F2BB89F008D3BFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC3EF4351F2BB89F008D3BFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC3EF4361F2BB89F008D3BFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC3EF4391F2BB89F008D3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3EF43E1F2BB89F008D3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +84,41 @@
 		FC3EF4501F2BB89F008D3BFD /* RSVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EF4541F2BB89F008D3BFD /* RSVPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSVPUITests.m; sourceTree = "<group>"; };
 		FC3EF4561F2BB89F008D3BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3EF4661F2BBC45008D3BFD /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		FC3EF4671F2BBC45008D3BFD /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		FC3EF46B1F2BBC45008D3BFD /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		FC3EF46C1F2BBC45008D3BFD /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		FC3EF46D1F2BBC45008D3BFD /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		FC3EF46E1F2BBC45008D3BFD /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		FC3EF4721F2BBE34008D3BFD /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
+		FC3EF4741F2BC13E008D3BFD /* RSVP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSVP-Prefix.pch"; sourceTree = "<group>"; };
+		FC3EF4761F2BC785008D3BFD /* 29ltbukrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 29ltbukrabold.otf; sourceTree = "<group>"; };
+		FC3EF4771F2BC785008D3BFD /* 29ltbukrabolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 29ltbukrabolditalic.otf; sourceTree = "<group>"; };
+		FC3EF4781F2BC785008D3BFD /* 29ltbukralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 29ltbukralight.otf; sourceTree = "<group>"; };
+		FC3EF4791F2BC785008D3BFD /* 29ltbukraregular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 29ltbukraregular.otf; sourceTree = "<group>"; };
+		FC3EF47E1F2BC903008D3BFD /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		FC3EF4801F2BCB2B008D3BFD /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
+		FC3EF4811F2BCB2B008D3BFD /* signUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUp.png; sourceTree = "<group>"; };
+		FC3EF4851F2BD01C008D3BFD /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideMenuViewController.h; path = SideMenuViewController/SideMenuViewController.h; sourceTree = "<group>"; };
+		FC3EF4861F2BD01C008D3BFD /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideMenuViewController.m; path = SideMenuViewController/SideMenuViewController.m; sourceTree = "<group>"; };
+		FC3EF4891F2BD0C5008D3BFD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = LoginViewController/LoginViewController.h; sourceTree = "<group>"; };
+		FC3EF48A1F2BD0C5008D3BFD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = LoginViewController/LoginViewController.m; sourceTree = "<group>"; };
+		FC3EF48D1F2BD126008D3BFD /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = SignUpViewController/SignUpViewController.h; sourceTree = "<group>"; };
+		FC3EF48E1F2BD126008D3BFD /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = SignUpViewController/SignUpViewController.m; sourceTree = "<group>"; };
+		FC3EF4911F2BD169008D3BFD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = MapViewController/MapViewController.h; sourceTree = "<group>"; };
+		FC3EF4921F2BD169008D3BFD /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = MapViewController/MapViewController.m; sourceTree = "<group>"; };
+		FC3EF4951F2BD270008D3BFD /* DEMORootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMORootViewController.h; sourceTree = "<group>"; };
+		FC3EF4961F2BD270008D3BFD /* DEMORootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMORootViewController.m; sourceTree = "<group>"; };
+		FC3EF4981F2BD41B008D3BFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FC3EF49A1F2BD4EB008D3BFD /* menuBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBtn.png; sourceTree = "<group>"; };
+		FC3EF49D1F2BDC08008D3BFD /* SideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideMenuTableViewCell.h; path = SideMenuTableViewCell/SideMenuTableViewCell.h; sourceTree = "<group>"; };
+		FC3EF49E1F2BDC08008D3BFD /* SideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideMenuTableViewCell.m; path = SideMenuTableViewCell/SideMenuTableViewCell.m; sourceTree = "<group>"; };
+		FC3EF4A11F2BDDF1008D3BFD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = HomeViewController/HomeViewController.h; sourceTree = "<group>"; };
+		FC3EF4A21F2BDDF1008D3BFD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = HomeViewController/HomeViewController.m; sourceTree = "<group>"; };
+		FC3EF4A41F2BE723008D3BFD /* iconBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconBack.png; sourceTree = "<group>"; };
+		FC3EF4A61F2BF1A7008D3BFD /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
+		FC3EF4A71F2BF1A7008D3BFD /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		FC3EF4AA1F2BF34B008D3BFD /* Msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Msg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3EF4991F2BD41B008D3BFD /* MapKit.framework in Frameworks */,
+				811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E85453C9B0CDAD0155734C /* libPods-RSVPTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +143,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6A9D55A180D33459A0643DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4981F2BD41B008D3BFD /* MapKit.framework */,
+				4143DBFD729961195176AC80 /* libPods-RSVP.a */,
+				D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */,
+				9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F02D32451CB6A63AB4F59E69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */,
+				CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */,
+				A211F6819E2EBB1EBDC5ACCC /* Pods-RSVPTests.debug.xcconfig */,
+				60DFA6E3516E671F9563A106 /* Pods-RSVPTests.release.xcconfig */,
+				FC2A054CCD00A1F9AA7CF406 /* Pods-RSVPUITests.debug.xcconfig */,
+				A2B753B9767D936FFA4A66B4 /* Pods-RSVPUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FC3EF4231F2BB89F008D3BFD = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +181,8 @@
 				FC3EF4481F2BB89F008D3BFD /* RSVPTests */,
 				FC3EF4531F2BB89F008D3BFD /* RSVPUITests */,
 				FC3EF42D1F2BB89F008D3BFD /* Products */,
+				F02D32451CB6A63AB4F59E69 /* Pods */,
+				D6A9D55A180D33459A0643DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +199,15 @@
 		FC3EF42E1F2BB89F008D3BFD /* RSVP */ = {
 			isa = PBXGroup;
 			children = (
+				FC3EF4751F2BC785008D3BFD /* Fonts */,
+				FC3EF4621F2BBC45008D3BFD /* Cell */,
+				FC3EF4631F2BBC45008D3BFD /* Images */,
+				FC3EF4641F2BBC45008D3BFD /* Libraries */,
+				FC3EF4681F2BBC45008D3BFD /* MVC */,
+				FC3EF4691F2BBC45008D3BFD /* Objects */,
+				FC3EF46A1F2BBC45008D3BFD /* Utilities */,
 				FC3EF4321F2BB89F008D3BFD /* AppDelegate.h */,
 				FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */,
-				FC3EF4351F2BB89F008D3BFD /* ViewController.h */,
-				FC3EF4361F2BB89F008D3BFD /* ViewController.m */,
 				FC3EF4381F2BB89F008D3BFD /* Main.storyboard */,
 				FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */,
 				FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */,
@@ -118,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3EF4301F2BB89F008D3BFD /* main.m */,
+				FC3EF4741F2BC13E008D3BFD /* RSVP-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +244,152 @@
 			path = RSVPUITests;
 			sourceTree = "<group>";
 		};
+		FC3EF4621F2BBC45008D3BFD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF49C1F2BDBEB008D3BFD /* SideMenuTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC3EF4631F2BBC45008D3BFD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4AA1F2BF34B008D3BFD /* Msg.png */,
+				FC3EF4A61F2BF1A7008D3BFD /* pass.png */,
+				FC3EF4A71F2BF1A7008D3BFD /* user.png */,
+				FC3EF4A41F2BE723008D3BFD /* iconBack.png */,
+				FC3EF49A1F2BD4EB008D3BFD /* menuBtn.png */,
+				FC3EF4801F2BCB2B008D3BFD /* img2.png */,
+				FC3EF4811F2BCB2B008D3BFD /* signUp.png */,
+				FC3EF47E1F2BC903008D3BFD /* login.png */,
+				FC3EF4721F2BBE34008D3BFD /* img1.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FC3EF4641F2BBC45008D3BFD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4651F2BBC45008D3BFD /* iCarousel */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		FC3EF4651F2BBC45008D3BFD /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4661F2BBC45008D3BFD /* iCarousel.h */,
+				FC3EF4671F2BBC45008D3BFD /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		FC3EF4681F2BBC45008D3BFD /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4A01F2BDDD0008D3BFD /* HomeViewController */,
+				FC3EF4941F2BD270008D3BFD /* DEMORootViewController */,
+				FC3EF4901F2BD157008D3BFD /* MapViewController */,
+				FC3EF48C1F2BD0D6008D3BFD /* SignUpViewController */,
+				FC3EF4881F2BD029008D3BFD /* LoginViewController */,
+				FC3EF4841F2BD002008D3BFD /* SideMenuViewController */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		FC3EF4691F2BBC45008D3BFD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		FC3EF46A1F2BBC45008D3BFD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF46B1F2BBC45008D3BFD /* UIImage+animatedGIF.h */,
+				FC3EF46C1F2BBC45008D3BFD /* UIImage+animatedGIF.m */,
+				FC3EF46D1F2BBC45008D3BFD /* Utils.h */,
+				FC3EF46E1F2BBC45008D3BFD /* Utils.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FC3EF4751F2BC785008D3BFD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4761F2BC785008D3BFD /* 29ltbukrabold.otf */,
+				FC3EF4771F2BC785008D3BFD /* 29ltbukrabolditalic.otf */,
+				FC3EF4781F2BC785008D3BFD /* 29ltbukralight.otf */,
+				FC3EF4791F2BC785008D3BFD /* 29ltbukraregular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FC3EF4841F2BD002008D3BFD /* SideMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4851F2BD01C008D3BFD /* SideMenuViewController.h */,
+				FC3EF4861F2BD01C008D3BFD /* SideMenuViewController.m */,
+			);
+			name = SideMenuViewController;
+			sourceTree = "<group>";
+		};
+		FC3EF4881F2BD029008D3BFD /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4891F2BD0C5008D3BFD /* LoginViewController.h */,
+				FC3EF48A1F2BD0C5008D3BFD /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		FC3EF48C1F2BD0D6008D3BFD /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF48D1F2BD126008D3BFD /* SignUpViewController.h */,
+				FC3EF48E1F2BD126008D3BFD /* SignUpViewController.m */,
+			);
+			name = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		FC3EF4901F2BD157008D3BFD /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4911F2BD169008D3BFD /* MapViewController.h */,
+				FC3EF4921F2BD169008D3BFD /* MapViewController.m */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		FC3EF4941F2BD270008D3BFD /* DEMORootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4951F2BD270008D3BFD /* DEMORootViewController.h */,
+				FC3EF4961F2BD270008D3BFD /* DEMORootViewController.m */,
+			);
+			path = DEMORootViewController;
+			sourceTree = "<group>";
+		};
+		FC3EF49C1F2BDBEB008D3BFD /* SideMenuTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF49D1F2BDC08008D3BFD /* SideMenuTableViewCell.h */,
+				FC3EF49E1F2BDC08008D3BFD /* SideMenuTableViewCell.m */,
+			);
+			name = SideMenuTableViewCell;
+			sourceTree = "<group>";
+		};
+		FC3EF4A01F2BDDD0008D3BFD /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC3EF4A11F2BDDF1008D3BFD /* HomeViewController.h */,
+				FC3EF4A21F2BDDF1008D3BFD /* HomeViewController.m */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3EF4591F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVP" */;
 			buildPhases = (
+				5195A6B95953138C25A1F5FE /* [CP] Check Pods Manifest.lock */,
 				FC3EF4281F2BB89F008D3BFD /* Sources */,
 				FC3EF4291F2BB89F008D3BFD /* Frameworks */,
 				FC3EF42A1F2BB89F008D3BFD /* Resources */,
+				D5F1DD55CC3026CFFB766376 /* [CP] Embed Pods Frameworks */,
+				4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +417,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3EF45C1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPTests" */;
 			buildPhases = (
+				31A1F6B62E40FD88795B80C3 /* [CP] Check Pods Manifest.lock */,
 				FC3EF4411F2BB89F008D3BFD /* Sources */,
 				FC3EF4421F2BB89F008D3BFD /* Frameworks */,
 				FC3EF4431F2BB89F008D3BFD /* Resources */,
+				9AED8995B33068904C6191C7 /* [CP] Embed Pods Frameworks */,
+				D15A97CE1A937EB686D9D19F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +438,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3EF45F1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPUITests" */;
 			buildPhases = (
+				679D029362722BC91899E1C5 /* [CP] Check Pods Manifest.lock */,
 				FC3EF44C1F2BB89F008D3BFD /* Sources */,
 				FC3EF44D1F2BB89F008D3BFD /* Frameworks */,
 				FC3EF44E1F2BB89F008D3BFD /* Resources */,
+				886B0042051094AD9C1E0E3D /* [CP] Embed Pods Frameworks */,
+				D07B375D2DF9E14E09A7495D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,7 +508,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3EF47C1F2BC785008D3BFD /* 29ltbukralight.otf in Resources */,
+				FC3EF4AB1F2BF34B008D3BFD /* Msg.png in Resources */,
+				FC3EF4831F2BCB2B008D3BFD /* signUp.png in Resources */,
 				FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */,
+				FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */,
+				FC3EF4A51F2BE723008D3BFD /* iconBack.png in Resources */,
+				FC3EF47A1F2BC785008D3BFD /* 29ltbukrabold.otf in Resources */,
+				FC3EF4A81F2BF1A7008D3BFD /* pass.png in Resources */,
+				FC3EF47F1F2BC903008D3BFD /* login.png in Resources */,
+				FC3EF47B1F2BC785008D3BFD /* 29ltbukrabolditalic.otf in Resources */,
+				FC3EF49B1F2BD4EB008D3BFD /* menuBtn.png in Resources */,
+				FC3EF4821F2BCB2B008D3BFD /* img2.png in Resources */,
+				FC3EF4A91F2BF1A7008D3BFD /* user.png in Resources */,
+				FC3EF47D1F2BC785008D3BFD /* 29ltbukraregular.otf in Resources */,
 				FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */,
 				FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */,
 			);
@@ -271,14 +543,161 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31A1F6B62E40FD88795B80C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVP/Pods-RSVP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5195A6B95953138C25A1F5FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		679D029362722BC91899E1C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		886B0042051094AD9C1E0E3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AED8995B33068904C6191C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D07B375D2DF9E14E09A7495D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D15A97CE1A937EB686D9D19F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5F1DD55CC3026CFFB766376 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVP/Pods-RSVP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC3EF4281F2BB89F008D3BFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3EF4371F2BB89F008D3BFD /* ViewController.m in Sources */,
+				FC3EF48B1F2BD0C5008D3BFD /* LoginViewController.m in Sources */,
+				FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */,
+				FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */,
 				FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */,
+				FC3EF4711F2BBC45008D3BFD /* Utils.m in Sources */,
+				FC3EF4701F2BBC45008D3BFD /* UIImage+animatedGIF.m in Sources */,
+				FC3EF49F1F2BDC08008D3BFD /* SideMenuTableViewCell.m in Sources */,
+				FC3EF4871F2BD01C008D3BFD /* SideMenuViewController.m in Sources */,
+				FC3EF4931F2BD169008D3BFD /* MapViewController.m in Sources */,
 				FC3EF4311F2BB89F008D3BFD /* main.m in Sources */,
+				FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */,
+				FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +846,11 @@
 		};
 		FC3EF45A1F2BB89F008D3BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96D398C43S;
+				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
@@ -439,9 +860,11 @@
 		};
 		FC3EF45B1F2BB89F008D3BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96D398C43S;
+				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
@@ -451,6 +874,7 @@
 		};
 		FC3EF45D1F2BB89F008D3BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A211F6819E2EBB1EBDC5ACCC /* Pods-RSVPTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 96D398C43S;
@@ -464,6 +888,7 @@
 		};
 		FC3EF45E1F2BB89F008D3BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DFA6E3516E671F9563A106 /* Pods-RSVPTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 96D398C43S;
@@ -477,6 +902,7 @@
 		};
 		FC3EF4601F2BB89F008D3BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC2A054CCD00A1F9AA7CF406 /* Pods-RSVPUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 96D398C43S;
 				INFOPLIST_FILE = RSVPUITests/Info.plist;
@@ -489,6 +915,7 @@
 		};
 		FC3EF4611F2BB89F008D3BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B753B9767D936FFA4A66B4 /* Pods-RSVPUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 96D398C43S;
 				INFOPLIST_FILE = RSVPUITests/Info.plist;
@@ -518,6 +945,7 @@
 				FC3EF45B1F2BB89F008D3BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3EF45C1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +954,7 @@
 				FC3EF45E1F2BB89F008D3BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3EF45F1F2BB89F008D3BFD /* Build configuration list for PBXNativeTarget "RSVPUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +963,7 @@
 				FC3EF4611F2BB89F008D3BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

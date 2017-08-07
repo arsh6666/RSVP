@@ -20,6 +20,13 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>29ltbukrabold.otf</string>
+		<string>29ltbukrabolditalic.otf</string>
+		<string>29ltbukralight.otf</string>
+		<string>29ltbukraregular.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

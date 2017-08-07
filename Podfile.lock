@@ -1,0 +1,15 @@
+PODS:
+  - RESideMenu (4.0.7)
+  - SingleLineInput (1.0.7)
+
+DEPENDENCIES:
+  - RESideMenu
+  - SingleLineInput
+
+SPEC CHECKSUMS:
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
+
+PODFILE CHECKSUM: e55fb7a3bf83c7eedf4bf577eb66eff04aba4e49
+
+COCOAPODS: 1.2.1

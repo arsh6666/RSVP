@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D30D6C9892C14CF66098B0651822E94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		0EB8CB402F74340C52CF8D98754B631C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		2BA322C636CE986ED244964AED12317D /* RECommonFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = ACBFCBEA2593D17929B8C71010E26B77 /* RECommonFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		434346EFD2982BD6114F94E31DB04F5E /* Pods-RSVP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72965290A276F7BB6907873740CA2808 /* Pods-RSVP-dummy.m */; };
+		4D8F772B1939FE24DA8072CE4D9C1B63 /* Pods-RSVPUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B3F39D1C5242298EA4EB8CD2FB8B4 /* Pods-RSVPUITests-dummy.m */; };
+		50B76BAF130D4AD998A264596EDF27F5 /* RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = D164C4C94CD4FFBD6090CCCF62358E4D /* RESideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B21623C226CA16AB6141276A9E7E3F1 /* SingleLineInput-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC00FC26EE1A3B02E435A13E305C5DCA /* SingleLineInput-dummy.m */; };
+		6F2597A667670F65057F102C574B6290 /* UIViewController+RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = BF53746A50EE72E3113903BF63A9AE87 /* UIViewController+RESideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7303A2F7D0536C135C165E8FE37B506F /* RESideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0766FE2B2F43AE4800E4FBD7B2A0DC /* RESideMenu-dummy.m */; };
+		753C29BBCC4CB7BF4E61FD4B4A163F1F /* Pods-RSVPTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5EF8A89FD5B710AE024E17C839D007 /* Pods-RSVPTests-dummy.m */; };
+		7E6139E6ACDA5F419D03FC358BD94640 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = E344C49D08AC49504D16A86C5DA6F11C /* RECommonFunctions.m */; };
+		7F67CC752BB6FB742F28859AEB4103D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		7F8208AC46D56F165F461527AD5C3E76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		89E84AE99BD64D0621D415DF43DDDA9F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
+		B11BF77E05392713EBCE5080C1BB57B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		B52B3F4E43666843815954DEDD8A5843 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E3DAF3FFD209EC9B8E06A374417D97 /* RESideMenu.m */; };
+		BE21A769B990D42BEDE6F6E8AF284C30 /* SingleLineTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = B5F184014A24A1E007FF3EADE7D904F8 /* SingleLineTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5C662A60230ACACA82293FD3F1B5535 /* SingleLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F6010AD15E4E8D0ED7C9E9EDB5E05329 /* SingleLineTextField.m */; };
+		FA9D9D2F45CDE549A5A1945C47B2D5C6 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD3E1E3CB11A0C45A40A70DF4D275F1 /* UIViewController+RESideMenu.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31F73FC1777060C997EE6B6FCAEFB349 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F638CC695541D99FDA32361E841B9BF1;
+			remoteInfo = "SingleLineInput-SingleLineInput";
+		};
+		852AC8A73E1464E648446099EED47571 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3DD55B2FAA8707254564C055AFCD327;
+			remoteInfo = SingleLineInput;
+		};
+		A530D6A80E345E4FD9CDF41A0889F267 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46E99801B8777F6F7E6EDFB02EC779FC;
+			remoteInfo = RESideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A0AB20F5084BA0A342F84179E2C6770 /* Pods-RSVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSVPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0A5B0FC4EE4785513A9BFD4D1DEEA078 /* libPods-RSVPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RSVPUITests.a"; path = "libPods-RSVPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		126CDAC0FAD339C7B00D7D81BB6D45E8 /* Pods-RSVPTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSVPTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		19D8E52E5D6C4259C4FAE29DE86EC712 /* libSingleLineInput.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSingleLineInput.a; path = libSingleLineInput.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C66C391AE9A479EAAA50DD5D4136CA /* Pods-RSVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSVP.debug.xcconfig"; sourceTree = "<group>"; };
+		3BD2308FE0E0CD18A2183B5C36C9A650 /* SingleLineInput-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SingleLineInput-prefix.pch"; sourceTree = "<group>"; };
+		4714A77797DE4C833A0A57422BB9F575 /* Pods-RSVPUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSVPUITests-resources.sh"; sourceTree = "<group>"; };
+		49CE0F55B635778120DB3FD305701325 /* Pods-RSVPUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSVPUITests-frameworks.sh"; sourceTree = "<group>"; };
+		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		56D2687A2471609D7F032F46E8392ADD /* Pods-RSVP-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSVP-resources.sh"; sourceTree = "<group>"; };
+		5B4BC0DB7B71581900948A011F2D6690 /* libPods-RSVPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RSVPTests.a"; path = "libPods-RSVPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E2FDF8FE52570DF4D25217583388CA /* RESideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RESideMenu.xcconfig; sourceTree = "<group>"; };
+		64AC7A06C34B43D2243442737146585D /* Pods-RSVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSVP.release.xcconfig"; sourceTree = "<group>"; };
+		655B465A4B692B5A581C44D99494C1CD /* Pods-RSVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		65672C2B2CB1BAB3922E760FE8332D9A /* Pods-RSVP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSVP-frameworks.sh"; sourceTree = "<group>"; };
+		691E16B29B604C544CB6801DD553D456 /* Pods-RSVP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSVP-acknowledgements.plist"; sourceTree = "<group>"; };
+		6C6B3F39D1C5242298EA4EB8CD2FB8B4 /* Pods-RSVPUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSVPUITests-dummy.m"; sourceTree = "<group>"; };
+		72965290A276F7BB6907873740CA2808 /* Pods-RSVP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSVP-dummy.m"; sourceTree = "<group>"; };
+		75BF9054BAA173AEDDDE6524D0FD1B82 /* ResourceBundle-SingleLineInput-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SingleLineInput-Info.plist"; sourceTree = "<group>"; };
+		779BE152CC3B2B43FFD7AD6F59AF4B2E /* Pods-RSVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSVPTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E5EF8A89FD5B710AE024E17C839D007 /* Pods-RSVPTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSVPTests-dummy.m"; sourceTree = "<group>"; };
+		90E1F604B1828C9B9DBB1EB1B74298DB /* SingleLineInput.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SingleLineInput.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4E3DAF3FFD209EC9B8E06A374417D97 /* RESideMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RESideMenu.m; path = RESideMenu/RESideMenu.m; sourceTree = "<group>"; };
+		ACBFCBEA2593D17929B8C71010E26B77 /* RECommonFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RECommonFunctions.h; path = RESideMenu/RECommonFunctions.h; sourceTree = "<group>"; };
+		AD0766FE2B2F43AE4800E4FBD7B2A0DC /* RESideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RESideMenu-dummy.m"; sourceTree = "<group>"; };
+		B18C29A5730C49DD8AC972E0A3EB0599 /* RESideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RESideMenu-prefix.pch"; sourceTree = "<group>"; };
+		B38EF0B910564DBC6BA7B588A78644EE /* Pods-RSVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSVPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B49CCA1EE81D202A67AB8DDEFC24232E /* Pods-RSVPTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSVPTests-resources.sh"; sourceTree = "<group>"; };
+		B5F184014A24A1E007FF3EADE7D904F8 /* SingleLineTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SingleLineTextField.h; path = Pod/Classes/SingleLineTextField.h; sourceTree = "<group>"; };
+		BE175F77BD27BD925A5DD539BC45F220 /* Pods-RSVPUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSVPUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BF53746A50EE72E3113903BF63A9AE87 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RESideMenu.h"; path = "RESideMenu/UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		CBC3D088B9D6B3C70A73F2F64E73763A /* libPods-RSVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RSVP.a"; path = "libPods-RSVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF79D2794A5857A9AE13CF589610A398 /* SingleLineInput.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SingleLineInput.bundle; path = SingleLineInput.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D164C4C94CD4FFBD6090CCCF62358E4D /* RESideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RESideMenu.h; path = RESideMenu/RESideMenu.h; sourceTree = "<group>"; };
+		D186F0D683EE16069AD84E912D4F710C /* libRESideMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRESideMenu.a; path = libRESideMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB1162AB038CEEF673C128ED53874BA1 /* Pods-RSVPTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSVPTests-frameworks.sh"; sourceTree = "<group>"; };
+		DB74F63EFAB54656FAB04117758DB384 /* Pods-RSVP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSVP-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DC00FC26EE1A3B02E435A13E305C5DCA /* SingleLineInput-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SingleLineInput-dummy.m"; sourceTree = "<group>"; };
+		E344C49D08AC49504D16A86C5DA6F11C /* RECommonFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RECommonFunctions.m; path = RESideMenu/RECommonFunctions.m; sourceTree = "<group>"; };
+		EB386B7169530259C55EBF01D1E0EE81 /* Pods-RSVPUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSVPUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EBD3E1E3CB11A0C45A40A70DF4D275F1 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RESideMenu.m"; path = "RESideMenu/UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		EDCD590FDF74E4CEDB1FD111EE0CA60C /* Pods-RSVPTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSVPTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F6010AD15E4E8D0ED7C9E9EDB5E05329 /* SingleLineTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SingleLineTextField.m; path = Pod/Classes/SingleLineTextField.m; sourceTree = "<group>"; };
+		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		082EA1DEE8BD6DEA591F8427382F6FAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB8CB402F74340C52CF8D98754B631C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C90E2B3F2B6F2EE3B2F241001795F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		476BFDB7AF7215802A3C0BD7E364BACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8208AC46D56F165F461527AD5C3E76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AA35F13250146E72D0C8BC4AC885563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D30D6C9892C14CF66098B0651822E94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8595885BAED5FB56528C4622DCDB6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B11BF77E05392713EBCE5080C1BB57B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6D3B66DABE139E5DCC3042722588A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F67CC752BB6FB742F28859AEB4103D7 /* Foundation.framework in Frameworks */,
+				89E84AE99BD64D0621D415DF43DDDA9F /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1062C574589118B49708453C44CF06C5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63E2FDF8FE52570DF4D25217583388CA /* RESideMenu.xcconfig */,
+				AD0766FE2B2F43AE4800E4FBD7B2A0DC /* RESideMenu-dummy.m */,
+				B18C29A5730C49DD8AC972E0A3EB0599 /* RESideMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RESideMenu";
+			sourceTree = "<group>";
+		};
+		172FA7D035E294309EF65716879A4762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC3D088B9D6B3C70A73F2F64E73763A /* libPods-RSVP.a */,
+				5B4BC0DB7B71581900948A011F2D6690 /* libPods-RSVPTests.a */,
+				0A5B0FC4EE4785513A9BFD4D1DEEA078 /* libPods-RSVPUITests.a */,
+				D186F0D683EE16069AD84E912D4F710C /* libRESideMenu.a */,
+				19D8E52E5D6C4259C4FAE29DE86EC712 /* libSingleLineInput.a */,
+				CF79D2794A5857A9AE13CF589610A398 /* SingleLineInput.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41B3DC141A67FB14C4BDF68FA0AAD83A /* Pods-RSVPTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCD590FDF74E4CEDB1FD111EE0CA60C /* Pods-RSVPTests-acknowledgements.markdown */,
+				126CDAC0FAD339C7B00D7D81BB6D45E8 /* Pods-RSVPTests-acknowledgements.plist */,
+				7E5EF8A89FD5B710AE024E17C839D007 /* Pods-RSVPTests-dummy.m */,
+				DB1162AB038CEEF673C128ED53874BA1 /* Pods-RSVPTests-frameworks.sh */,
+				B49CCA1EE81D202A67AB8DDEFC24232E /* Pods-RSVPTests-resources.sh */,
+				B38EF0B910564DBC6BA7B588A78644EE /* Pods-RSVPTests.debug.xcconfig */,
+				779BE152CC3B2B43FFD7AD6F59AF4B2E /* Pods-RSVPTests.release.xcconfig */,
+			);
+			name = "Pods-RSVPTests";
+			path = "Target Support Files/Pods-RSVPTests";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D53FFFF00406B66636827B53E36647B /* SingleLineInput */ = {
+			isa = PBXGroup;
+			children = (
+				B5F184014A24A1E007FF3EADE7D904F8 /* SingleLineTextField.h */,
+				F6010AD15E4E8D0ED7C9E9EDB5E05329 /* SingleLineTextField.m */,
+				A861C293F5A484F44A0ED7FCB4D788CA /* Support Files */,
+			);
+			name = SingleLineInput;
+			path = SingleLineInput;
+			sourceTree = "<group>";
+		};
+		5999DFD6EB2D81D298C8DBA74331AE5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60691776A573E9AFFA000EE21E1C6D11 /* RESideMenu */,
+				4D53FFFF00406B66636827B53E36647B /* SingleLineInput */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		60691776A573E9AFFA000EE21E1C6D11 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				ACBFCBEA2593D17929B8C71010E26B77 /* RECommonFunctions.h */,
+				E344C49D08AC49504D16A86C5DA6F11C /* RECommonFunctions.m */,
+				D164C4C94CD4FFBD6090CCCF62358E4D /* RESideMenu.h */,
+				A4E3DAF3FFD209EC9B8E06A374417D97 /* RESideMenu.m */,
+				BF53746A50EE72E3113903BF63A9AE87 /* UIViewController+RESideMenu.h */,
+				EBD3E1E3CB11A0C45A40A70DF4D275F1 /* UIViewController+RESideMenu.m */,
+				1062C574589118B49708453C44CF06C5 /* Support Files */,
+			);
+			name = RESideMenu;
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5999DFD6EB2D81D298C8DBA74331AE5D /* Pods */,
+				172FA7D035E294309EF65716879A4762 /* Products */,
+				958489DBE06C0926179CEDFD731EDE66 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		958489DBE06C0926179CEDFD731EDE66 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C03C8830FBB53DDE266C3AB3B9682523 /* Pods-RSVP */,
+				41B3DC141A67FB14C4BDF68FA0AAD83A /* Pods-RSVPTests */,
+				A22401CA602DC002B09EDF789DEA8183 /* Pods-RSVPUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
+				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A22401CA602DC002B09EDF789DEA8183 /* Pods-RSVPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE175F77BD27BD925A5DD539BC45F220 /* Pods-RSVPUITests-acknowledgements.markdown */,
+				EB386B7169530259C55EBF01D1E0EE81 /* Pods-RSVPUITests-acknowledgements.plist */,
+				6C6B3F39D1C5242298EA4EB8CD2FB8B4 /* Pods-RSVPUITests-dummy.m */,
+				49CE0F55B635778120DB3FD305701325 /* Pods-RSVPUITests-frameworks.sh */,
+				4714A77797DE4C833A0A57422BB9F575 /* Pods-RSVPUITests-resources.sh */,
+				655B465A4B692B5A581C44D99494C1CD /* Pods-RSVPUITests.debug.xcconfig */,
+				0A0AB20F5084BA0A342F84179E2C6770 /* Pods-RSVPUITests.release.xcconfig */,
+			);
+			name = "Pods-RSVPUITests";
+			path = "Target Support Files/Pods-RSVPUITests";
+			sourceTree = "<group>";
+		};
+		A861C293F5A484F44A0ED7FCB4D788CA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75BF9054BAA173AEDDDE6524D0FD1B82 /* ResourceBundle-SingleLineInput-Info.plist */,
+				90E1F604B1828C9B9DBB1EB1B74298DB /* SingleLineInput.xcconfig */,
+				DC00FC26EE1A3B02E435A13E305C5DCA /* SingleLineInput-dummy.m */,
+				3BD2308FE0E0CD18A2183B5C36C9A650 /* SingleLineInput-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SingleLineInput";
+			sourceTree = "<group>";
+		};
+		C03C8830FBB53DDE266C3AB3B9682523 /* Pods-RSVP */ = {
+			isa = PBXGroup;
+			children = (
+				DB74F63EFAB54656FAB04117758DB384 /* Pods-RSVP-acknowledgements.markdown */,
+				691E16B29B604C544CB6801DD553D456 /* Pods-RSVP-acknowledgements.plist */,
+				72965290A276F7BB6907873740CA2808 /* Pods-RSVP-dummy.m */,
+				65672C2B2CB1BAB3922E760FE8332D9A /* Pods-RSVP-frameworks.sh */,
+				56D2687A2471609D7F032F46E8392ADD /* Pods-RSVP-resources.sh */,
+				33C66C391AE9A479EAAA50DD5D4136CA /* Pods-RSVP.debug.xcconfig */,
+				64AC7A06C34B43D2243442737146585D /* Pods-RSVP.release.xcconfig */,
+			);
+			name = "Pods-RSVP";
+			path = "Target Support Files/Pods-RSVP";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		96658CAD9990328E19C4BD2FB8C6FD83 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA322C636CE986ED244964AED12317D /* RECommonFunctions.h in Headers */,
+				50B76BAF130D4AD998A264596EDF27F5 /* RESideMenu.h in Headers */,
+				6F2597A667670F65057F102C574B6290 /* UIViewController+RESideMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D27E47CA935B1BA7AA8CA64A33C37974 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE21A769B990D42BEDE6F6E8AF284C30 /* SingleLineTextField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		25D384B58453B3B3EEDA0EAF73821D49 /* Pods-RSVPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10D8DE5F85A1312B0419752F0043E2C /* Build configuration list for PBXNativeTarget "Pods-RSVPUITests" */;
+			buildPhases = (
+				DC1B4D94878A77FE8350D8DA2504B54C /* Sources */,
+				7AA35F13250146E72D0C8BC4AC885563 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-RSVPUITests";
+			productName = "Pods-RSVPUITests";
+			productReference = 0A5B0FC4EE4785513A9BFD4D1DEEA078 /* libPods-RSVPUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		46E99801B8777F6F7E6EDFB02EC779FC /* RESideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 878B469D8556FAA3DFFC3070ECFA3428 /* Build configuration list for PBXNativeTarget "RESideMenu" */;
+			buildPhases = (
+				E153774D55A0ACB9DBFC3D81446644AC /* Sources */,
+				C6D3B66DABE139E5DCC3042722588A75 /* Frameworks */,
+				96658CAD9990328E19C4BD2FB8C6FD83 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RESideMenu;
+			productName = RESideMenu;
+			productReference = D186F0D683EE16069AD84E912D4F710C /* libRESideMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9E3B6D9B7FD8A58F1C98664CA4996CAB /* Pods-RSVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0996C585A835B7EC9C8C87FFE89DE6A /* Build configuration list for PBXNativeTarget "Pods-RSVPTests" */;
+			buildPhases = (
+				B64B493C89C78DFFA166BC8420670D50 /* Sources */,
+				476BFDB7AF7215802A3C0BD7E364BACF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-RSVPTests";
+			productName = "Pods-RSVPTests";
+			productReference = 5B4BC0DB7B71581900948A011F2D6690 /* libPods-RSVPTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B3DD55B2FAA8707254564C055AFCD327 /* SingleLineInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21648A52C75621BA96B4E69BA787B225 /* Build configuration list for PBXNativeTarget "SingleLineInput" */;
+			buildPhases = (
+				B4D29D660D615FAF14EDDAF277213D6B /* Sources */,
+				B8595885BAED5FB56528C4622DCDB6C0 /* Frameworks */,
+				D27E47CA935B1BA7AA8CA64A33C37974 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E18C42554D081DF21D4DC04A0BE34B94 /* PBXTargetDependency */,
+			);
+			name = SingleLineInput;
+			productName = SingleLineInput;
+			productReference = 19D8E52E5D6C4259C4FAE29DE86EC712 /* libSingleLineInput.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F638CC695541D99FDA32361E841B9BF1 /* SingleLineInput-SingleLineInput */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAA7B1D059D7F2E80060AECE6698F0E7 /* Build configuration list for PBXNativeTarget "SingleLineInput-SingleLineInput" */;
+			buildPhases = (
+				8939655F2C8A72068772C4B0658064DE /* Sources */,
+				3C90E2B3F2B6F2EE3B2F241001795F1A /* Frameworks */,
+				1D6A4064366EE609B09B11258129FF8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SingleLineInput-SingleLineInput";
+			productName = "SingleLineInput-SingleLineInput";
+			productReference = CF79D2794A5857A9AE13CF589610A398 /* SingleLineInput.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		FC456860D5F034CCE4CC90EB6B71EC9F /* Pods-RSVP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B9FFB538F50ED19B8DF54D925CE036 /* Build configuration list for PBXNativeTarget "Pods-RSVP" */;
+			buildPhases = (
+				AD352619D65AD6B67B243B718183E5DB /* Sources */,
+				082EA1DEE8BD6DEA591F8427382F6FAA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04C5DC9461DDDE98AA6150566577DEBF /* PBXTargetDependency */,
+				6020E59A07969AE4015414E08C081F62 /* PBXTargetDependency */,
+			);
+			name = "Pods-RSVP";
+			productName = "Pods-RSVP";
+			productReference = CBC3D088B9D6B3C70A73F2F64E73763A /* libPods-RSVP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 172FA7D035E294309EF65716879A4762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC456860D5F034CCE4CC90EB6B71EC9F /* Pods-RSVP */,
+				9E3B6D9B7FD8A58F1C98664CA4996CAB /* Pods-RSVPTests */,
+				25D384B58453B3B3EEDA0EAF73821D49 /* Pods-RSVPUITests */,
+				46E99801B8777F6F7E6EDFB02EC779FC /* RESideMenu */,
+				B3DD55B2FAA8707254564C055AFCD327 /* SingleLineInput */,
+				F638CC695541D99FDA32361E841B9BF1 /* SingleLineInput-SingleLineInput */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D6A4064366EE609B09B11258129FF8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8939655F2C8A72068772C4B0658064DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD352619D65AD6B67B243B718183E5DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434346EFD2982BD6114F94E31DB04F5E /* Pods-RSVP-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D29D660D615FAF14EDDAF277213D6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B21623C226CA16AB6141276A9E7E3F1 /* SingleLineInput-dummy.m in Sources */,
+				C5C662A60230ACACA82293FD3F1B5535 /* SingleLineTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64B493C89C78DFFA166BC8420670D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				753C29BBCC4CB7BF4E61FD4B4A163F1F /* Pods-RSVPTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1B4D94878A77FE8350D8DA2504B54C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D8F772B1939FE24DA8072CE4D9C1B63 /* Pods-RSVPUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E153774D55A0ACB9DBFC3D81446644AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E6139E6ACDA5F419D03FC358BD94640 /* RECommonFunctions.m in Sources */,
+				7303A2F7D0536C135C165E8FE37B506F /* RESideMenu-dummy.m in Sources */,
+				B52B3F4E43666843815954DEDD8A5843 /* RESideMenu.m in Sources */,
+				FA9D9D2F45CDE549A5A1945C47B2D5C6 /* UIViewController+RESideMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04C5DC9461DDDE98AA6150566577DEBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RESideMenu;
+			target = 46E99801B8777F6F7E6EDFB02EC779FC /* RESideMenu */;
+			targetProxy = A530D6A80E345E4FD9CDF41A0889F267 /* PBXContainerItemProxy */;
+		};
+		6020E59A07969AE4015414E08C081F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SingleLineInput;
+			target = B3DD55B2FAA8707254564C055AFCD327 /* SingleLineInput */;
+			targetProxy = 852AC8A73E1464E648446099EED47571 /* PBXContainerItemProxy */;
+		};
+		E18C42554D081DF21D4DC04A0BE34B94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SingleLineInput-SingleLineInput";
+			target = F638CC695541D99FDA32361E841B9BF1 /* SingleLineInput-SingleLineInput */;
+			targetProxy = 31F73FC1777060C997EE6B6FCAEFB349 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14E4E7F3C2B36FB3575EDA211A75A401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E1F604B1828C9B9DBB1EB1B74298DB /* SingleLineInput.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SingleLineInput";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SingleLineInput/ResourceBundle-SingleLineInput-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = SingleLineInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2EF8BA99A03563307B17003D67A97F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655B465A4B692B5A581C44D99494C1CD /* Pods-RSVPUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3E31C930C7D9C36323BE059605323997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E1F604B1828C9B9DBB1EB1B74298DB /* SingleLineInput.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SingleLineInput/SingleLineInput-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		647A4AB6643C5222CD00A3163803F05C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E1F604B1828C9B9DBB1EB1B74298DB /* SingleLineInput.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SingleLineInput";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SingleLineInput/ResourceBundle-SingleLineInput-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = SingleLineInput;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6AA7929DB5FC47B5BC0CDA9B33532294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779BE152CC3B2B43FFD7AD6F59AF4B2E /* Pods-RSVPTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CF1537D22765C5B2AC985F391AA3832 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C66C391AE9A479EAAA50DD5D4136CA /* Pods-RSVP.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A64650E32D14EC7C239ECD83F7EEC191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E2FDF8FE52570DF4D25217583388CA /* RESideMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RESideMenu/RESideMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A8DD9CBBB6639D6E1EA3A0190155F740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64AC7A06C34B43D2243442737146585D /* Pods-RSVP.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B91FE052AA82505386B2015C433D6BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E2FDF8FE52570DF4D25217583388CA /* RESideMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RESideMenu/RESideMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CF7E8550FAFAB4ED955C392A9CBFF899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A0AB20F5084BA0A342F84179E2C6770 /* Pods-RSVPUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DFC29D34E4B89B2681722DAA5FFDE48C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B38EF0B910564DBC6BA7B588A78644EE /* Pods-RSVPTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F9BB8E0EB548DD616BEBC9EF3680D0B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E1F604B1828C9B9DBB1EB1B74298DB /* SingleLineInput.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SingleLineInput/SingleLineInput-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21648A52C75621BA96B4E69BA787B225 /* Build configuration list for PBXNativeTarget "SingleLineInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E31C930C7D9C36323BE059605323997 /* Debug */,
+				F9BB8E0EB548DD616BEBC9EF3680D0B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		878B469D8556FAA3DFFC3070ECFA3428 /* Build configuration list for PBXNativeTarget "RESideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A64650E32D14EC7C239ECD83F7EEC191 /* Debug */,
+				B91FE052AA82505386B2015C433D6BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0996C585A835B7EC9C8C87FFE89DE6A /* Build configuration list for PBXNativeTarget "Pods-RSVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFC29D34E4B89B2681722DAA5FFDE48C /* Debug */,
+				6AA7929DB5FC47B5BC0CDA9B33532294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAA7B1D059D7F2E80060AECE6698F0E7 /* Build configuration list for PBXNativeTarget "SingleLineInput-SingleLineInput" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				647A4AB6643C5222CD00A3163803F05C /* Debug */,
+				14E4E7F3C2B36FB3575EDA211A75A401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10D8DE5F85A1312B0419752F0043E2C /* Build configuration list for PBXNativeTarget "Pods-RSVPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EF8BA99A03563307B17003D67A97F5F /* Debug */,
+				CF7E8550FAFAB4ED955C392A9CBFF899 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B9FFB538F50ED19B8DF54D925CE036 /* Build configuration list for PBXNativeTarget "Pods-RSVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CF1537D22765C5B2AC985F391AA3832 /* Debug */,
+				A8DD9CBBB6639D6E1EA3A0190155F740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
