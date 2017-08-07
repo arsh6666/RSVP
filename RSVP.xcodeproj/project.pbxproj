@@ -106,6 +106,7 @@
 		A2B753B9767D936FFA4A66B4 /* Pods-RSVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.release.xcconfig"; sourceTree = "<group>"; };
 		D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC16D65D1F39157F00A15C56 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FC2A054CCD00A1F9AA7CF406 /* Pods-RSVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC3EF42C1F2BB89F008D3BFD /* RSVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EF4301F2BB89F008D3BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -292,6 +293,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FC16D65C1F39157F00A15C56 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FC16D65D1F39157F00A15C56 /* Constants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		FC3EF4231F2BB89F008D3BFD = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +326,7 @@
 		FC3EF42E1F2BB89F008D3BFD /* RSVP */ = {
 			isa = PBXGroup;
 			children = (
+				FC16D65C1F39157F00A15C56 /* Constants */,
 				FC3EF4751F2BC785008D3BFD /* Fonts */,
 				FC3EF4621F2BBC45008D3BFD /* Cell */,
 				FC3EF4631F2BBC45008D3BFD /* Images */,
@@ -999,7 +1009,7 @@
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1013,7 +1023,7 @@
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
