@@ -24,10 +24,10 @@
     [super viewDidLoad];
     
     if (appDelegate().isLogin == YES) {
-        array = [NSMutableArray arrayWithObjects:@"",@"My Profile",@"Looking for Parking",@"Park Driveway",@"Block Driveway",@"Parked On Street",@"Logout", nil];
+        array = [NSMutableArray arrayWithObjects:@"",@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Logout", nil];
     }
     else{
-    array = [NSMutableArray arrayWithObjects:@"Login/Sign Up",@"Looking for Parking",@"Park Driveway",@"Block Driveway",@"Parked On Street", nil];
+    array = [NSMutableArray arrayWithObjects:@"Login/Sign Up",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street", nil];
     }
     // Do any additional setup after loading the view.
 }

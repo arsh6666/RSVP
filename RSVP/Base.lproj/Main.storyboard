@@ -405,7 +405,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ContentViewController" id="Yas-ex-OIJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fkI-A1-kpB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kyi-53-QnF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kyi-53-QnF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
