@@ -9,6 +9,9 @@
 #import "BillingDetailVC.h"
 
 @interface BillingDetailVC ()
+@property (strong, nonatomic) IBOutlet UITextField *qickpayemail;
+@property (strong, nonatomic) IBOutlet UITextField *zellemail;
+@property (strong, nonatomic) IBOutlet UITextField *monthlyChecks;
 
 @end
 
@@ -22,6 +25,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)nextButtonAction:(id)sender {
+    if (_qickpayemail.text.length == 0 && _zellemail.text.length == 0 && _monthlyChecks.text.length == 0){
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showWarning:self title:@"Alert" subTitle:@"Please enter one of the textfield." closeButtonTitle:@"OK" duration:0.0f];
+        return;
+    }else{
+        if (_drivewayToRentSwitch.isOn){
+            DriveWayInfoVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DriveWayInfoVC"];
+            [self.navigationController pushViewController:hvc animated:YES];
+        }else{
+            MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+            [self.navigationController pushViewController:hvc animated:YES];
+        }
+    }
+    
 }
 
 /*

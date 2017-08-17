@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BidVC : UIViewController
+@property NSString *drivewayID;
 
 @end

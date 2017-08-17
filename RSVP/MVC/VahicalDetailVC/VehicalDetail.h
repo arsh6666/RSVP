@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+//NSString *carModelId;
 @interface VehicalDetail : UIViewController
+
+@property(nonatomic) NSString *carModelId;
+@property(nonatomic) NSString *carModelName;
 
 @end

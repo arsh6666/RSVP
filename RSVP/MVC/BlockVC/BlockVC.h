@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BlockVC : UIViewController
-
+@property NSDictionary *myblockData;
 @end

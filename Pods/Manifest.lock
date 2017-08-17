@@ -1,18 +1,41 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - IQKeyboardManager (4.0.11)
   - RESideMenu (4.0.7)
+  - SCLAlertView-Objective-C (1.1.2)
   - SingleLineInput (1.0.7)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
   - IQKeyboardManager
   - RESideMenu
+  - SCLAlertView-Objective-C (~> 1.1)
   - SingleLineInput
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 83eae5318483a34eb2069ef413d195b97605232e
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  SCLAlertView-Objective-C: 0e54351fa4f98a5c7c6ad3727e6dbb46784534e5
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 957789e0029d4fec1f832866000ec11bb10d518f
+PODFILE CHECKSUM: 83d5304cb0dcde7edd8cf9b6ffa05c150ece8c20
 
 COCOAPODS: 1.1.1

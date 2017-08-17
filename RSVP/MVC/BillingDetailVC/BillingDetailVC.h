@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BillingDetailVC : UIViewController
+@property (strong, nonatomic) IBOutlet UISwitch *drivewayToRentSwitch;
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BidderVC : UIViewController<UITableViewDataSource,UITabBarDelegate>
-
+@property NSString *drivewayID;
+@property BOOL isMyDriveway;
 @end

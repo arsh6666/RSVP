@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ParkInVC : UIViewController
+@property NSDictionary *drivewarData;
+
 
 @end

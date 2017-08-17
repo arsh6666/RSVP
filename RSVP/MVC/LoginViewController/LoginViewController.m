@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
 }
 
@@ -26,15 +29,62 @@
 - (IBAction)backButtonAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)loginButtonAction:(id)sender {
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    if (_emailTextField.text.length == 0){
+        [alert showWarning:self title:@"Alert" subTitle:@"Please enter email address." closeButtonTitle:@"OK" duration:0.0f];
+        return;
+    }
+    if (![self validateEmailWithString:_emailTextField.text]){
+        [alert showWarning:self title:@"Alert" subTitle:@"Please enter valid email address." closeButtonTitle:@"OK" duration:0.0f];
+        return;
+    }
+    if (_passwordTextField.text.length == 0){
+        [alert showWarning:self title:@"Alert" subTitle:@"Please enter password." closeButtonTitle:@"OK" duration:0.0f];
+        return;
+    }
+    if (_passwordTextField.text.length < 8){
+        [alert showWarning:self title:@"Alert" subTitle:@"Password should contain minimum 8 characters." closeButtonTitle:@"OK" duration:0.0f];
+        return;
+    }else{
+        [self webService];
+    }
 }
-*/
+
+- (BOOL)validateEmailWithString:(NSString*)email
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
+}
+
+-(void)webService{
+    [SVProgressHUD show];
+    NSDictionary *dict = @{@"UserName":_emailTextField.text,
+                           @"Password": _passwordTextField.text};
+    NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Login";
+    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager1 POST:url parameters:dict progress:nil
+           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               NSDictionary *jsonDict = responseObject;
+               [SVProgressHUD dismiss];
+               if ([jsonDict[@"Success"] boolValue]){
+                   [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%@",jsonDict[@"Id"]] forKey:@"userId"];
+                   [NSUserDefaults.standardUserDefaults setBool:YES forKey:@"isLogin"];
+                   MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+                   [self.navigationController pushViewController:hvc animated:YES];
+                   
+               }else{
+                   SCLAlertView *alert = [[SCLAlertView alloc] init];
+                   [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
+               }
+               NSLog(@"%@",responseObject);
+           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               [SVProgressHUD dismiss];
+               NSLog(@"%@",error);
+           }];
+    
+}
 
 @end

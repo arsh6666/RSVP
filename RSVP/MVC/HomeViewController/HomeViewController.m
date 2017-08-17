@@ -8,8 +8,9 @@
 
 #import "HomeViewController.h"
 
-@interface HomeViewController ()
-
+@interface HomeViewController (){
+    UIWebView *webView;
+}
 @end
 
 @implementation HomeViewController
@@ -18,6 +19,8 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view.
+    [self.sideMenuViewController setPanFromEdge:NO];
+    [self.sideMenuViewController setPanGestureEnabled:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +29,24 @@
 }
 - (IBAction)menuButtonAction:(id)sender {
     [self.sideMenuViewController presentLeftMenuViewController];
+}
+- (IBAction)openTermsButtonAction:(id)sender {
+     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    UIButton *close = [[UIButton alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-50,20, 50, 30)];
+    [close setTitle:@"Close" forState:UIControlStateNormal];
+    [close setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [close addTarget:self action:@selector(closewebView:) forControlEvents:UIControlEventTouchUpInside];
+    [webView addSubview:close];
+    [webView bringSubviewToFront:close];
+    NSURL *targetURL = [[NSBundle mainBundle] URLForResource:@"RSVP terms-conditions-pdf-english" withExtension:@"pdf"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+    [webView loadRequest:request];
+    
+    [self.view addSubview:webView];
+}
+
+-(IBAction)closewebView:(id)sender{
+    [webView removeFromSuperview];
 }
 
 /*

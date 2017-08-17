@@ -6,8 +6,10 @@ target 'RSVP' do
     pod 'SingleLineInput'
     pod 'RESideMenu'
     pod 'IQKeyboardManager'
-    
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    pod 'SCLAlertView-Objective-C', '~> 1.1'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'SVProgressHUD'
+# Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
   # Pods for RSVP

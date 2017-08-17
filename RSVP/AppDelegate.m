@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DEMORootViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,42 @@
     [[SingleLineTextField appearance] setLineNormalColor:[UIColor grayColor]];
     [[SingleLineTextField appearance] setLineSelectedColor:[UIColor whiteColor]];
     [[SingleLineTextField appearance] setInputPlaceHolderColor:[UIColor whiteColor]];
-    
+    if ([NSUserDefaults.standardUserDefaults boolForKey:@"isLogin"]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"mapNVC"];
+        UIViewController *leftMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"SideMenuViewController"];
+        UIViewController *rightMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+      
+        
+        // Create side menu controller
+        //
+        RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+                                                                        leftMenuViewController:leftMenuViewController
+                                                                       rightMenuViewController:rightMenuViewController];
+        sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+        
+        // Make it a root controller
+        //
+        self.window.rootViewController = sideMenuViewController;
+    }else{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"ContentViewController"];
+        UIViewController *leftMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"SideMenuViewController"];
+        UIViewController *rightMenuViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        
+        
+        // Create side menu controller
+        //
+        RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+                                                                        leftMenuViewController:leftMenuViewController
+                                                                       rightMenuViewController:rightMenuViewController];
+        sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+        
+        // Make it a root controller
+        //
+        self.window.rootViewController = sideMenuViewController;
+    }
+   
     
     // Override point for customization after application launch.
     return YES;

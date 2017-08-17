@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SCLAlertView-Objective-C.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SingleLineInput-SingleLineInput.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,22 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>206389DA90F2460F7EA0366EF7A2EDED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>25D384B58453B3B3EEDA0EAF73821D49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58265DDE97121F50E6EA85ACA63A77DC</key>
+		<key>354C7EE7AB06730F48FEFE0189BCE976</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7561661BDBA565B726B2C6691CF5D088</key>
+		<key>6731433B6C241D9B9BC6EBA6E3BCAF8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +77,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>907FE7C7512469AF1966542CF85C1132</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9E3B6D9B7FD8A58F1C98664CA4996CAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0132B6A7CC52208FDB651D35EA6F30F</key>
+		<key>B25C31FC1DF35B264E4F7FE7F345A4FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC8E031C28E312539952D4FD53F6B819</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6E37C24EAA89B4E119B2AC38E161699</key>
 		<dict>
 			<key>primary</key>
 			<true/>

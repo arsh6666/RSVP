@@ -23,12 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (appDelegate().isLogin == YES) {
-        array = [NSMutableArray arrayWithObjects:@"",@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Logout", nil];
-    }
-    else{
-    array = [NSMutableArray arrayWithObjects:@"Login/Sign Up",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street", nil];
-    }
+//    if (appDelegate().isLogin == YES) {
+//        array = [NSMutableArray arrayWithObjects:@"",@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Logout", nil];
+//    }
+//    else{
+    array = [NSMutableArray arrayWithObjects:@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Logout", nil];
+   // }
     // Do any additional setup after loading the view.
 }
 
@@ -50,7 +50,7 @@
     
     if (indexPath.row == 0) {
         
-        HomeViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        MyProfileVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileVC"];
         UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
         [self.sideMenuViewController setContentViewController:MainNav animated:YES];
         [self.sideMenuViewController hideMenuViewController];
@@ -68,7 +68,7 @@
     
     if (indexPath.row == 2) {
         
-        ParkInVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ParkInVC"];
+        MyDrivewayList *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDrivewayList"];
         UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:vc];
         [self.sideMenuViewController setContentViewController:MainNav animated:YES];
         [self.sideMenuViewController hideMenuViewController];
@@ -77,15 +77,28 @@
     
     if (indexPath.row == 3) {
         
-        BlockVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"BlockVC"];
+        MyBlockList *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyBlockList"];
         UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
         [self.sideMenuViewController setContentViewController:MainNav animated:YES];
         [self.sideMenuViewController hideMenuViewController];
         
     }
-    
-    
-    
+    if (indexPath.row == 4) {
+        
+        StreetParkingVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"StreetParkingVC"];
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+        [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+        [self.sideMenuViewController hideMenuViewController];
+        
+    }
+    if (indexPath.row == 5) {
+        [NSUserDefaults.standardUserDefaults setBool:NO forKey:@"isLogin"];
+        HomeViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+        [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+        [self.sideMenuViewController hideMenuViewController];
+        
+    }
     
 }
 
