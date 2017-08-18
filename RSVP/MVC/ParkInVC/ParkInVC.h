@@ -10,6 +10,10 @@
 
 @interface ParkInVC : UIViewController
 @property NSDictionary *drivewarData;
-
+@property NSString *day;
+@property NSString *typeOfParking;
+@property NSString *toLabel;
+@property NSString *fromLabel;
+@property NSString *enableDisable;
 
 @end

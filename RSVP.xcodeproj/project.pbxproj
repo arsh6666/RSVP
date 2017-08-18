@@ -10,14 +10,11 @@
 		37018A0C1F4270CD00125B55 /* StreetParkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37018A0B1F4270CD00125B55 /* StreetParkingVC.m */; };
 		37175B141F38D0D400D6E535 /* BillingDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B131F38D0D400D6E535 /* BillingDetailVC.m */; };
 		37175B191F38D13900D6E535 /* ParkInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B181F38D13900D6E535 /* ParkInVC.m */; };
-		37175B1C1F38D15600D6E535 /* BlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B1B1F38D15600D6E535 /* BlockVC.m */; };
 		37175B1F1F38D1DB00D6E535 /* ForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B1E1F38D1DB00D6E535 /* ForgotPasswordVC.m */; };
 		37175B231F38D24100D6E535 /* BidderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B221F38D24100D6E535 /* BidderVC.m */; };
 		37175B271F38D26400D6E535 /* BidVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B261F38D26400D6E535 /* BidVC.m */; };
 		37175B2D1F38E37800D6E535 /* BidderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B2C1F38E37800D6E535 /* BidderCell.m */; };
 		37175B2F1F38EA3900D6E535 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37175B2E1F38EA3900D6E535 /* menu-icon.png */; };
-		3717727D1F4026F0001DC1D7 /* CommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3717727C1F4026F0001DC1D7 /* CommonClass.m */; };
-		371772811F4031CC001DC1D7 /* CarMakeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 371772801F4031CC001DC1D7 /* CarMakeVC.m */; };
 		371772851F403243001DC1D7 /* CarMakeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 371772841F403243001DC1D7 /* CarMakeCell.m */; };
 		371772891F406836001DC1D7 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 371772881F406836001DC1D7 /* CustomAnnotation.m */; };
 		3717728C1F4070D2001DC1D7 /* PointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3717728B1F4070D2001DC1D7 /* PointAnnotation.m */; };
@@ -35,7 +32,8 @@
 		37AC9D771F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */; };
 		37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */; };
 		37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7E1F442AD700751851 /* MyDrivewayList.m */; };
-		37DDD6921F456043007873BE /* MyBlockList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DDD6911F456043007873BE /* MyBlockList.m */; };
+		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
+		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
 		811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4143DBFD729961195176AC80 /* libPods-RSVP.a */; };
 		CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */; };
@@ -98,8 +96,6 @@
 		37175B131F38D0D400D6E535 /* BillingDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillingDetailVC.m; path = BillingDetailVC/BillingDetailVC.m; sourceTree = "<group>"; };
 		37175B171F38D13900D6E535 /* ParkInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParkInVC.h; path = ParkInVC/ParkInVC.h; sourceTree = "<group>"; };
 		37175B181F38D13900D6E535 /* ParkInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParkInVC.m; path = ParkInVC/ParkInVC.m; sourceTree = "<group>"; };
-		37175B1A1F38D15600D6E535 /* BlockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockVC.h; path = BlockVC/BlockVC.h; sourceTree = "<group>"; };
-		37175B1B1F38D15600D6E535 /* BlockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockVC.m; path = BlockVC/BlockVC.m; sourceTree = "<group>"; };
 		37175B1D1F38D1DB00D6E535 /* ForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotPasswordVC.h; path = ForgotPasswordVC/ForgotPasswordVC.h; sourceTree = "<group>"; };
 		37175B1E1F38D1DB00D6E535 /* ForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPasswordVC.m; path = ForgotPasswordVC/ForgotPasswordVC.m; sourceTree = "<group>"; };
 		37175B211F38D24100D6E535 /* BidderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BidderVC.h; path = BidderVC/BidderVC.h; sourceTree = "<group>"; };
@@ -109,10 +105,6 @@
 		37175B2B1F38E37800D6E535 /* BidderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BidderCell.h; path = BidderCell/BidderCell.h; sourceTree = "<group>"; };
 		37175B2C1F38E37800D6E535 /* BidderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BidderCell.m; path = BidderCell/BidderCell.m; sourceTree = "<group>"; };
 		37175B2E1F38EA3900D6E535 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
-		3717727B1F4026F0001DC1D7 /* CommonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonClass.h; path = CommonClass/CommonClass.h; sourceTree = "<group>"; };
-		3717727C1F4026F0001DC1D7 /* CommonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonClass.m; path = CommonClass/CommonClass.m; sourceTree = "<group>"; };
-		3717727F1F4031CC001DC1D7 /* CarMakeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarMakeVC.h; path = CarMakeVC/CarMakeVC.h; sourceTree = "<group>"; };
-		371772801F4031CC001DC1D7 /* CarMakeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarMakeVC.m; path = CarMakeVC/CarMakeVC.m; sourceTree = "<group>"; };
 		371772831F403243001DC1D7 /* CarMakeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarMakeCell.h; path = CarMakeCell/CarMakeCell.h; sourceTree = "<group>"; };
 		371772841F403243001DC1D7 /* CarMakeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarMakeCell.m; path = CarMakeCell/CarMakeCell.m; sourceTree = "<group>"; };
 		371772871F406836001DC1D7 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAnnotation.h; path = MKPointAnnotation/CustomAnnotation.h; sourceTree = "<group>"; };
@@ -139,8 +131,10 @@
 		37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayListcell.m; path = MyDrivewayListcell/MyDrivewayListcell.m; sourceTree = "<group>"; };
 		37AC9D7D1F442AD700751851 /* MyDrivewayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDrivewayList.h; path = MyDrivewayList/MyDrivewayList.h; sourceTree = "<group>"; };
 		37AC9D7E1F442AD700751851 /* MyDrivewayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayList.m; path = MyDrivewayList/MyDrivewayList.m; sourceTree = "<group>"; };
-		37DDD6901F456043007873BE /* MyBlockList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyBlockList.h; path = "untitled folder/MyBlockList.h"; sourceTree = "<group>"; };
-		37DDD6911F456043007873BE /* MyBlockList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyBlockList.m; path = "untitled folder/MyBlockList.m"; sourceTree = "<group>"; };
+		37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
+		37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
+		37DD5A8D1F46BBFB0095F7E8 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleVC.h; path = ScheduleVC/ScheduleVC.h; sourceTree = "<group>"; };
+		37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleVC.m; path = ScheduleVC/ScheduleVC.m; sourceTree = "<group>"; };
 		37E0710A1F3B990900AB23F5 /* DriveWayInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DriveWayInfoVC.h; path = DriveWayInfoVC/DriveWayInfoVC.h; sourceTree = "<group>"; };
 		37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DriveWayInfoVC.m; path = DriveWayInfoVC/DriveWayInfoVC.m; sourceTree = "<group>"; };
 		4143DBFD729961195176AC80 /* libPods-RSVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,15 +253,6 @@
 			name = ParkInVC;
 			sourceTree = "<group>";
 		};
-		37175B161F38D10C00D6E535 /* BlockVC */ = {
-			isa = PBXGroup;
-			children = (
-				37175B1A1F38D15600D6E535 /* BlockVC.h */,
-				37175B1B1F38D15600D6E535 /* BlockVC.m */,
-			);
-			name = BlockVC;
-			sourceTree = "<group>";
-		};
 		37175B201F38D1E200D6E535 /* ForgotPasswordVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,24 +287,6 @@
 				37175B2C1F38E37800D6E535 /* BidderCell.m */,
 			);
 			name = BidderCell;
-			sourceTree = "<group>";
-		};
-		3717727A1F40267D001DC1D7 /* Common Classes */ = {
-			isa = PBXGroup;
-			children = (
-				3717727B1F4026F0001DC1D7 /* CommonClass.h */,
-				3717727C1F4026F0001DC1D7 /* CommonClass.m */,
-			);
-			name = "Common Classes";
-			sourceTree = "<group>";
-		};
-		3717727E1F403199001DC1D7 /* CarMakeVC */ = {
-			isa = PBXGroup;
-			children = (
-				3717727F1F4031CC001DC1D7 /* CarMakeVC.h */,
-				371772801F4031CC001DC1D7 /* CarMakeVC.m */,
-			);
-			name = CarMakeVC;
 			sourceTree = "<group>";
 		};
 		371772821F40320A001DC1D7 /* CarMakeCell */ = {
@@ -396,13 +363,22 @@
 			name = MyDrivewayList;
 			sourceTree = "<group>";
 		};
-		37DDD68F1F456024007873BE /* MyBlockList */ = {
+		37DD5A881F46BAFE0095F7E8 /* ScheduleCell */ = {
 			isa = PBXGroup;
 			children = (
-				37DDD6901F456043007873BE /* MyBlockList.h */,
-				37DDD6911F456043007873BE /* MyBlockList.m */,
+				37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */,
+				37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */,
 			);
-			name = MyBlockList;
+			name = ScheduleCell;
+			sourceTree = "<group>";
+		};
+		37DD5A8C1F46BBBF0095F7E8 /* ScheduleVC */ = {
+			isa = PBXGroup;
+			children = (
+				37DD5A8D1F46BBFB0095F7E8 /* ScheduleVC.h */,
+				37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */,
+			);
+			name = ScheduleVC;
 			sourceTree = "<group>";
 		};
 		37E0710D1F3B991300AB23F5 /* DriveWayInfoVC */ = {
@@ -520,6 +496,7 @@
 		FC3EF4621F2BBC45008D3BFD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				37DD5A881F46BAFE0095F7E8 /* ScheduleCell */,
 				37AC9D781F4429CD00751851 /* MyDrivewayListcell */,
 				379B833B1F42D71B001D1A2C /* MyProfileCell */,
 				371772821F40320A001DC1D7 /* CarMakeCell */,
@@ -574,12 +551,11 @@
 		FC3EF4681F2BBC45008D3BFD /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				37DDD68F1F456024007873BE /* MyBlockList */,
 				37AC9D7C1F442AA700751851 /* MyDrivewayList */,
+				37DD5A8C1F46BBBF0095F7E8 /* ScheduleVC */,
+				37175B151F38D0FF00D6E535 /* ParkInVC */,
 				379B83371F42C42D001D1A2C /* MyProfileVC */,
 				371772861F406803001DC1D7 /* CustomAnnotaion */,
-				3717727E1F403199001DC1D7 /* CarMakeVC */,
-				3717727A1F40267D001DC1D7 /* Common Classes */,
 				FC3EF4A01F2BDDD0008D3BFD /* HomeViewController */,
 				FC3EF4941F2BD270008D3BFD /* DEMORootViewController */,
 				FC3EF4901F2BD157008D3BFD /* MapViewController */,
@@ -589,8 +565,6 @@
 				37175B201F38D1E200D6E535 /* ForgotPasswordVC */,
 				378AE4521F38A7D50037EE8B /* VehicleDetailVC */,
 				37175B111F38D09500D6E535 /* BillingDetail */,
-				37175B151F38D0FF00D6E535 /* ParkInVC */,
-				37175B161F38D10C00D6E535 /* BlockVC */,
 				378AE4531F38A8230037EE8B /* PaymentVC */,
 				37175B241F38D24700D6E535 /* BidderVC */,
 				37175B281F38D26C00D6E535 /* BidVC */,
@@ -997,14 +971,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DDD6921F456043007873BE /* MyBlockList.m in Sources */,
 				379B833A1F42C458001D1A2C /* MyProfileVC.m in Sources */,
-				3717727D1F4026F0001DC1D7 /* CommonClass.m in Sources */,
 				FC3EF48B1F2BD0C5008D3BFD /* LoginViewController.m in Sources */,
 				FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */,
-				371772811F4031CC001DC1D7 /* CarMakeVC.m in Sources */,
 				FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */,
 				37175B191F38D13900D6E535 /* ParkInVC.m in Sources */,
+				37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */,
 				37175B1F1F38D1DB00D6E535 /* ForgotPasswordVC.m in Sources */,
 				FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */,
 				37018A0C1F4270CD00125B55 /* StreetParkingVC.m in Sources */,
@@ -1012,10 +984,10 @@
 				FC3EF4701F2BBC45008D3BFD /* UIImage+animatedGIF.m in Sources */,
 				37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */,
 				FC3EF49F1F2BDC08008D3BFD /* SideMenuTableViewCell.m in Sources */,
+				37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */,
 				379B833E1F42D74F001D1A2C /* MyProfileCell.m in Sources */,
 				37175B231F38D24100D6E535 /* BidderVC.m in Sources */,
 				378AE4511F38A7CA0037EE8B /* VehicalDetail.m in Sources */,
-				37175B1C1F38D15600D6E535 /* BlockVC.m in Sources */,
 				37175B141F38D0D400D6E535 /* BillingDetailVC.m in Sources */,
 				FC3EF4871F2BD01C008D3BFD /* SideMenuViewController.m in Sources */,
 				37175B271F38D26400D6E535 /* BidVC.m in Sources */,

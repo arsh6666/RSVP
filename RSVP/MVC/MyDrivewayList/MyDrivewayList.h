@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MyDrivewayList : UIViewController
+@property NSString *typeOfParking;
 @property (strong, nonatomic) IBOutlet UITableView *adressTableView;
 
 @end

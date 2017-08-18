@@ -9,9 +9,10 @@
 #import "MyDrivewayList.h"
 
 @interface MyDrivewayList()<UITableViewDataSource,UITableViewDelegate>{
-    NSMutableArray *mydriveways;
+    NSMutableArray *WeekDays;
 }
 @property (strong, nonatomic) IBOutlet UITableView *drivewayListTableView;
+@property (strong, nonatomic) IBOutlet UILabel *setTitleLabel;
 
 @end
 
@@ -19,9 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    NSString *frontLabel = @"Park in my ";
+    NSString *newString = [frontLabel stringByAppendingString:[NSString stringWithFormat:@"%@",_typeOfParking]];
+    _setTitleLabel.text = newString;
+    WeekDays = [NSMutableArray arrayWithObjects:@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday", @"Sunday", nil];
     [self.navigationController setNavigationBarHidden:YES];
-     [self getMyDrivayList];
 
     // Do any additional setup after loading the view.
 }
@@ -36,61 +39,26 @@
     [self.sideMenuViewController presentLeftMenuViewController];
 
 }
-- (IBAction)addDrivewayAction:(id)sender {
-    DriveWayInfoVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DriveWayInfoVC"];
-    [self.navigationController pushViewController:hvc animated:YES];
-}
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSInteger coun = mydriveways.count;
-    return coun;
+    return WeekDays.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MyDrivewayListcell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    NSDictionary *biderName = mydriveways[indexPath.row];
-    cell.Address.text = biderName[@"Address"];
+    cell.Address.text = WeekDays[indexPath.row];
     return cell;
-
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ParkInVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ParkInVC"];
-    hvc.drivewarData = mydriveways[indexPath.row];
-    [self.navigationController pushViewController:hvc animated:YES];
+    ScheduleVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ScheduleVC"];
+    vc.day = WeekDays[indexPath.row];
+    vc.typeOfParking = _typeOfParking;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
--(void)getMyDrivayList{
-    [SVProgressHUD show];
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayinfoList?UserId=";
-    NSString *UrlToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
-    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
-    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 GET:UrlToHit parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *jsonDict = responseObject;
-        [SVProgressHUD dismiss];
-        if ([jsonDict[@"Success"] boolValue]){
-            mydriveways = [[NSMutableArray alloc]init];
 
-            NSArray *mydrivewaylist = jsonDict[@"DriwayinfoList"];
-            for (NSInteger i = 0; i < mydrivewaylist.count; i++) {
-                NSDictionary *mydict = mydrivewaylist[i];
-                BOOL isBlockavailable = mydict[@"AvailableDriway"];
-                if (isBlockavailable){
-                    [mydriveways addObject:mydrivewaylist[i]];
-                }
-            }
-            
-        }
-        [_drivewayListTableView reloadData];
-
-        NSLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD dismiss];
-        NSLog(@"%@",error);
-    }];
-}
 
 @end

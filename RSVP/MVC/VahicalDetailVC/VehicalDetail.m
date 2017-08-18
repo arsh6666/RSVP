@@ -8,7 +8,7 @@
 
 #import "VehicalDetail.h"
 
-@interface VehicalDetail ()<senddataProtocol>{
+@interface VehicalDetail (){
     NSDictionary *dataDict;
 }
 @property (strong, nonatomic) IBOutlet UITextField *carMakeTextField;
@@ -36,11 +36,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)selectCarMake:(id)sender {
-    CarMakeVC *acontollerobject= [self.storyboard instantiateViewControllerWithIdentifier:@"CarMakeVC"];
-    acontollerobject.delegate = self; // protocol listener
-    [self.navigationController pushViewController:acontollerobject animated:YES];
-}
+
 
 - (IBAction)nextButtonAction:(id)sender {
     SCLAlertView *alert = [[SCLAlertView alloc] init];

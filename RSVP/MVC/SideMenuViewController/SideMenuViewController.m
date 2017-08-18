@@ -69,6 +69,7 @@
     if (indexPath.row == 2) {
         
         MyDrivewayList *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDrivewayList"];
+        vc.typeOfParking = @"Driveway";
         UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:vc];
         [self.sideMenuViewController setContentViewController:MainNav animated:YES];
         [self.sideMenuViewController hideMenuViewController];
@@ -77,8 +78,9 @@
     
     if (indexPath.row == 3) {
         
-        MyBlockList *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyBlockList"];
-        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+        MyDrivewayList *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MyDrivewayList"];
+        vc.typeOfParking = @"Block";
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:vc];
         [self.sideMenuViewController setContentViewController:MainNav animated:YES];
         [self.sideMenuViewController hideMenuViewController];
         
