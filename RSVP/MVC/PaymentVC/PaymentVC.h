@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PaymentVC : UIViewController
-
+@property NSDictionary *userDetail;
+@property NSDictionary *userCarDetail;
 @end

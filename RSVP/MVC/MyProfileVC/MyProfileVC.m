@@ -36,6 +36,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)editProfileButton:(id)sender {
+    EditProfileVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EditProfileVC"];
+    vc.myProfileDetail = myDetail;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 -(void)setUpMyProfile{
     _nameLabel.text = myDetail[@"FirstName"];

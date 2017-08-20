@@ -12,6 +12,7 @@
 @interface MapViewController ()<MKMapViewDelegate,CLLocationManagerDelegate>{
     NSArray *DriwayinfoList;
     NSArray *myDriveWaylist;
+    BOOL isLocUpdated;
 }
 
 
@@ -24,6 +25,7 @@ CLLocationManager *locationManager;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isLocUpdated = NO;
     locationManager = [[CLLocationManager alloc] init];
     [locationManager requestAlwaysAuthorization];
     [locationManager startUpdatingLocation];
@@ -34,7 +36,6 @@ CLLocationManager *locationManager;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self zoomToUserLocation:self.mapView.userLocation];
     [self.navigationController setNavigationBarHidden:YES];
     
 }
@@ -48,30 +49,16 @@ CLLocationManager *locationManager;
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
-    [self zoomToUserLocation:userLocation];
-}
-
-
-- (void)zoomToUserLocation:(MKUserLocation *)userLocation
-{
-    if (!userLocation)
-        return;
+    if (!isLocUpdated){
+        CLLocationCoordinate2D loc = [userLocation coordinate];
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 1000, 1000);
+        [_mapView setRegion:region animated:YES];
+        isLocUpdated = YES;
+    }
     
-    MKCoordinateRegion region;
-    region.center = userLocation.location.coordinate;
-    region.span = MKCoordinateSpanMake(0.1, 0.1); //Zoom distance
-    region = [self.mapView regionThatFits:region];
-    [self.mapView setRegion:region animated:YES];
 }
 
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
-    //    CustomAnnotation *an = view.annotation;
-    //    NSDictionary *markerData = an.markerDict;
-    //    NSString *DriwayId = markerData[@"DriwayId"];
-    //    BidderVC *bidderVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BidderVC"];
-    //    bidderVC.drivewayID = DriwayId;
-    //    [self.navigationController pushViewController:bidderVC animated:YES];
-}
+
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
     CustomAnnotation *an = view.annotation;
@@ -113,7 +100,7 @@ CLLocationManager *locationManager;
         if ([jsonDict[@"Success"] boolValue]){
             DriwayinfoList = jsonDict[@"DriwayinfoList"];
             [self getMyDrivayList];
-            [self setMarkerData];
+            
         }else{
             SCLAlertView *alert = [[SCLAlertView alloc] init];
             [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
@@ -136,8 +123,9 @@ CLLocationManager *locationManager;
         [SVProgressHUD dismiss];
         if ([jsonDict[@"Success"] boolValue]){
             myDriveWaylist = jsonDict[@"DriwayinfoList"];
+            [DriwayinfoList arrayByAddingObject:myDriveWaylist];
         }
-        NSLog(@"%@",responseObject);
+        [self setMarkerData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
         NSLog(@"%@",error);
@@ -151,7 +139,7 @@ CLLocationManager *locationManager;
         NSString *lng =  DrivewayDict[@"Longitude"];
         PointAnnotation *point = [[PointAnnotation alloc] init];
         point.markerDict = DrivewayDict;
-        point.title = @"mohali";
+        point.title = [NSString stringWithFormat:@"%@",DrivewayDict[@"Address"]];
         point.coordinate = CLLocationCoordinate2DMake([Lat doubleValue], [lng doubleValue]);
         [self.mapView addAnnotation:point];
         

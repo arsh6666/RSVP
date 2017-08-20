@@ -10,8 +10,9 @@
 
 //NSString *carModelId;
 @interface VehicalDetail : UIViewController
-
+@property NSDictionary *userDetail;
 @property(nonatomic) NSString *carModelId;
 @property(nonatomic) NSString *carModelName;
-
+@property BOOL isEditProfile;
+@property NSDictionary *userDetailFromEdited;
 @end

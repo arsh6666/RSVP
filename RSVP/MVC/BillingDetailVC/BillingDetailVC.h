@@ -10,5 +10,6 @@
 
 @interface BillingDetailVC : UIViewController
 @property (strong, nonatomic) IBOutlet UISwitch *drivewayToRentSwitch;
-
+@property NSDictionary *userDetail;
+@property NSDictionary *userCardDetail;
 @end
