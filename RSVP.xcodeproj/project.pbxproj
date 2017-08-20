@@ -19,6 +19,7 @@
 		371772891F406836001DC1D7 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 371772881F406836001DC1D7 /* CustomAnnotation.m */; };
 		3717728C1F4070D2001DC1D7 /* PointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3717728B1F4070D2001DC1D7 /* PointAnnotation.m */; };
 		3717728E1F407312001DC1D7 /* map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 3717728D1F407312001DC1D7 /* map-marker.png */; };
+		371FE25C1F4A155E00AC4680 /* EditProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 371FE25B1F4A155E00AC4680 /* EditProfileVC.m */; };
 		378AE4481F3890A30037EE8B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE4471F3890A30037EE8B /* star.png */; };
 		378AE44A1F3891260037EE8B /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE4491F3891260037EE8B /* man.png */; };
 		378AE44C1F3891770037EE8B /* parking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378AE44B1F3891770037EE8B /* parking.jpg */; };
@@ -112,6 +113,8 @@
 		3717728A1F4070D2001DC1D7 /* PointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointAnnotation.h; path = MKPointAnnotation/PointAnnotation.h; sourceTree = "<group>"; };
 		3717728B1F4070D2001DC1D7 /* PointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointAnnotation.m; path = MKPointAnnotation/PointAnnotation.m; sourceTree = "<group>"; };
 		3717728D1F407312001DC1D7 /* map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-marker.png"; sourceTree = "<group>"; };
+		371FE25A1F4A155E00AC4680 /* EditProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileVC.h; path = EditProfileVC/EditProfileVC.h; sourceTree = "<group>"; };
+		371FE25B1F4A155E00AC4680 /* EditProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileVC.m; path = EditProfileVC/EditProfileVC.m; sourceTree = "<group>"; };
 		378AE4471F3890A30037EE8B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		378AE4491F3891260037EE8B /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
 		378AE44B1F3891770037EE8B /* parking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = parking.jpg; sourceTree = "<group>"; };
@@ -307,6 +310,15 @@
 				3717728B1F4070D2001DC1D7 /* PointAnnotation.m */,
 			);
 			name = CustomAnnotaion;
+			sourceTree = "<group>";
+		};
+		371FE2591F4A153000AC4680 /* EditProfileDetail */ = {
+			isa = PBXGroup;
+			children = (
+				371FE25A1F4A155E00AC4680 /* EditProfileVC.h */,
+				371FE25B1F4A155E00AC4680 /* EditProfileVC.m */,
+			);
+			name = EditProfileDetail;
 			sourceTree = "<group>";
 		};
 		378AE4521F38A7D50037EE8B /* VehicleDetailVC */ = {
@@ -551,6 +563,7 @@
 		FC3EF4681F2BBC45008D3BFD /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				371FE2591F4A153000AC4680 /* EditProfileDetail */,
 				37AC9D7C1F442AA700751851 /* MyDrivewayList */,
 				37DD5A8C1F46BBBF0095F7E8 /* ScheduleVC */,
 				37175B151F38D0FF00D6E535 /* ParkInVC */,
@@ -742,7 +755,7 @@
 				TargetAttributes = {
 					FC3EF42B1F2BB89F008D3BFD = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 96D398C43S;
+						DevelopmentTeam = AV3C87DRLW;
 						ProvisioningStyle = Automatic;
 					};
 					FC3EF4441F2BB89F008D3BFD = {
@@ -997,6 +1010,7 @@
 				37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */,
 				378AE4561F38A8540037EE8B /* PaymentVC.m in Sources */,
 				FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */,
+				371FE25C1F4A155E00AC4680 /* EditProfileVC.m in Sources */,
 				37175B2D1F38E37800D6E535 /* BidderCell.m in Sources */,
 				371772851F403243001DC1D7 /* CarMakeCell.m in Sources */,
 				FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */,
@@ -1153,11 +1167,11 @@
 			baseConfigurationReference = 2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 96D398C43S;
+				DEVELOPMENT_TEAM = AV3C87DRLW;
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1167,11 +1181,11 @@
 			baseConfigurationReference = CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 96D398C43S;
+				DEVELOPMENT_TEAM = AV3C87DRLW;
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

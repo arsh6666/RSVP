@@ -38,7 +38,7 @@
         [self.checkBoxButton setImage:[UIImage imageNamed:@"tick"] forState:UIControlStateNormal];
     else
         [self.checkBoxButton setImage:[UIImage imageNamed:@"box"] forState:UIControlStateNormal];
-
+    
 }
 - (IBAction)termButtonACtion:(id)sender {
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -63,7 +63,7 @@
 }
 - (IBAction)signUpButtonAction:(id)sender {
     SCLAlertView *alert = [[SCLAlertView alloc] init];
-
+    
     if (_firstNameTextField.text.length == 0)
     {
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter first name." closeButtonTitle:@"OK" duration:0.0f];
@@ -118,36 +118,38 @@
 }
 
 -(void)webService{
-    [SVProgressHUD show];
     NSDictionary *dict = @{@"FirstName":_firstNameTextField.text,
                            @"LastName": _lastNameTextField.text,
                            @"Email":_emailTextField.text,
                            @"Password": _passwordTextField.text,
                            @"NickName": _nickNameTextField.text,
                            @"PhoneNumber":@"1234567890"};
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Register";
-    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
-    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
-           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-               [SVProgressHUD dismiss];
-        NSDictionary *jsonDict = responseObject;
-               if ([jsonDict[@"Success"] boolValue]){
-                   [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%@",jsonDict[@"Id"]] forKey:@"userId"];
-                   [NSUserDefaults.standardUserDefaults setBool:YES forKey:@"isLogin"];
-                   VehicalDetail *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicalDetail"];
-                   [self.navigationController pushViewController:hvc animated:YES];
-                   
-               }else{
-                   SCLAlertView *alert = [[SCLAlertView alloc] init];
-                   [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
-               }
-        NSLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD dismiss];
-        NSLog(@"%@",error);
-    }];
-
+    VehicalDetail *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicalDetail"];
+    hvc.userDetail = dict;
+    [self.navigationController pushViewController:hvc animated:YES];
+    //    NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Register";
+    //    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+    //    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    //    [manager1 POST:url parameters:dict progress:nil
+    //           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    //               [SVProgressHUD dismiss];
+    //        NSDictionary *jsonDict = responseObject;
+    //               if ([jsonDict[@"Success"] boolValue]){
+    //                   [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%@",jsonDict[@"Id"]] forKey:@"userId"];
+    //                   [NSUserDefaults.standardUserDefaults setBool:YES forKey:@"isLogin"];
+    //                   VehicalDetail *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicalDetail"];
+    //                   [self.navigationController pushViewController:hvc animated:YES];
+    //
+    //               }else{
+    //                   SCLAlertView *alert = [[SCLAlertView alloc] init];
+    //                   [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
+    //               }
+    //        NSLog(@"%@",responseObject);
+    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    //        [SVProgressHUD dismiss];
+    //        NSLog(@"%@",error);
+    //    }];
+    //
 }
 
 @end

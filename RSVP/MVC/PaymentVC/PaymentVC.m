@@ -27,6 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)nextButtonAction:(id)sender {
+    
     if (_cardNumber.text.length == 0){
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter your card number." closeButtonTitle:@"OK" duration:0.0f];
@@ -42,7 +43,12 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter billing zip." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }else{
+        [NSUserDefaults.standardUserDefaults setObject:_cardNumber.text forKey:@"cardNumber"];
+        [NSUserDefaults.standardUserDefaults setObject:_expriyDate.text forKey:@"exipryDate"];
+        [NSUserDefaults.standardUserDefaults setObject:_billingzip.text forKey:@"billingZip"];
         BillingDetailVC *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"BillingDetailVC"];
+        VC.userDetail = _userDetail;
+        VC.userCardDetail = _userCarDetail;
         [self.navigationController pushViewController:VC animated:YES];
     }
     
