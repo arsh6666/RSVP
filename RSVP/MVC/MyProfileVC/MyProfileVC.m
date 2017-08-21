@@ -71,6 +71,7 @@
 }
 -(void)webService{
     [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
     NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
@@ -79,6 +80,8 @@
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
               NSDictionary *jsonDict = responseObject;
               [SVProgressHUD dismiss];
+              [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+
               if ([jsonDict[@"Success"] boolValue]){
                   myDetail = jsonDict;
                   [self setUpMyProfile];

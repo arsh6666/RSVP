@@ -39,7 +39,7 @@
 
 -(void)webService{
     [SVProgressHUD show];
-    
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     NSDictionary *dict = @{@"FirstName":_userDetail[@"FirstName"],
                            @"LastName": _userDetail[@"LastName"],
                            @"Email":_userDetail[@"Email"],
@@ -56,6 +56,7 @@
     [manager1 POST:url parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                [SVProgressHUD dismiss];
+               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                NSDictionary *jsonDict = responseObject;
                if ([jsonDict[@"Success"] boolValue]){
                    [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%@",jsonDict[@"Id"]] forKey:@"userId"];
@@ -76,6 +77,8 @@
 
 -(void)webServiceCardDetail{
     [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+
     NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"Brand":_userCardDetail[@"Brand"],
                            @"Model": _userCardDetail[@"Model"],
@@ -90,6 +93,7 @@
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                    NSDictionary *jsonDict = responseObject;
                    [SVProgressHUD dismiss];
+                   [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                    if ([jsonDict[@"Success"] boolValue]){
                        if (_drivewayToRentSwitch.isOn){
                            DriveWayInfoVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"DriveWayInfoVC"];

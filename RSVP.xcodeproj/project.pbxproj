@@ -33,6 +33,7 @@
 		37AC9D771F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */; };
 		37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */; };
 		37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7E1F442AD700751851 /* MyDrivewayList.m */; };
+		37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */; };
 		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
 		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
@@ -134,6 +135,7 @@
 		37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayListcell.m; path = MyDrivewayListcell/MyDrivewayListcell.m; sourceTree = "<group>"; };
 		37AC9D7D1F442AD700751851 /* MyDrivewayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDrivewayList.h; path = MyDrivewayList/MyDrivewayList.h; sourceTree = "<group>"; };
 		37AC9D7E1F442AD700751851 /* MyDrivewayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayList.m; path = MyDrivewayList/MyDrivewayList.m; sourceTree = "<group>"; };
+		37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Privacy-Policy-pdf-english.pdf"; sourceTree = "<group>"; };
 		37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
 		37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
 		37DD5A8D1F46BBFB0095F7E8 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleVC.h; path = ScheduleVC/ScheduleVC.h; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 		FC3EF4641F2BBC45008D3BFD /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */,
 				37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */,
 				FC3EF4651F2BBC45008D3BFD /* iCarousel */,
 			);
@@ -804,6 +807,7 @@
 				378AE44A1F3891260037EE8B /* man.png in Resources */,
 				37175B2F1F38EA3900D6E535 /* menu-icon.png in Resources */,
 				FC3EF4831F2BCB2B008D3BFD /* signUp.png in Resources */,
+				37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */,
 				FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */,
 				FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */,
 				FC3EF4A51F2BE723008D3BFD /* iconBack.png in Resources */,
