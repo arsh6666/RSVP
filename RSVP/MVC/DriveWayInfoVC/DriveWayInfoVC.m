@@ -8,7 +8,8 @@
 
 #import "DriveWayInfoVC.h"
 
-@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate>{
+
+@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,getCordsDelegates>{
     CLLocationCoordinate2D location;
     NSString *isOwner;
     NSString *Rented;
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UISwitch *spaceForRegularCarSwitch;
 @property (strong, nonatomic) IBOutlet UITextField *regularCarCommentTextField;
 @property (strong, nonatomic) IBOutlet UISwitch *ruleSwitch;
+@property (strong, nonatomic) IBOutlet UIButton *adressButton;
 @property (strong, nonatomic) IBOutlet UITextField *rulesTextField;
 @end
 
@@ -38,7 +40,6 @@ CLLocationManager *locationManager1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     locationManager1 = [[CLLocationManager alloc] init];
     locationManager1.delegate = self;
     [locationManager1 requestAlwaysAuthorization];
@@ -49,6 +50,13 @@ CLLocationManager *locationManager1;
 -(void)viewWillAppear:(BOOL)animated{
     
 }
+
+-(void)getCordinates:(CLLocationCoordinate2D)coordintes{
+    [_adressButton setTitle:@"Your location has been set" forState:normal];
+    location = coordintes;
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -125,6 +133,12 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
 }
 
 - (IBAction)uploadImageBurronAction:(id)sender {
+}
+
+- (IBAction)addressOnMap:(id)sender {
+    GoogleMapVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"GoogleMapVC"];
+    hvc.delegate = self;
+    [self.navigationController pushViewController:hvc animated:YES];
 }
 - (IBAction)submitButtonAction:(id)sender {
     if (!islocationEnable){

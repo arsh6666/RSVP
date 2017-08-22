@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DriveWayInfoVC : UIViewController{
-    
+
     
 }
-
 
 
 

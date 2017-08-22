@@ -41,6 +41,7 @@
     
 }
 - (IBAction)termButtonACtion:(id)sender {
+    
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     UIButton *close = [[UIButton alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-50,20, 50, 30)];
     [close setTitle:@"Close" forState:UIControlStateNormal];
