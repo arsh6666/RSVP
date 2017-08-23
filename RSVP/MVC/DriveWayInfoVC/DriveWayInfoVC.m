@@ -22,6 +22,7 @@
     
 }
 @property (strong, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) IBOutlet UITextField *txtSpotName;
 @property (strong, nonatomic) IBOutlet MVPlaceSearchTextField *addressTextField;
 @property (strong, nonatomic) IBOutlet UISwitch *blockAvailableSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *ownerSwitch;
@@ -184,6 +185,11 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter Address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
+    if (self.txtSpotName.text.length == 0){
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showWarning:self title:@"Alert" subTitle:@"Please enter Spot Name." closeButtonTitle:@"OK" duration:0.0f];
+        return;
+    }
     if (_ownerSwitch.isOn){
         isOwner = @"true";
     }else{
@@ -252,7 +258,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
 
 -(void)webService{
     [SVProgressHUD show];
-    NSDictionary *dict = @{@"Owner": [NSString stringWithFormat:@"%@",isOwner],
+    NSDictionary *dict = @{
+                           @"Owner": [NSString stringWithFormat:@"%@",isOwner],
                            @"Rented": [NSString stringWithFormat:@"%@",Rented],
                            @"Sharing": [NSString stringWithFormat:@"%@",Sharing],
                            @"Comment": _sharingCommentTextField.text,
@@ -264,6 +271,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                            @"Latitude": [NSString stringWithFormat:@"%f",location.latitude],
                            @"Longitude": [NSString stringWithFormat:@"%f",location.longitude],
                            @"Address": _addressTextField.text,
+                           @"Name":self.txtSpotName.text,
                            @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]
                            };
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveDriwayinfo";

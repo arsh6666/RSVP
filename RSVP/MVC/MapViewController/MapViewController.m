@@ -66,6 +66,8 @@ CLLocationManager *locationManager;
     NSString *DriwayId = markerData[@"DriwayId"];
     if ([markerData[@"ParkingType"]  isEqual: @"Driway"] || [markerData[@"ParkingType"]  isEqual: @"Block"]){
         
+        
+        
     }else{
         BidderVC *bidderVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BidderVC"];
         bidderVC.drivewayID = DriwayId;
@@ -150,7 +152,7 @@ CLLocationManager *locationManager;
         NSString *lng =  DrivewayDict[@"Longitude"];
         PointAnnotation *point = [[PointAnnotation alloc] init];
         point.markerDict = DrivewayDict;
-        point.title = [NSString stringWithFormat:@"%@",DrivewayDict[@"Address"]];
+        point.title = [NSString stringWithFormat:@"%@",DrivewayDict[@"Name"]];
         if ([DrivewayDict[@"ParkingType"]  isEqual: @"Driway"] || [DrivewayDict[@"ParkingType"]  isEqual: @"Block"]){
             point.subtitle = @"$10";
         }else{

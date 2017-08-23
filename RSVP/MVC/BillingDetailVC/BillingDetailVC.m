@@ -50,7 +50,7 @@
                            @"NickName": _userDetail[@"NickName"],
                            @"ChaseQuickpayEmail":_qickpayemail.text,
                            @"PhoneNumber":_userDetail[@"PhoneNumber"],
-                           @"ZelleEmail":_zellemail.text,
+                          
                            @"AddressMonthly":_monthlyChecks.text};
     
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Register";
@@ -88,6 +88,7 @@
                            @"Color":_userCardDetail[@"Color"],
                            @"Class":_userCardDetail[@"Class"],
                            @"Plate":_userCardDetail[@"Plate"],
+                           @"ZelleEmail":_zellemail.text,
                            @"State":_userCardDetail[@"State"]};
         NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveCar";
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
