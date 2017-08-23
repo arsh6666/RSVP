@@ -7,9 +7,9 @@
 //
 
 #import "DriveWayInfoVC.h"
+#import "MVPlaceSearchTextField.h"
 
-
-@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,getCordsDelegates>{
+@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,getCordsDelegates,PlaceSearchTextFieldDelegate>{
     CLLocationCoordinate2D location;
     NSString *isOwner;
     NSString *Rented;
@@ -20,8 +20,9 @@
     NSString *blockAvailable;
     BOOL islocationEnable;
     
+    
 }
-@property (strong, nonatomic) IBOutlet UITextField *addressTextField;
+@property (strong, nonatomic) IBOutlet MVPlaceSearchTextField *addressTextField;
 @property (strong, nonatomic) IBOutlet UISwitch *blockAvailableSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *ownerSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *rentingSwitch;
@@ -44,12 +45,56 @@ CLLocationManager *locationManager1;
     locationManager1.delegate = self;
     [locationManager1 requestAlwaysAuthorization];
     [locationManager1 startUpdatingLocation];
+    
+    self.addressTextField.placeSearchDelegate= self;
+    self.addressTextField.strApiKey= @"AIzaSyB6s0dHyu-TaDcYNrTcmTZg4oGV2H3ct-A";
+    self.addressTextField.superViewOfList= self.view;  // View, on which Autocompletion list should be appeared.
+    self.addressTextField.autoCompleteShouldHideOnSelection= YES;
+    self.addressTextField.maximumNumberOfAutoCompleteRows= 5;
    
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
     
+    self.addressTextField.autoCompleteRegularFontName =  @"HelveticaNeue-Bold";
+    self.addressTextField.autoCompleteBoldFontName = @"HelveticaNeue";
+    self.addressTextField.autoCompleteTableCornerRadius=0.0;
+    self.addressTextField.autoCompleteRowHeight=35;
+    self.addressTextField.autoCompleteTableCellTextColor=[UIColor colorWithWhite:0.131 alpha:1.000];
+    self.addressTextField.autoCompleteFontSize=14;
+    self.addressTextField.autoCompleteTableBorderWidth=1.0;
+    self.addressTextField.showTextFieldDropShadowWhenAutoCompleteTableIsOpen=YES;
+    self.addressTextField.autoCompleteShouldHideOnSelection=YES;
+    self.addressTextField.autoCompleteShouldHideClosingKeyboard=YES;
+    self.addressTextField.autoCompleteShouldSelectOnExactMatchAutomatically = YES;
+    self.addressTextField.autoCompleteTableFrame = CGRectMake(5,130, self.addressTextField.frame.size.width, 300.0);
 }
+
+
+#pragma mark - Place search Textfield Delegates
+
+-(void)placeSearch:(MVPlaceSearchTextField*)textField ResponseForSelectedPlace:(GMSPlace*)responseDict{
+    
+    [self.view endEditing:YES];
+    NSLog(@"SELECTED ADDRESS :%@",responseDict);
+}
+
+-(void)placeSearchWillShowResult:(MVPlaceSearchTextField*)textField{
+    
+}
+
+-(void)placeSearchWillHideResult:(MVPlaceSearchTextField*)textField{
+    
+}
+
+-(void)placeSearch:(MVPlaceSearchTextField*)textField ResultCell:(UITableViewCell*)cell withPlaceObject:(PlaceObject*)placeObject atIndex:(NSInteger)index{
+    if(index%2==0){
+        cell.contentView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    }else{
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+    }
+}
+
 
 -(void)getCordinates:(CLLocationCoordinate2D)coordintes{
     [_adressButton setTitle:@"Your location has been set" forState:normal];
@@ -183,7 +228,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
         if (_spaceForRegularCarSwitch.isOn == NO){
             if (_regularCarCommentTextField.text.length == 0){
                 SCLAlertView *alert = [[SCLAlertView alloc] init];
-                [alert showWarning:self title:@"Alert" subTitle:@"Palease specify about space." closeButtonTitle:@"OK" duration:0.0f];
+                [alert showWarning:self title:@"Alert" subTitle:@"Please specify about space." closeButtonTitle:@"OK" duration:0.0f];
                 return;
             }
         }
@@ -195,7 +240,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
         if (_ruleSwitch.isOn){
             if (_rulesTextField.text.length == 0){
                 SCLAlertView *alert = [[SCLAlertView alloc] init];
-                [alert showWarning:self title:@"Alert" subTitle:@"Palease specify rules." closeButtonTitle:@"OK" duration:0.0f];
+                [alert showWarning:self title:@"Alert" subTitle:@"Please specify rules." closeButtonTitle:@"OK" duration:0.0f];
                 return;
             }else{
                 blockAvailable = @"true";
