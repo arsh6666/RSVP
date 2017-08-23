@@ -11,4 +11,5 @@
 @interface PaymentVC : UIViewController
 @property NSDictionary *userDetail;
 @property NSDictionary *userCarDetail;
+@property BOOL isEditProfile;
 @end

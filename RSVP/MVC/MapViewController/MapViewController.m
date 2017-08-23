@@ -64,16 +64,21 @@ CLLocationManager *locationManager;
     CustomAnnotation *an = view.annotation;
     NSDictionary *markerData = an.markerDict;
     NSString *DriwayId = markerData[@"DriwayId"];
-    BidderVC *bidderVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BidderVC"];
-    bidderVC.drivewayID = DriwayId;
-    for(NSInteger i=0; i < myDriveWaylist.count; i++){
-        NSDictionary *drivewayDict = myDriveWaylist[i];
-        NSString *myDrivewayID = drivewayDict[@"DriwayId"];
-        if (myDrivewayID == DriwayId){
-            bidderVC.isMyDriveway = YES;
+    if ([markerData[@"ParkingType"]  isEqual: @"Driway"] || [markerData[@"ParkingType"]  isEqual: @"Block"]){
+        
+    }else{
+        BidderVC *bidderVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BidderVC"];
+        bidderVC.drivewayID = DriwayId;
+        for(NSInteger i=0; i < myDriveWaylist.count; i++){
+            NSDictionary *drivewayDict = myDriveWaylist[i];
+            NSString *myDrivewayID = drivewayDict[@"DriwayId"];
+            if (myDrivewayID == DriwayId){
+                bidderVC.isMyDriveway = YES;
+            }
         }
+        [self.navigationController pushViewController:bidderVC animated:YES];
     }
-    [self.navigationController pushViewController:bidderVC animated:YES];
+   
 }
 
 - (MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{

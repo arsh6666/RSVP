@@ -18,7 +18,18 @@
     // Callout settings - if you want a callout bubble
     self.canShowCallout = YES;
     self.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    self.image = [UIImage imageNamed:@"map-marker"];
+    //driveway = 1
+    //block = 2
+    //steet = 3
+    NSString *ParkingType = markerDict[@"ParkingType"];
+    if ([ParkingType  isEqual: @"Driway"]){
+        self.image = [UIImage imageNamed:@"bluemarker"];
+    }
+    if ([ParkingType  isEqual: @"Block"]){
+        self.image = [UIImage imageNamed:@"blackmarker"];
+    }else{
+        self.image = [UIImage imageNamed:@"map-marker"];
+    }
     return self;
 
 }

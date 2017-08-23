@@ -26,6 +26,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)backButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (IBAction)nextButtonAction:(id)sender {
     if (_qickpayemail.text.length == 0 && _zellemail.text.length == 0 && _monthlyChecks.text.length == 0){
         SCLAlertView *alert = [[SCLAlertView alloc] init];
@@ -46,7 +49,7 @@
                            @"Password": _userDetail[@"Password"],
                            @"NickName": _userDetail[@"NickName"],
                            @"ChaseQuickpayEmail":_qickpayemail.text,
-                           @"PhoneNumber":@"9876543210",
+                           @"PhoneNumber":_userDetail[@"PhoneNumber"],
                            @"ZelleEmail":_zellemail.text,
                            @"AddressMonthly":_monthlyChecks.text};
     

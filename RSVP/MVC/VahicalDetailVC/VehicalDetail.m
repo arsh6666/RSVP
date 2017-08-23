@@ -56,34 +56,39 @@
 
 
 - (IBAction)nextButtonAction:(id)sender {
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    if (_carMakeTextField.text.length == 0){
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter car make." closeButtonTitle:@"OK" duration:0.0f];
-        return;
-    }
-    if (_modelTextfield.text.length == 0){
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter car model." closeButtonTitle:@"OK" duration:0.0f];
-        return;
-    }
-    if (_coloTextField.text.length == 0){
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter color of the car." closeButtonTitle:@"OK" duration:0.0f];
-        return;
-    }
-    if (_classTextField.text.length == 0){
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter class of the car." closeButtonTitle:@"OK" duration:0.0f];
-        return;
-    }
-    if (_plateTextField.text.length == 0){
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter car plate number." closeButtonTitle:@"OK" duration:0.0f];
-        return;
-    }
-    if (_StateTextField.text.length == 0){
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter state." closeButtonTitle:@"OK" duration:0.0f];
-        return;
+    if (_isEditProfile){
+        [self.navigationController popViewControllerAnimated:YES];
     }else{
-        [self webService];
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        if (_carMakeTextField.text.length == 0){
+            [alert showWarning:self title:@"Alert" subTitle:@"Please enter car make." closeButtonTitle:@"OK" duration:0.0f];
+            return;
+        }
+        if (_modelTextfield.text.length == 0){
+            [alert showWarning:self title:@"Alert" subTitle:@"Please enter car model." closeButtonTitle:@"OK" duration:0.0f];
+            return;
+        }
+        if (_coloTextField.text.length == 0){
+            [alert showWarning:self title:@"Alert" subTitle:@"Please enter color of the car." closeButtonTitle:@"OK" duration:0.0f];
+            return;
+        }
+        if (_classTextField.text.length == 0){
+            [alert showWarning:self title:@"Alert" subTitle:@"Please enter class of the car." closeButtonTitle:@"OK" duration:0.0f];
+            return;
+        }
+        if (_plateTextField.text.length == 0){
+            [alert showWarning:self title:@"Alert" subTitle:@"Please enter car plate number." closeButtonTitle:@"OK" duration:0.0f];
+            return;
+        }
+        if (_StateTextField.text.length == 0){
+            [alert showWarning:self title:@"Alert" subTitle:@"Please enter state." closeButtonTitle:@"OK" duration:0.0f];
+            return;
+        }else{
+            [self webService];
+        }
+        
     }
-    
+   
 }
 
 

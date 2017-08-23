@@ -57,9 +57,8 @@
  possibleCompletionsForString:(NSString *)string
             completionHandler:(void (^)(NSArray *))handler
 {
-        NSString *selected = [[NSUserDefaults standardUserDefaults]valueForKey:@"CityName"];
 
-        NSString *aQuery=[NSString stringWithFormat:@"%@ %@",selected,textField.text];
+        NSString *aQuery=[NSString stringWithFormat:@"%@",textField.text];
         [NSObject cancelPreviousPerformRequestsWithTarget:_placesClient selector:@selector(autocompleteQuery:bounds:filter:callback:) object:self];
     
         if(aQuery.length>0){

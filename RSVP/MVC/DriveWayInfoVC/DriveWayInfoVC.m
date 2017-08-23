@@ -5,11 +5,10 @@
 //  Created by Maninder Singh on 10/08/17.
 //  Copyright © 2017 Arshdeep Singh. All rights reserved.
 //
-
-#import "DriveWayInfoVC.h"
 #import "MVPlaceSearchTextField.h"
+#import "DriveWayInfoVC.h"
 
-@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,getCordsDelegates,PlaceSearchTextFieldDelegate>{
+@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,PlaceSearchTextFieldDelegate>{
     CLLocationCoordinate2D location;
     NSString *isOwner;
     NSString *Rented;
@@ -22,6 +21,7 @@
     
     
 }
+@property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet MVPlaceSearchTextField *addressTextField;
 @property (strong, nonatomic) IBOutlet UISwitch *blockAvailableSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *ownerSwitch;
@@ -47,8 +47,8 @@ CLLocationManager *locationManager1;
     [locationManager1 startUpdatingLocation];
     
     self.addressTextField.placeSearchDelegate= self;
-    self.addressTextField.strApiKey= @"AIzaSyB6s0dHyu-TaDcYNrTcmTZg4oGV2H3ct-A";
-    self.addressTextField.superViewOfList= self.view;  // View, on which Autocompletion list should be appeared.
+    self.addressTextField.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+    self.addressTextField.superViewOfList= self.contentView;  // View, on which Autocompletion list should be appeared.
     self.addressTextField.autoCompleteShouldHideOnSelection= YES;
     self.addressTextField.maximumNumberOfAutoCompleteRows= 5;
    
@@ -67,14 +67,14 @@ CLLocationManager *locationManager1;
     self.addressTextField.autoCompleteShouldHideOnSelection=YES;
     self.addressTextField.autoCompleteShouldHideClosingKeyboard=YES;
     self.addressTextField.autoCompleteShouldSelectOnExactMatchAutomatically = YES;
-    self.addressTextField.autoCompleteTableFrame = CGRectMake(5,130, self.addressTextField.frame.size.width, 300.0);
+    self.addressTextField.autoCompleteTableFrame = CGRectMake(20,95, self.addressTextField.frame.size.width, 300.0);
 }
 
 
 #pragma mark - Place search Textfield Delegates
 
--(void)placeSearch:(MVPlaceSearchTextField*)textField ResponseForSelectedPlace:(GMSPlace*)responseDict{
-    
+-(void)placeSearch:(MVPlaceSearchTextField *)textField ResponseForSelectedPlace:(GMSPlace *)responseDict{
+    location = responseDict.coordinate;
     [self.view endEditing:YES];
     NSLog(@"SELECTED ADDRESS :%@",responseDict);
 }
@@ -96,21 +96,11 @@ CLLocationManager *locationManager1;
 }
 
 
--(void)getCordinates:(CLLocationCoordinate2D)coordintes{
-    [_adressButton setTitle:@"Your location has been set" forState:normal];
-    location = coordintes;
-
-}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    location = userLocation.coordinate;
-}
+
 - (IBAction)ownerButtonAction:(id)sender {
     if (_ownerSwitch.isOn){
         [_rentingSwitch setOn:NO];
@@ -126,9 +116,7 @@ CLLocationManager *locationManager1;
     }
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    location = newLocation.coordinate;
-}
+
 
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status{

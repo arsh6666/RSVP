@@ -38,6 +38,8 @@
 		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
 		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
+		37FE719D1F4E014D0069729D /* blackmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FE719B1F4E014D0069729D /* blackmarker.png */; };
+		37FE719E1F4E014D0069729D /* bluemarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FE719C1F4E014D0069729D /* bluemarker.png */; };
 		811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4143DBFD729961195176AC80 /* libPods-RSVP.a */; };
 		CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */; };
 		F3E85453C9B0CDAD0155734C /* libPods-RSVPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */; };
@@ -150,6 +152,8 @@
 		37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleVC.m; path = ScheduleVC/ScheduleVC.m; sourceTree = "<group>"; };
 		37E0710A1F3B990900AB23F5 /* DriveWayInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DriveWayInfoVC.h; path = DriveWayInfoVC/DriveWayInfoVC.h; sourceTree = "<group>"; };
 		37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DriveWayInfoVC.m; path = DriveWayInfoVC/DriveWayInfoVC.m; sourceTree = "<group>"; };
+		37FE719B1F4E014D0069729D /* blackmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackmarker.png; sourceTree = "<group>"; };
+		37FE719C1F4E014D0069729D /* bluemarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluemarker.png; sourceTree = "<group>"; };
 		4143DBFD729961195176AC80 /* libPods-RSVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFA6E3516E671F9563A106 /* Pods-RSVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,8 +259,8 @@
 		37018A0D1F4270D500125B55 /* StreetParkingVC */ = {
 			isa = PBXGroup;
 			children = (
-				37018A0B1F4270CD00125B55 /* StreetParkingVC.m */,
 				37018A0A1F4270CD00125B55 /* StreetParkingVC.h */,
+				37018A0B1F4270CD00125B55 /* StreetParkingVC.m */,
 			);
 			name = StreetParkingVC;
 			sourceTree = "<group>";
@@ -557,6 +561,8 @@
 				379B83351F42BCFE001D1A2C /* tick.png */,
 				3717728D1F407312001DC1D7 /* map-marker.png */,
 				378AE4491F3891260037EE8B /* man.png */,
+				37FE719B1F4E014D0069729D /* blackmarker.png */,
+				37FE719C1F4E014D0069729D /* bluemarker.png */,
 				378AE4471F3890A30037EE8B /* star.png */,
 				37175B2E1F38EA3900D6E535 /* menu-icon.png */,
 				FC3EF4AA1F2BF34B008D3BFD /* Msg.png */,
@@ -876,12 +882,14 @@
 				378AE44E1F38A61C0037EE8B /* pencil.png in Resources */,
 				FC3EF47F1F2BC903008D3BFD /* login.png in Resources */,
 				379B83361F42BCFE001D1A2C /* tick.png in Resources */,
+				37FE719D1F4E014D0069729D /* blackmarker.png in Resources */,
 				FC3EF47B1F2BC785008D3BFD /* 29ltbukrabolditalic.otf in Resources */,
 				FC3EF49B1F2BD4EB008D3BFD /* menuBtn.png in Resources */,
 				FC3EF4821F2BCB2B008D3BFD /* img2.png in Resources */,
 				3717728E1F407312001DC1D7 /* map-marker.png in Resources */,
 				FC3EF4A91F2BF1A7008D3BFD /* user.png in Resources */,
 				FC3EF47D1F2BC785008D3BFD /* 29ltbukraregular.otf in Resources */,
+				37FE719E1F4E014D0069729D /* bluemarker.png in Resources */,
 				FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */,
 				FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */,
 				378AE44C1F3891770037EE8B /* parking.jpg in Resources */,

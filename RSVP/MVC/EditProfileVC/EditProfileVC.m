@@ -50,6 +50,11 @@
     vc.isEditProfile = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (IBAction)editCardDetail:(id)sender {
+    PaymentVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentVC"];
+    vc.isEditProfile = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 
