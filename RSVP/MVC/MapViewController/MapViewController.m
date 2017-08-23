@@ -90,6 +90,7 @@ CLLocationManager *locationManager;
 
 -(void)webService{
     [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayinfoList?UserId=";
     
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
@@ -97,6 +98,8 @@ CLLocationManager *locationManager;
     [manager1 GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *jsonDict = responseObject;
         [SVProgressHUD dismiss];
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+
         if ([jsonDict[@"Success"] boolValue]){
             DriwayinfoList = jsonDict[@"DriwayinfoList"];
             [self getMyDrivayList];
@@ -114,6 +117,8 @@ CLLocationManager *locationManager;
 
 -(void)getMyDrivayList{
     [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayinfoList?UserId=";
     NSString *UrlToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
@@ -121,6 +126,7 @@ CLLocationManager *locationManager;
     [manager1 GET:UrlToHit parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *jsonDict = responseObject;
         [SVProgressHUD dismiss];
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
         if ([jsonDict[@"Success"] boolValue]){
             myDriveWaylist = jsonDict[@"DriwayinfoList"];
             [DriwayinfoList arrayByAddingObject:myDriveWaylist];

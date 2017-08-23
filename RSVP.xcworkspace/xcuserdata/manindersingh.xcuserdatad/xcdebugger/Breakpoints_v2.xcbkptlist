@@ -19,13 +19,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSVP/MVC/BillingDetailVC/BillingDetailVC.m"
-            timestampString = "524947050.376982"
+            filePath = "RSVP/Libraries/ABCGooglePlacesAutoComplete/ABCGoogleAutoCompleteResult.h"
+            timestampString = "525082790.418929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-webService"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "name"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSVP/MVC/DriveWayInfoVC/DriveWayInfoVC.m"
+            timestampString = "525093904.224626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-getCordinates:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,12 +51,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSVP/MVC/BillingDetailVC/BillingDetailVC.m"
-            timestampString = "524947118.524354"
+            filePath = "RSVP/MVC/DriveWayInfoVC/DriveWayInfoVC.m"
+            timestampString = "525093880.970303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "-webService"
             landmarkType = "7">
          </BreakpointContent>

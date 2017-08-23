@@ -26,6 +26,7 @@
 		378AE44E1F38A61C0037EE8B /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE44D1F38A61C0037EE8B /* pencil.png */; };
 		378AE4511F38A7CA0037EE8B /* VehicalDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 378AE4501F38A7CA0037EE8B /* VehicalDetail.m */; };
 		378AE4561F38A8540037EE8B /* PaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 378AE4551F38A8540037EE8B /* PaymentVC.m */; };
+		378BF9B71F4C07F400A32638 /* GoogleMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 378BF9B61F4C07F400A32638 /* GoogleMapVC.m */; };
 		379B83341F42BC90001D1A2C /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 379B83321F42BC90001D1A2C /* box.png */; };
 		379B83361F42BCFE001D1A2C /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 379B83351F42BCFE001D1A2C /* tick.png */; };
 		379B833A1F42C458001D1A2C /* MyProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 379B83391F42C458001D1A2C /* MyProfileVC.m */; };
@@ -33,6 +34,7 @@
 		37AC9D771F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */; };
 		37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */; };
 		37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7E1F442AD700751851 /* MyDrivewayList.m */; };
+		37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */; };
 		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
 		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
@@ -123,6 +125,8 @@
 		378AE4501F38A7CA0037EE8B /* VehicalDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VehicalDetail.m; path = VahicalDetailVC/VehicalDetail.m; sourceTree = "<group>"; };
 		378AE4541F38A8540037EE8B /* PaymentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentVC.h; path = PaymentVC/PaymentVC.h; sourceTree = "<group>"; };
 		378AE4551F38A8540037EE8B /* PaymentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentVC.m; path = PaymentVC/PaymentVC.m; sourceTree = "<group>"; };
+		378BF9B51F4C07F400A32638 /* GoogleMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleMapVC.h; path = GoogleMapVC/GoogleMapVC.h; sourceTree = "<group>"; };
+		378BF9B61F4C07F400A32638 /* GoogleMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleMapVC.m; path = GoogleMapVC/GoogleMapVC.m; sourceTree = "<group>"; };
 		379B83321F42BC90001D1A2C /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		379B83351F42BCFE001D1A2C /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
 		379B83381F42C458001D1A2C /* MyProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyProfileVC.h; path = MyProfileVC/MyProfileVC.h; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayListcell.m; path = MyDrivewayListcell/MyDrivewayListcell.m; sourceTree = "<group>"; };
 		37AC9D7D1F442AD700751851 /* MyDrivewayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDrivewayList.h; path = MyDrivewayList/MyDrivewayList.h; sourceTree = "<group>"; };
 		37AC9D7E1F442AD700751851 /* MyDrivewayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayList.m; path = MyDrivewayList/MyDrivewayList.m; sourceTree = "<group>"; };
+		37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Privacy-Policy-pdf-english.pdf"; sourceTree = "<group>"; };
 		37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
 		37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
 		37DD5A8D1F46BBFB0095F7E8 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleVC.h; path = ScheduleVC/ScheduleVC.h; sourceTree = "<group>"; };
@@ -337,6 +342,15 @@
 				378AE4551F38A8540037EE8B /* PaymentVC.m */,
 			);
 			name = PaymentVC;
+			sourceTree = "<group>";
+		};
+		378BF9B81F4C07FC00A32638 /* GoogleMapVC */ = {
+			isa = PBXGroup;
+			children = (
+				378BF9B51F4C07F400A32638 /* GoogleMapVC.h */,
+				378BF9B61F4C07F400A32638 /* GoogleMapVC.m */,
+			);
+			name = GoogleMapVC;
 			sourceTree = "<group>";
 		};
 		379B83371F42C42D001D1A2C /* MyProfileVC */ = {
@@ -545,6 +559,7 @@
 		FC3EF4641F2BBC45008D3BFD /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */,
 				37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */,
 				FC3EF4651F2BBC45008D3BFD /* iCarousel */,
 			);
@@ -583,6 +598,7 @@
 				37175B281F38D26C00D6E535 /* BidVC */,
 				37E0710D1F3B991300AB23F5 /* DriveWayInfoVC */,
 				37018A0D1F4270D500125B55 /* StreetParkingVC */,
+				378BF9B81F4C07FC00A32638 /* GoogleMapVC */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -804,6 +820,7 @@
 				378AE44A1F3891260037EE8B /* man.png in Resources */,
 				37175B2F1F38EA3900D6E535 /* menu-icon.png in Resources */,
 				FC3EF4831F2BCB2B008D3BFD /* signUp.png in Resources */,
+				37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */,
 				FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */,
 				FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */,
 				FC3EF4A51F2BE723008D3BFD /* iconBack.png in Resources */,
@@ -1008,6 +1025,7 @@
 				FC3EF4931F2BD169008D3BFD /* MapViewController.m in Sources */,
 				FC3EF4311F2BB89F008D3BFD /* main.m in Sources */,
 				37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */,
+				378BF9B71F4C07F400A32638 /* GoogleMapVC.m in Sources */,
 				378AE4561F38A8540037EE8B /* PaymentVC.m in Sources */,
 				FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */,
 				371FE25C1F4A155E00AC4680 /* EditProfileVC.m in Sources */,

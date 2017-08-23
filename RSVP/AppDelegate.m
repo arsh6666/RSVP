@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
+    [GMSServices provideAPIKey:@"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY"];
     [[SingleLineTextField appearance] setLineDisabledColor:[UIColor cyanColor]];
     [[SingleLineTextField appearance] setLineNormalColor:[UIColor grayColor]];
     [[SingleLineTextField appearance] setLineSelectedColor:[UIColor whiteColor]];

@@ -37,6 +37,9 @@
 #import "ScheduleCell.h"
 #import "MyDrivewayList.h"
 #import "EditProfileVC.h"
+#import "GoogleMapVC.h"
+#import <GoogleMaps/GoogleMaps.h>
+#import <GooglePlaces/GooglePlaces.h>
 #import <SVProgressHUD.h>
 #import <MapKit/MapKit.h>
 #import <RESideMenu/RESideMenu.h>

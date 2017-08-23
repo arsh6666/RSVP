@@ -9,6 +9,8 @@ target 'RSVP' do
     pod 'SCLAlertView-Objective-C', '~> 1.1'
     pod 'AFNetworking', '~> 3.0'
     pod 'SVProgressHUD'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
