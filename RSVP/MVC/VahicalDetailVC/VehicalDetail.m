@@ -96,13 +96,14 @@
 }
 
 -(void)webService{
-    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
+    NSDictionary *dict = @{
                            @"Brand":_carMakeTextField.text,
                            @"Model": _modelTextfield.text,
                            @"Color":_coloTextField.text,
                            @"Class":_classTextField.text,
                            @"Plate":_plateTextField.text,
-                           @"State":_StateTextField.text};
+                           @"State":_StateTextField.text
+                           };
     PaymentVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentVC"];
     hvc.userDetail = _userDetail;
     hvc.userCarDetail = dict;

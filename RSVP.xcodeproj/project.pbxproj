@@ -72,6 +72,11 @@
 		FC3EF4A81F2BF1A7008D3BFD /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A61F2BF1A7008D3BFD /* pass.png */; };
 		FC3EF4A91F2BF1A7008D3BFD /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A71F2BF1A7008D3BFD /* user.png */; };
 		FC3EF4AB1F2BF34B008D3BFD /* Msg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4AA1F2BF34B008D3BFD /* Msg.png */; };
+		FCAE95C41F4DE746006936BA /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */; };
+		FCAE95C51F4DE746006936BA /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95BD1F4DE746006936BA /* NSString+Levenshtein.m */; };
+		FCAE95C61F4DE746006936BA /* MVPlaceSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95BF1F4DE746006936BA /* MVPlaceSearchTextField.m */; };
+		FCAE95C71F4DE746006936BA /* PlaceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95C11F4DE746006936BA /* PlaceDetail.m */; };
+		FCAE95C81F4DE746006936BA /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95C31F4DE746006936BA /* PlaceObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +208,19 @@
 		FC3EF4A61F2BF1A7008D3BFD /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
 		FC3EF4A71F2BF1A7008D3BFD /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		FC3EF4AA1F2BF34B008D3BFD /* Msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Msg.png; sourceTree = "<group>"; };
+		FCAE95B71F4DE746006936BA /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		FCAE95B91F4DE746006936BA /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		FCAE95BA1F4DE746006936BA /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		FCAE95BB1F4DE746006936BA /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		FCAE95BC1F4DE746006936BA /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		FCAE95BD1F4DE746006936BA /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		FCAE95BE1F4DE746006936BA /* MVPlaceSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVPlaceSearchTextField.h; sourceTree = "<group>"; };
+		FCAE95BF1F4DE746006936BA /* MVPlaceSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVPlaceSearchTextField.m; sourceTree = "<group>"; };
+		FCAE95C01F4DE746006936BA /* PlaceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetail.h; sourceTree = "<group>"; };
+		FCAE95C11F4DE746006936BA /* PlaceDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetail.m; sourceTree = "<group>"; };
+		FCAE95C21F4DE746006936BA /* PlaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceObject.h; sourceTree = "<group>"; };
+		FCAE95C31F4DE746006936BA /* PlaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -559,6 +577,7 @@
 		FC3EF4641F2BBC45008D3BFD /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FCAE95B51F4DE746006936BA /* MVPlaceSearchTextField */,
 				37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */,
 				37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */,
 				FC3EF4651F2BBC45008D3BFD /* iCarousel */,
@@ -695,6 +714,34 @@
 			name = HomeViewController;
 			sourceTree = "<group>";
 		};
+		FCAE95B51F4DE746006936BA /* MVPlaceSearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE95B61F4DE746006936BA /* MLPAutoCompleteTextField */,
+				FCAE95BE1F4DE746006936BA /* MVPlaceSearchTextField.h */,
+				FCAE95BF1F4DE746006936BA /* MVPlaceSearchTextField.m */,
+				FCAE95C01F4DE746006936BA /* PlaceDetail.h */,
+				FCAE95C11F4DE746006936BA /* PlaceDetail.m */,
+				FCAE95C21F4DE746006936BA /* PlaceObject.h */,
+				FCAE95C31F4DE746006936BA /* PlaceObject.m */,
+			);
+			path = MVPlaceSearchTextField;
+			sourceTree = "<group>";
+		};
+		FCAE95B61F4DE746006936BA /* MLPAutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FCAE95B71F4DE746006936BA /* MLPAutoCompleteTextField.h */,
+				FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */,
+				FCAE95B91F4DE746006936BA /* MLPAutoCompleteTextFieldDataSource.h */,
+				FCAE95BA1F4DE746006936BA /* MLPAutoCompleteTextFieldDelegate.h */,
+				FCAE95BB1F4DE746006936BA /* MLPAutoCompletionObject.h */,
+				FCAE95BC1F4DE746006936BA /* NSString+Levenshtein.h */,
+				FCAE95BD1F4DE746006936BA /* NSString+Levenshtein.m */,
+			);
+			path = MLPAutoCompleteTextField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -771,7 +818,7 @@
 				TargetAttributes = {
 					FC3EF42B1F2BB89F008D3BFD = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = AV3C87DRLW;
+						DevelopmentTeam = 96D398C43S;
 						ProvisioningStyle = Automatic;
 					};
 					FC3EF4441F2BB89F008D3BFD = {
@@ -871,7 +918,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */ = {
@@ -901,7 +948,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		679D029362722BC91899E1C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -916,7 +963,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		886B0042051094AD9C1E0E3D /* [CP] Embed Pods Frameworks */ = {
@@ -1003,7 +1050,9 @@
 			files = (
 				379B833A1F42C458001D1A2C /* MyProfileVC.m in Sources */,
 				FC3EF48B1F2BD0C5008D3BFD /* LoginViewController.m in Sources */,
+				FCAE95C61F4DE746006936BA /* MVPlaceSearchTextField.m in Sources */,
 				FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */,
+				FCAE95C81F4DE746006936BA /* PlaceObject.m in Sources */,
 				FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */,
 				37175B191F38D13900D6E535 /* ParkInVC.m in Sources */,
 				37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */,
@@ -1024,13 +1073,16 @@
 				37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */,
 				FC3EF4931F2BD169008D3BFD /* MapViewController.m in Sources */,
 				FC3EF4311F2BB89F008D3BFD /* main.m in Sources */,
+				FCAE95C71F4DE746006936BA /* PlaceDetail.m in Sources */,
 				37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */,
 				378BF9B71F4C07F400A32638 /* GoogleMapVC.m in Sources */,
 				378AE4561F38A8540037EE8B /* PaymentVC.m in Sources */,
 				FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */,
 				371FE25C1F4A155E00AC4680 /* EditProfileVC.m in Sources */,
 				37175B2D1F38E37800D6E535 /* BidderCell.m in Sources */,
+				FCAE95C41F4DE746006936BA /* MLPAutoCompleteTextField.m in Sources */,
 				371772851F403243001DC1D7 /* CarMakeCell.m in Sources */,
+				FCAE95C51F4DE746006936BA /* NSString+Levenshtein.m in Sources */,
 				FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */,
 				371772891F406836001DC1D7 /* CustomAnnotation.m in Sources */,
 				3717728C1F4070D2001DC1D7 /* PointAnnotation.m in Sources */,
@@ -1185,11 +1237,11 @@
 			baseConfigurationReference = 2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AV3C87DRLW;
+				DEVELOPMENT_TEAM = 96D398C43S;
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1199,11 +1251,11 @@
 			baseConfigurationReference = CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = AV3C87DRLW;
+				DEVELOPMENT_TEAM = 96D398C43S;
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
