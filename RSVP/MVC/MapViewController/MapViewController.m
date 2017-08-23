@@ -151,6 +151,12 @@ CLLocationManager *locationManager;
         PointAnnotation *point = [[PointAnnotation alloc] init];
         point.markerDict = DrivewayDict;
         point.title = [NSString stringWithFormat:@"%@",DrivewayDict[@"Address"]];
+        if ([DrivewayDict[@"ParkingType"]  isEqual: @"Driway"] || [DrivewayDict[@"ParkingType"]  isEqual: @"Block"]){
+            point.subtitle = @"$10";
+        }else{
+            point.subtitle = @"$1";
+        }
+        
         point.coordinate = CLLocationCoordinate2DMake([Lat doubleValue], [lng doubleValue]);
         [self.mapView addAnnotation:point];
         
