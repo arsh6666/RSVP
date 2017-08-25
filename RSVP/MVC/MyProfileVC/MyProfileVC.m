@@ -37,8 +37,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)editProfileButton:(id)sender {
-    EditProfileVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EditProfileVC"];
-    vc.myProfileDetail = myDetail;
+    ConfirmationVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ConfirmationVC"];
+    //vc.myProfileDetail = myDetail;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
