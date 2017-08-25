@@ -11,6 +11,7 @@ target 'RSVP' do
     pod 'SVProgressHUD'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'authorizenet-sdk'
 # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 

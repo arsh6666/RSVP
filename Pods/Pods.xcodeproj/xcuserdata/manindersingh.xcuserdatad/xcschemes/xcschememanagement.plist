@@ -54,30 +54,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>authorizenet-sdk.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>065F07F61C01C64085A1794212FBE840</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0CA463AB63409ABA5708999392AAF597</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>25D384B58453B3B3EEDA0EAF73821D49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>354C7EE7AB06730F48FEFE0189BCE976</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6731433B6C241D9B9BC6EBA6E3BCAF8C</key>
+		<key>2E3C99F8C8452E46C92A132A7744FA83</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>904F4F27FD314010A3812EB2A9306183</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>907FE7C7512469AF1966542CF85C1132</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +97,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B25C31FC1DF35B264E4F7FE7F345A4FE</key>
+		<key>BDF09EA92113DB854C6169BF2A23503F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC8E031C28E312539952D4FD53F6B819</key>
+		<key>DE1301ACB2A3DFBE7527FD5A3AB96163</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6E37C24EAA89B4E119B2AC38E161699</key>
+		<key>F3BD7896F9888661C109662E1FCB4EDD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4B3C1F8AEE6D971C3112D5BC33DA766</key>
 		<dict>
 			<key>primary</key>
 			<true/>

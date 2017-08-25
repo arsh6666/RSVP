@@ -37,6 +37,7 @@
 		37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */; };
 		37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7E1F442AD700751851 /* MyDrivewayList.m */; };
 		37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */; };
+		37B3E2271F50217A0092F778 /* AnetEMVSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */; };
 		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
 		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
@@ -152,6 +153,7 @@
 		37AC9D7D1F442AD700751851 /* MyDrivewayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDrivewayList.h; path = MyDrivewayList/MyDrivewayList.h; sourceTree = "<group>"; };
 		37AC9D7E1F442AD700751851 /* MyDrivewayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayList.m; path = MyDrivewayList/MyDrivewayList.m; sourceTree = "<group>"; };
 		37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Privacy-Policy-pdf-english.pdf"; sourceTree = "<group>"; };
+		37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnetEMVSdk.framework; sourceTree = "<group>"; };
 		37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
 		37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
 		37DD5A8D1F46BBFB0095F7E8 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleVC.h; path = ScheduleVC/ScheduleVC.h; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			files = (
 				FC3EF4991F2BD41B008D3BFD /* MapKit.framework in Frameworks */,
 				811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */,
+				37B3E2271F50217A0092F778 /* AnetEMVSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +610,7 @@
 		FC3EF4641F2BBC45008D3BFD /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */,
 				FCAE95B51F4DE746006936BA /* MVPlaceSearchTextField */,
 				37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */,
 				37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */,
@@ -952,7 +956,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */ = {
@@ -982,7 +986,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		679D029362722BC91899E1C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -997,7 +1001,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		886B0042051094AD9C1E0E3D /* [CP] Embed Pods Frameworks */ = {
@@ -1274,9 +1278,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96D398C43S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RSVP/Libraries",
+				);
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RSVP/Libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1288,9 +1301,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96D398C43S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RSVP/Libraries",
+				);
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
 				INFOPLIST_FILE = RSVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RSVP/Libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
