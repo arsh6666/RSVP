@@ -22,6 +22,8 @@
 #import "ForgotPasswordVC.h"
 #import "VehicalDetail.h"
 #import "BillingDetailVC.h"
+#import "ConfirmationVC.h"
+#import "AgreementVC.h"
 #import "BidderCell.h"
 #import "MapViewController.h"
 #import "DriveWayInfoVC.h"

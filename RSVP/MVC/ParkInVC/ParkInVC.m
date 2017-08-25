@@ -27,7 +27,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [_pickerView setHidden:YES];
+    [_pickerFrom addTarget:self  action:@selector(DateChange:)
+         forControlEvents:UIControlEventValueChanged];
+    [_pickerTo addTarget:self  action:@selector(DateChange:)
+          forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,8 +40,7 @@
 - (IBAction)menuButtonAction:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-- (IBAction)doneButtonAction:(id)sender {
-    [_pickerView setHidden:YES];
+- (void)DateChange:(id)sender {
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"hh:mm a"]; //24hr time format
     
@@ -58,9 +60,7 @@
     _sunto.text = To;
     
 }
-- (IBAction)editButtonAction:(id)sender {
-    [_pickerView setHidden:NO];
-}
+
 - (IBAction)submitButtonAction:(id)sender {
     [self WebService];
 }

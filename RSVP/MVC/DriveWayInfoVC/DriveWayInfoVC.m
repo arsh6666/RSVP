@@ -49,6 +49,7 @@ CLLocationManager *locationManager1;
     
     self.addressTextField.placeSearchDelegate= self;
     self.addressTextField.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+    //@"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
     self.addressTextField.superViewOfList= self.contentView;  // View, on which Autocompletion list should be appeared.
     self.addressTextField.autoCompleteShouldHideOnSelection= YES;
     self.addressTextField.maximumNumberOfAutoCompleteRows= 5;

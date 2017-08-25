@@ -20,6 +20,8 @@
 		3717728C1F4070D2001DC1D7 /* PointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3717728B1F4070D2001DC1D7 /* PointAnnotation.m */; };
 		3717728E1F407312001DC1D7 /* map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 3717728D1F407312001DC1D7 /* map-marker.png */; };
 		371FE25C1F4A155E00AC4680 /* EditProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 371FE25B1F4A155E00AC4680 /* EditProfileVC.m */; };
+		373B29241F4F6773002C02B0 /* AgreementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B29231F4F6773002C02B0 /* AgreementVC.m */; };
+		373B29271F4F6799002C02B0 /* ConfirmationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B29261F4F6799002C02B0 /* ConfirmationVC.m */; };
 		378AE4481F3890A30037EE8B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE4471F3890A30037EE8B /* star.png */; };
 		378AE44A1F3891260037EE8B /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = 378AE4491F3891260037EE8B /* man.png */; };
 		378AE44C1F3891770037EE8B /* parking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 378AE44B1F3891770037EE8B /* parking.jpg */; };
@@ -124,6 +126,10 @@
 		3717728D1F407312001DC1D7 /* map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-marker.png"; sourceTree = "<group>"; };
 		371FE25A1F4A155E00AC4680 /* EditProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileVC.h; path = EditProfileVC/EditProfileVC.h; sourceTree = "<group>"; };
 		371FE25B1F4A155E00AC4680 /* EditProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileVC.m; path = EditProfileVC/EditProfileVC.m; sourceTree = "<group>"; };
+		373B29221F4F6773002C02B0 /* AgreementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AgreementVC.h; path = AgreementVC/AgreementVC.h; sourceTree = "<group>"; };
+		373B29231F4F6773002C02B0 /* AgreementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AgreementVC.m; path = AgreementVC/AgreementVC.m; sourceTree = "<group>"; };
+		373B29251F4F6799002C02B0 /* ConfirmationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfirmationVC.h; path = ConfirmationVC/ConfirmationVC.h; sourceTree = "<group>"; };
+		373B29261F4F6799002C02B0 /* ConfirmationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfirmationVC.m; path = ConfirmationVC/ConfirmationVC.m; sourceTree = "<group>"; };
 		378AE4471F3890A30037EE8B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		378AE4491F3891260037EE8B /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
 		378AE44B1F3891770037EE8B /* parking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = parking.jpg; sourceTree = "<group>"; };
@@ -346,6 +352,24 @@
 				371FE25B1F4A155E00AC4680 /* EditProfileVC.m */,
 			);
 			name = EditProfileDetail;
+			sourceTree = "<group>";
+		};
+		373B29201F4F6738002C02B0 /* ConfirmationVC */ = {
+			isa = PBXGroup;
+			children = (
+				373B29251F4F6799002C02B0 /* ConfirmationVC.h */,
+				373B29261F4F6799002C02B0 /* ConfirmationVC.m */,
+			);
+			name = ConfirmationVC;
+			sourceTree = "<group>";
+		};
+		373B29211F4F6749002C02B0 /* AgreementVC */ = {
+			isa = PBXGroup;
+			children = (
+				373B29221F4F6773002C02B0 /* AgreementVC.h */,
+				373B29231F4F6773002C02B0 /* AgreementVC.m */,
+			);
+			name = AgreementVC;
 			sourceTree = "<group>";
 		};
 		378AE4521F38A7D50037EE8B /* VehicleDetailVC */ = {
@@ -603,6 +627,8 @@
 		FC3EF4681F2BBC45008D3BFD /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				373B29211F4F6749002C02B0 /* AgreementVC */,
+				373B29201F4F6738002C02B0 /* ConfirmationVC */,
 				371FE2591F4A153000AC4680 /* EditProfileDetail */,
 				37AC9D7C1F442AA700751851 /* MyDrivewayList */,
 				37DD5A8C1F46BBBF0095F7E8 /* ScheduleVC */,
@@ -1058,6 +1084,7 @@
 			files = (
 				379B833A1F42C458001D1A2C /* MyProfileVC.m in Sources */,
 				FC3EF48B1F2BD0C5008D3BFD /* LoginViewController.m in Sources */,
+				373B29241F4F6773002C02B0 /* AgreementVC.m in Sources */,
 				FCAE95C61F4DE746006936BA /* MVPlaceSearchTextField.m in Sources */,
 				FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */,
 				FCAE95C81F4DE746006936BA /* PlaceObject.m in Sources */,
@@ -1092,6 +1119,7 @@
 				371772851F403243001DC1D7 /* CarMakeCell.m in Sources */,
 				FCAE95C51F4DE746006936BA /* NSString+Levenshtein.m in Sources */,
 				FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */,
+				373B29271F4F6799002C02B0 /* ConfirmationVC.m in Sources */,
 				371772891F406836001DC1D7 /* CustomAnnotation.m in Sources */,
 				3717728C1F4070D2001DC1D7 /* PointAnnotation.m in Sources */,
 			);
