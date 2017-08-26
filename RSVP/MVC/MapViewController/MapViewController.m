@@ -65,8 +65,9 @@ CLLocationManager *locationManager;
     NSDictionary *markerData = an.markerDict;
     NSString *DriwayId = markerData[@"DriwayId"];
     if ([markerData[@"ParkingType"]  isEqual: @"Driway"] || [markerData[@"ParkingType"]  isEqual: @"Block"]){
-        
-        
+        ConfirmationVC *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"ConfirmationVC"];
+        VC.markerData = markerData;
+        [self.navigationController pushViewController:VC animated:YES];
         
     }else{
         BidderVC *bidderVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BidderVC"];
@@ -165,6 +166,8 @@ CLLocationManager *locationManager;
     }
     
 }
+
+
 
 
 @end

@@ -15,4 +15,8 @@
 @property(nonatomic) NSString *carModelName;
 @property BOOL isEditProfile;
 @property NSDictionary *userDetailFromEdited;
+@property NSString *zellemail;
+@property NSString *quckpay;
+@property NSString *address;
+
 @end

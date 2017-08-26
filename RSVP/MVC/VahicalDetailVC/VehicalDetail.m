@@ -57,7 +57,7 @@
 
 - (IBAction)nextButtonAction:(id)sender {
     if (_isEditProfile){
-        [self.navigationController popViewControllerAnimated:YES];
+        [self updatecarDetail];
     }else{
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         if (_carMakeTextField.text.length == 0){
@@ -110,7 +110,7 @@
                            @"State":_StateTextField.text
                            };
     PaymentVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentVC"];
-    hvc.userDetail = _userDetail;
+    //hvc.userDetail = _userDetail;
     hvc.userCarDetail = dict;
     [self.navigationController pushViewController:hvc animated:YES];
     //    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveCar";
@@ -136,5 +136,41 @@
 }
 
 
+-(void)updatecarDetail{
+    [SVProgressHUD show];
+    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
+                           @"Brand":_carMakeTextField.text,
+                           @"Model": _modelTextfield.text,
+                           @"Color":_coloTextField.text,
+                           @"Class":_classTextField.text,
+                           @"Plate":_plateTextField.text,
+                           @"ZelleEmail":_zellemail,
+                           @"ChaseQuickpayEmail":_quckpay,
+                           @"AddressMonthly":_address,
+                           @"State":_StateTextField.text};
+    
+    
+    PaymentVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentVC"];
+    //hvc.userDetail = _userDetail;
+    hvc.userCarDetail = dict;
+    [self.navigationController pushViewController:hvc animated:YES];
+    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveCar";
+    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager1 PUT:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *jsonDict = responseObject;
+        [SVProgressHUD dismiss];
+        if ([jsonDict[@"Success"] boolValue]){
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            SCLAlertView *alert = [[SCLAlertView alloc] init];
+            [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
+        }
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+        NSLog(@"%@",error);
+    }];
+}
 
 @end

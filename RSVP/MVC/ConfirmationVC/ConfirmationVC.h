@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ConfirmationVC : UIViewController
-
+@property NSDictionary *markerData;
 @end
