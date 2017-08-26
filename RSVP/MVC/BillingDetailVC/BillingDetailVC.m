@@ -35,48 +35,11 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter one of the textfield." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }else{
-        [self webService];
+        [self webServiceCardDetail];
     }
     
 }
 
--(void)webService{
-    [SVProgressHUD show];
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSDictionary *dict = @{@"FirstName":_userDetail[@"FirstName"],
-                           @"LastName": _userDetail[@"LastName"],
-                           @"Email":_userDetail[@"Email"],
-                           @"Password": _userDetail[@"Password"],
-                           @"NickName": _userDetail[@"NickName"],
-                           @"ChaseQuickpayEmail":_qickpayemail.text,
-                           @"PhoneNumber":_userDetail[@"PhoneNumber"],
-                          
-                           @"AddressMonthly":_monthlyChecks.text};
-    
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Register";
-    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
-    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
-           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-               [SVProgressHUD dismiss];
-               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-               NSDictionary *jsonDict = responseObject;
-               if ([jsonDict[@"Success"] boolValue]){
-                   [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%@",jsonDict[@"Id"]] forKey:@"userId"];
-                   [NSUserDefaults.standardUserDefaults setBool:YES forKey:@"isLogin"];
-                   [self webServiceCardDetail];
-                   
-               }else{
-                   SCLAlertView *alert = [[SCLAlertView alloc] init];
-                   [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
-               }
-               NSLog(@"%@",responseObject);
-           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-               [SVProgressHUD dismiss];
-               NSLog(@"%@",error);
-           }];
-    
-}
 
 -(void)webServiceCardDetail{
     [SVProgressHUD show];
@@ -89,6 +52,8 @@
                            @"Class":_userCardDetail[@"Class"],
                            @"Plate":_userCardDetail[@"Plate"],
                            @"ZelleEmail":_zellemail.text,
+                           @"ChaseQuickpayEmail":_qickpayemail.text,
+                           @"AddressMonthly":_monthlyChecks.text,
                            @"State":_userCardDetail[@"State"]};
         NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveCar";
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];

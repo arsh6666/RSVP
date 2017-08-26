@@ -38,6 +38,7 @@
 		37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7E1F442AD700751851 /* MyDrivewayList.m */; };
 		37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */; };
 		37B3E2271F50217A0092F778 /* AnetEMVSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */; };
+		37CE63D41F51CF2300D7E1F9 /* RatingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE63D31F51CF2300D7E1F9 /* RatingVC.m */; };
 		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
 		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
@@ -154,6 +155,8 @@
 		37AC9D7E1F442AD700751851 /* MyDrivewayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayList.m; path = MyDrivewayList/MyDrivewayList.m; sourceTree = "<group>"; };
 		37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Privacy-Policy-pdf-english.pdf"; sourceTree = "<group>"; };
 		37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnetEMVSdk.framework; sourceTree = "<group>"; };
+		37CE63D21F51CF2300D7E1F9 /* RatingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingVC.h; path = RatingVC/RatingVC.h; sourceTree = "<group>"; };
+		37CE63D31F51CF2300D7E1F9 /* RatingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingVC.m; path = RatingVC/RatingVC.m; sourceTree = "<group>"; };
 		37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
 		37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
 		37DD5A8D1F46BBFB0095F7E8 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleVC.h; path = ScheduleVC/ScheduleVC.h; sourceTree = "<group>"; };
@@ -438,6 +441,15 @@
 			name = MyDrivewayList;
 			sourceTree = "<group>";
 		};
+		37CE63D11F51CF0100D7E1F9 /* RatingVC */ = {
+			isa = PBXGroup;
+			children = (
+				37CE63D21F51CF2300D7E1F9 /* RatingVC.h */,
+				37CE63D31F51CF2300D7E1F9 /* RatingVC.m */,
+			);
+			name = RatingVC;
+			sourceTree = "<group>";
+		};
 		37DD5A881F46BAFE0095F7E8 /* ScheduleCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +643,7 @@
 		FC3EF4681F2BBC45008D3BFD /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				37CE63D11F51CF0100D7E1F9 /* RatingVC */,
 				373B29211F4F6749002C02B0 /* AgreementVC */,
 				373B29201F4F6738002C02B0 /* ConfirmationVC */,
 				371FE2591F4A153000AC4680 /* EditProfileDetail */,
@@ -854,8 +867,13 @@
 				TargetAttributes = {
 					FC3EF42B1F2BB89F008D3BFD = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 96D398C43S;
+						DevelopmentTeam = AV3C87DRLW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					FC3EF4441F2BB89F008D3BFD = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1091,6 +1109,7 @@
 				373B29241F4F6773002C02B0 /* AgreementVC.m in Sources */,
 				FCAE95C61F4DE746006936BA /* MVPlaceSearchTextField.m in Sources */,
 				FC3EF46F1F2BBC45008D3BFD /* iCarousel.m in Sources */,
+				37CE63D41F51CF2300D7E1F9 /* RatingVC.m in Sources */,
 				FCAE95C81F4DE746006936BA /* PlaceObject.m in Sources */,
 				FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */,
 				37175B191F38D13900D6E535 /* ParkInVC.m in Sources */,
@@ -1205,6 +1224,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1254,6 +1274,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1277,7 +1298,7 @@
 			baseConfigurationReference = 2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 96D398C43S;
+				DEVELOPMENT_TEAM = AV3C87DRLW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1290,7 +1311,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RSVP/Libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1300,7 +1321,7 @@
 			baseConfigurationReference = CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 96D398C43S;
+				DEVELOPMENT_TEAM = AV3C87DRLW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1313,7 +1334,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RSVP/Libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVPTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

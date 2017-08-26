@@ -22,6 +22,7 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.4.0):
     - GoogleMaps/Base (= 2.4.0)
+  - HCSStarRatingView (1.5)
   - IQKeyboardManager (4.0.13)
   - RESideMenu (4.0.7)
   - SCLAlertView-Objective-C (1.1.2)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - authorizenet-sdk
   - GoogleMaps
   - GooglePlaces
+  - HCSStarRatingView (~> 1.5)
   - IQKeyboardManager
   - RESideMenu
   - SCLAlertView-Objective-C (~> 1.1)
@@ -44,12 +46,13 @@ SPEC CHECKSUMS:
   authorizenet-sdk: e082ace28cda27ef5a68a6a2bbb86d3681ab02b7
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SCLAlertView-Objective-C: 0e54351fa4f98a5c7c6ad3727e6dbb46784534e5
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: a88f98c62d7b67d321006cb0b3eb199b2044b875
+PODFILE CHECKSUM: 1077d9ecf337d646fef414b74eee67bf6e052046
 
 COCOAPODS: 1.1.1

@@ -24,6 +24,17 @@
     [[SingleLineTextField appearance] setLineNormalColor:[UIColor grayColor]];
     [[SingleLineTextField appearance] setLineSelectedColor:[UIColor whiteColor]];
     [[SingleLineTextField appearance] setInputPlaceHolderColor:[UIColor whiteColor]];
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                              if (!error) {
+                                  NSLog(@"request authorization succeeded!");
+                                  //[self showAlert];
+                              }
+                          }];
+
+    
     if ([NSUserDefaults.standardUserDefaults boolForKey:@"isLogin"]){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"mapNVC"];
@@ -65,6 +76,30 @@
     return YES;
 }
 
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+
+}
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    //[self takeActionWithLocalNotification:response.notification];
+}
+
+-(void)showAlert {
+    UIAlertController *objAlertController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"show an alert!" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action) {
+                                       NSLog(@"Ok clicked!");
+                                   }];
+    [objAlertController addAction:cancelAction];
+    
+    
+    [[[[[UIApplication sharedApplication] windows] objectAtIndex:0] rootViewController] presentViewController:objAlertController animated:YES completion:^{
+        
+    }];
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

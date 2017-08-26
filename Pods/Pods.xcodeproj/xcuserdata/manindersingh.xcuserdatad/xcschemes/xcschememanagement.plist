@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HCSStarRatingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>035054759443536D96DBB16DDC0806C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>065F07F61C01C64085A1794212FBE840</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0CA463AB63409ABA5708999392AAF597</key>
+		<key>153B5BAD1253642EACE3DAC7E9D27566</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E3C99F8C8452E46C92A132A7744FA83</key>
+		<key>44B56E97CA3FEC296867A60AFF302EA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E61F2F2502A2191CC5673EC004BB113</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E90AEE404F9D85D4292AC17E1C6665D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDF09EA92113DB854C6169BF2A23503F</key>
+		<key>F223000400C7DE657D84982EEA211DDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE1301ACB2A3DFBE7527FD5A3AB96163</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F3BD7896F9888661C109662E1FCB4EDD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F4B3C1F8AEE6D971C3112D5BC33DA766</key>
+		<key>F8401ED9388AB320698C2014BE415D6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
