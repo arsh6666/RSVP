@@ -539,7 +539,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yas-ex-OIJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fkI-A1-kpB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kyi-53-QnF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kyi-53-QnF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3002,7 +3002,7 @@
             <objects>
                 <navigationController storyboardIdentifier="mapNVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pox-RM-uDV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bqZ-12-bVl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqZ-12-bVl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
