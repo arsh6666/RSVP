@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ParkInVC : UIViewController
-@property NSDictionary *drivewarData;
+
+@property BOOL EditBool;
+@property NSDictionary *scheduleDict;
 @property NSString *day;
 @property NSString *typeOfParking;
 @property NSString *toLabel;

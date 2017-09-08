@@ -9,24 +9,29 @@
 #import "AgreementVC.h"
 #import <UserNotifications/UserNotifications.h>
 
-@interface AgreementVC ()<AuthNetDelegate>
+@interface AgreementVC ()<AuthNetDelegate,MFMailComposeViewControllerDelegate>
 {
     NSTimer *timer;
     int currMinute;
-    int currSeconds;NSString *token;
+    int currSeconds;
+    NSString *token;
     NSString *uniqueIdentifier;
+    NSDictionary *sellerProfile;
 }
 @property (strong, nonatomic) IBOutlet UILabel *sellerLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *buyerLabel;
+@property (strong, nonatomic) IBOutlet AsyncImageView *imgSpot;
+
 @end
 
 @implementation AgreementVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     currMinute=30;
     currSeconds=00;
     [self webServiceUserDetail];
@@ -41,17 +46,21 @@
 
 -(void)viewWillAppear:(BOOL)animated{
    
-    if (_markerData[@"Name"] != [NSNull null]){
-         _sellerLabel.text = _markerData[@"Name"];
-    }
-    if (_markerData[@"Address"] != [NSNull null]){
-        _addressLabel.text = _markerData[@"Address"];
-    }
-
     [self setTime];
 }
+    
+-(void)UpdateView
+{
+    NSLog(@"Seller Detail %@",self.markerData);
+    NSLog(@"UserDetail %@",self.UserProfile);
+    self.buyerLabel.text = [self.UserProfile valueForKey:@"NickName"];
+    self.sellerLabel.text = [sellerProfile valueForKey:@"NickName"];
+    _addressLabel.text = _markerData[@"Address"];
+ 
+}
 
--(void)viewDidDisappear:(BOOL)animated{
+-(void)viewDidDisappear:(BOOL)animated
+{
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     // or @"yyyy-MM-dd hh:mm:ss a" if you prefer the time with AM/PM
@@ -60,39 +69,47 @@
 }
 
 - (IBAction)backButton:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.sideMenuViewController presentLeftMenuViewController];
 }
 
 - (IBAction)addMoreTime:(id)sender {
-    uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    
-    [AuthNet authNetWithEnvironment:ENV_TEST];
-    MobileDeviceLoginRequest *mobileDeviceLoginRequest = [MobileDeviceLoginRequest mobileDeviceLoginRequest];
-    mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.name = @"maninderbindra1991";
-    mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.password = @"Iphone_5s";
-    mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.mobileDeviceId = uniqueIdentifier;
-    AuthNet *an = [AuthNet getInstance];
-    [an setDelegate:self];
-    [an mobileDeviceLoginRequest: mobileDeviceLoginRequest];
+
 }
+    
 - (IBAction)complaintTransaction:(id)sender {
+    
+    // Email Subject
+    NSString *emailTitle = @"issues with this transaction";
+    // Email Content
+    NSString *messageBody = @"";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"info@rsvpny.co"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
 }
 
 
 -(void)start
 {
     timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
-
-    
     
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
     UNMutableNotificationContent *content = [UNMutableNotificationContent new];
     content.title = @"Alert";
-    content.body = @"You have 5 min left, you can add more 5 min if you want.";
+    content.body = @"You have another 5 min to move your car, Please don't be late";
     content.sound = [UNNotificationSound defaultSound];
     UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1500 repeats:NO];
     
     NSString *identifier = @"UYLLocalNotification";
+    
     UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:identifier content:content trigger:trigger];
     
     [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
@@ -126,67 +143,42 @@
     }
 }
 
--(void)paymentSucceeded:(CreateTransactionResponse *)response{
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [self webService];
-    [alert showSuccess:self title:@"Alert" subTitle:[NSString stringWithFormat:@"%@",response.responseReasonText] closeButtonTitle:@"Ok" duration:0.0f];
-    currMinute = currMinute + 15;
+-(void)GetUserImages
+{
     
-}
--(void)emvPaymentSucceeded:(AnetEMVTransactionResponse *)response{
+    [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayImageList?DriwayId=";
+    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[self.markerData valueForKey:@"DriwayId"]]];
+    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager1 GET: URLToHit parameters:nil progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+     {
+         NSDictionary *jsonDict = responseObject;
+         [SVProgressHUD dismiss];
+         if ([jsonDict[@"Success"] boolValue])
+         {
+              [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+             
+             [self UpdateView];
+             NSMutableArray *imageArray = [responseObject valueForKey:@"ImageList"];
+             NSString *urlString = [NSString stringWithFormat:@"http://rsvp.rootflyinfo.com%@",[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
+             self.imgSpot.imageURL = [NSURL URLWithString:urlString];
+         }
+        
+         NSLog(@"%@",responseObject);
+     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         [SVProgressHUD dismiss];
+         NSLog(@"%@",error);
+     }];
+    
+    
     
 }
 
--(void)requestFailed:(AuthNetResponse *)response{
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@",response.responseReasonText] closeButtonTitle:@"OK" duration:0.0f];
-}
-
-- (void) mobileDeviceLoginSucceeded:(MobileDeviceLoginResponse *)response {
-    token = response.sessionToken;
-    
-    CreditCardType *creditCardType = [CreditCardType creditCardType];
-    creditCardType.cardNumber = [NSUserDefaults.standardUserDefaults objectForKey:@"cardNumber"];
-    creditCardType.cardCode = [NSUserDefaults.standardUserDefaults objectForKey:@"cvv"];
-    creditCardType.expirationDate = [NSUserDefaults.standardUserDefaults objectForKey:@"exipryDate"];
-    
-    PaymentType *paymentType = [PaymentType paymentType];
-    paymentType.creditCard = creditCardType;
-    
-    ExtendedAmountType *extendedAmountTypeTax = [ExtendedAmountType extendedAmountType];
-    extendedAmountTypeTax.amount = @"0";
-    extendedAmountTypeTax.name = @"Tax";
-    
-    ExtendedAmountType *extendedAmountTypeShipping = [ExtendedAmountType extendedAmountType];
-    extendedAmountTypeShipping.amount = @"0";
-    extendedAmountTypeShipping.name = @"Shipping";
-    
-    LineItemType *lineItem = [LineItemType lineItem];
-    lineItem.itemName = @"block";
-    lineItem.itemDescription = @"address";
-    lineItem.itemQuantity = @"1";
-    lineItem.itemPrice = @"5";
-    lineItem.itemID = @"1";
-    
-    TransactionRequestType *requestType = [TransactionRequestType transactionRequest];
-    requestType.lineItems = [NSMutableArray arrayWithObject:lineItem];
-    requestType.amount = lineItem.itemPrice;
-    requestType.payment = paymentType;
-    requestType.tax = extendedAmountTypeTax;
-    requestType.shipping = extendedAmountTypeShipping;
-    
-    CreateTransactionRequest *request = [CreateTransactionRequest createTransactionRequest];
-    request.transactionRequest = requestType;
-    request.transactionType = AUTH_CAPTURE;
-    request.anetApiRequest.merchantAuthentication.mobileDeviceId = uniqueIdentifier;
-    request.anetApiRequest.merchantAuthentication.sessionToken = token;
-    
-    AuthNet *an1 = [AuthNet getInstance];
-    [an1 setDelegate:self];
-    [an1 purchaseWithRequest:request];
-}
-
--(void)setTime{
+-(void)setTime
+{
     NSString *getOldTime = [NSUserDefaults.standardUserDefaults objectForKey:@"getTime"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
@@ -196,61 +188,57 @@
 
 }
 
--(void)webService{
-    [SVProgressHUD show];
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
-                           @"ToUserId": _markerData[@"userId"],
-                           @"Amount": @5};
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SavePayment";
-    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
-    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
-           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-               [SVProgressHUD dismiss];
-               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-               NSDictionary *jsonDict = responseObject;
-               if ([jsonDict[@"Success"] boolValue]){
-                   [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%@",jsonDict[@"Id"]] forKey:@"userId"];
-                   [NSUserDefaults.standardUserDefaults setBool:YES forKey:@"isLogin"];
-                   VehicalDetail *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicalDetail"];
-                   [self.navigationController pushViewController:hvc animated:YES];
-                   
-               }else{
-                   SCLAlertView *alert = [[SCLAlertView alloc] init];
-                   [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
-               }
-               NSLog(@"%@",responseObject);
-           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-               [SVProgressHUD dismiss];
-               NSLog(@"%@",error);
-           }];
-    
-}
 
--(void)webServiceUserDetail{
+-(void)webServiceUserDetail
+{
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
+    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[self.markerData valueForKey:@"UserId"]]];
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     [manager1 GET: URLToHit parameters:nil progress:nil
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
               NSDictionary *jsonDict = responseObject;
-              [SVProgressHUD dismiss];
+             // [SVProgressHUD dismiss];
               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
               
-              if ([jsonDict[@"Success"] boolValue]){
-                  _buyerLabel.text = jsonDict[@"FirstName"];
+              if ([jsonDict[@"Success"] boolValue])
+              {
+                  sellerProfile = responseObject;
+                  [self GetUserImages];
               }
               NSLog(@"%@",responseObject);
-          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+          }
+          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
               [SVProgressHUD dismiss];
               NSLog(@"%@",error);
           }];
     
 }
 
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+    {
+        switch (result)
+        {
+            case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+            case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+            case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+            case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+            default:
+            break;
+        }
+        
+        // Close the Mail Interface
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
 
 @end

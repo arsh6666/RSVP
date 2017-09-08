@@ -13,10 +13,11 @@
     CLLocationCoordinate2D location;
 
 }
-@property (strong, nonatomic) IBOutlet UITextField *aproxAddress;
+@property (strong, nonatomic) IBOutlet MVPlaceSearchTextField *aproxAddress;
 
 @property (strong, nonatomic) IBOutlet UITextField *stateTextField;
 @property (strong, nonatomic) IBOutlet MVPlaceSearchTextField *pprovedAddress;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollVew;
 
 @end
 
@@ -25,15 +26,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    self.aproxAddress.placeSearchDelegate = self;
+    self.aproxAddress.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+    self.aproxAddress.superViewOfList= self.scrollVew;  // View, on which Autocompletion list should be appeared.
+    self.aproxAddress.autoCompleteShouldHideOnSelection= YES;
+    self.aproxAddress.maximumNumberOfAutoCompleteRows= 5;
+
+    
 
     self.pprovedAddress.placeSearchDelegate = self;
     self.pprovedAddress.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
-    self.pprovedAddress.superViewOfList= self.view;  // View, on which Autocompletion list should be appeared.
+    self.pprovedAddress.superViewOfList= self.scrollVew;  // View, on which Autocompletion list should be appeared.
     self.pprovedAddress.autoCompleteShouldHideOnSelection= YES;
     self.pprovedAddress.maximumNumberOfAutoCompleteRows= 5;
+    
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
+    
+    self.aproxAddress.autoCompleteRegularFontName =  @"HelveticaNeue-Bold";
+    self.aproxAddress.autoCompleteBoldFontName = @"HelveticaNeue";
+    self.aproxAddress.autoCompleteTableCornerRadius=0.0;
+    self.aproxAddress.autoCompleteRowHeight=35;
+    self.aproxAddress.autoCompleteTableCellTextColor=[UIColor colorWithWhite:0.131 alpha:1.000];
+    self.aproxAddress.autoCompleteFontSize=14;
+    self.aproxAddress.autoCompleteTableBorderWidth=1.0;
+    self.aproxAddress.showTextFieldDropShadowWhenAutoCompleteTableIsOpen=YES;
+    self.aproxAddress.autoCompleteShouldHideOnSelection=YES;
+    self.aproxAddress.autoCompleteShouldHideClosingKeyboard=YES;
+    self.aproxAddress.autoCompleteShouldSelectOnExactMatchAutomatically = YES;
+    self.aproxAddress.autoCompleteTableFrame = CGRectMake(20,self.aproxAddress.frame.origin.y+self.aproxAddress.frame.size.height+20, self.aproxAddress.frame.size.width, 300.0);
+    
     
     self.pprovedAddress.autoCompleteRegularFontName =  @"HelveticaNeue-Bold";
     self.pprovedAddress.autoCompleteBoldFontName = @"HelveticaNeue";
@@ -46,15 +73,23 @@
     self.pprovedAddress.autoCompleteShouldHideOnSelection=YES;
     self.pprovedAddress.autoCompleteShouldHideClosingKeyboard=YES;
     self.pprovedAddress.autoCompleteShouldSelectOnExactMatchAutomatically = YES;
-    self.pprovedAddress.autoCompleteTableFrame = CGRectMake(20,295, self.pprovedAddress.frame.size.width, 300.0);
+    self.pprovedAddress.autoCompleteTableFrame = CGRectMake(20,self.pprovedAddress.frame.origin.y+self.pprovedAddress.frame.size.height+20, self.pprovedAddress.frame.size.width, 300.0);;
+    
+
 }
 
 
 #pragma mark - Place search Textfield Delegates
 
--(void)placeSearch:(MVPlaceSearchTextField *)textField ResponseForSelectedPlace:(GMSPlace *)responseDict{
-    location = responseDict.coordinate;
+-(void)placeSearch:(MVPlaceSearchTextField *)textField ResponseForSelectedPlace:(GMSPlace *)responseDict
+{
+    if (textField == self.aproxAddress)
+    {
+        location = responseDict.coordinate;
+    }
+    
     [self.view endEditing:YES];
+    
     NSLog(@"SELECTED ADDRESS :%@",responseDict);
 }
 
@@ -90,11 +125,6 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter Approximate address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
-    if (_stateTextField.text.length == 0)
-    {
-        [alert showWarning:self title:@"Alert" subTitle:@"Please enter State." closeButtonTitle:@"OK" duration:0.0f];
-        return;
-    }
     if (_pprovedAddress.text.length == 0)
     {
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter Aprroved Address." closeButtonTitle:@"OK" duration:0.0f];
@@ -109,12 +139,13 @@
 -(void)addStreet{
     [SVProgressHUD show];
     
-    NSDictionary *dict = @{@"Name":[NSUserDefaults.standardUserDefaults objectForKey:@"myName"],
+    NSDictionary *dict = @{
+                           @"Name":[NSUserDefaults.standardUserDefaults objectForKey:@"myName"],
                            @"Latitude":[NSString stringWithFormat:@"%f",location.latitude],
                            @"Longitude":[NSString stringWithFormat:@"%f",location.longitude],
                            @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"Address":_aproxAddress.text,
-                           @"City":_stateTextField.text,
+                           @"City":@"",
                            @"ApproveAddress":_pprovedAddress.text,
                            };
     
@@ -125,10 +156,16 @@
     [manager1 POST:url parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *jsonDict = responseObject;
         [SVProgressHUD dismiss];
-        if ([jsonDict[@"Success"] boolValue]){
+        if ([jsonDict[@"Success"] boolValue])
+        {
             [NSUserDefaults.standardUserDefaults setObject:jsonDict[@"StreetId"] forKey:@"myStreetId"];
             SCLAlertView *alert = [[SCLAlertView alloc] init];
-            [alert showWarning:self title:@"Alert" subTitle: @"Save Successfully" closeButtonTitle:@"OK" duration:0.0f];
+            [alert showWarning:self title:@"Alert" subTitle: @"your spot has successfully posted please watch active sessions to see when someone grabbed your spot" closeButtonTitle:@"OK" duration:0.0f];
+            MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+            UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+            [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            
         }else{
             SCLAlertView *alert = [[SCLAlertView alloc] init];
             [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];

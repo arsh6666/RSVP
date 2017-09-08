@@ -23,4 +23,7 @@
 +(UIImage*)imageByCombiningImage:(UIImage*)firstImage withImage:(UIImage*)secondImage;
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (NSDictionary *)dictionaryByReplacingNullsWithStrings :(NSDictionary *)Dict;
++(NSString *) stringByStrippingHTML:(NSString *)str;
++(NSString*)remaningTime:(NSDate*)startDate endDate:(NSDate*)endDate;
+
 @end

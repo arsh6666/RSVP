@@ -8,10 +8,38 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>AsyncImageView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CLImageEditor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DatePickerDialog-ObjC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HCSStarRatingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KLCPopup.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NTMonthYearPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -20,147 +48,141 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-RSVPTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-RSVPUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>RESideMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
+		</dict>
+		<key>RMPScrollingMenuBarController-RMPScrollingMenuBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RMPScrollingMenuBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SCLAlertView-Objective-C.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>SingleLineInput-SingleLineInput.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>SingleLineInput.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
-		</dict>
-		<key>authorizenet-sdk.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>065F07F61C01C64085A1794212FBE840</key>
+		<key>0E6F458F96437242A8A96C5492E16DCC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0CA463AB63409ABA5708999392AAF597</key>
+		<key>0FCD9071733B1394923280169CF57B10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25D384B58453B3B3EEDA0EAF73821D49</key>
+		<key>16D734CA8F9A10B6860D0189A830A6DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E3C99F8C8452E46C92A132A7744FA83</key>
+		<key>1CC21E8867E4D6B4A7F020FAE75D52A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>354C7EE7AB06730F48FEFE0189BCE976</key>
+		<key>1E28CACF6D2C9CE7D96315852821A3FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6731433B6C241D9B9BC6EBA6E3BCAF8C</key>
+		<key>215043F2E1CF7AB61A045F2F435C8BD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>904F4F27FD314010A3812EB2A9306183</key>
+		<key>279AA6726F52A334C45E85774BD21A3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>907FE7C7512469AF1966542CF85C1132</key>
+		<key>45FF4A7AFE5D8E17D01023C53AED87FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<key>5BE919DC15409F27286E0EEA6D7F699A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E3B6D9B7FD8A58F1C98664CA4996CAB</key>
+		<key>60B6A040E4CB19C93966571A6197D229</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B25C31FC1DF35B264E4F7FE7F345A4FE</key>
+		<key>6781484AACA274D8D41414AE3B594109</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC8E031C28E312539952D4FD53F6B819</key>
+		<key>7477EB33AF99CF4654FC551FDD2BBDAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDF09EA92113DB854C6169BF2A23503F</key>
+		<key>AF6293E5AF66094725F2B9C46236F876</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE1301ACB2A3DFBE7527FD5A3AB96163</key>
+		<key>BEB448027894FADC6D34FFCAC855794A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3BD7896F9888661C109662E1FCB4EDD</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4B3C1F8AEE6D971C3112D5BC33DA766</key>
+		<key>EED28939C2D4075F82BD26C2005B539B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6E37C24EAA89B4E119B2AC38E161699</key>
+		<key>F55CF1ED3B0E3D4DF433984C934A5F18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F57B04605ECE33603F36AAFD65072F82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

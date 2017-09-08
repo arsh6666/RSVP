@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AgreementVC : UIViewController
+    
 @property NSDictionary *markerData;
+@property NSDictionary *UserProfile;
+    
 @end

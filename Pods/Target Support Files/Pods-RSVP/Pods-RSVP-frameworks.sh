@@ -59,8 +59,13 @@ code_sign_if_enabled() {
   if [ -n "${EXPANDED_CODE_SIGN_IDENTITY}" -a "${CODE_SIGNING_REQUIRED}" != "NO" -a "${CODE_SIGNING_ALLOWED}" != "NO" ]; then
     # Use the current code_sign_identitiy
     echo "Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}"
-    echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements \"$1\""
-    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements "$1"
+    local code_sign_cmd="/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements '$1'"
+
+    if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
+      code_sign_cmd="$code_sign_cmd &"
+    fi
+    echo "$code_sign_cmd"
+    eval "$code_sign_cmd"
   fi
 }
 
@@ -82,3 +87,37 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AsyncImageView/AsyncImageView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CLImageEditor/CLImageEditor.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DatePickerDialog-ObjC/DatePickerDialog_ObjC.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HCSStarRatingView/HCSStarRatingView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManager/IQKeyboardManager.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KLCPopup/KLCPopup.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/NTMonthYearPicker/NTMonthYearPicker.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RESideMenu/RESideMenu.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RMPScrollingMenuBarController/RMPScrollingMenuBarController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SingleLineInput/SingleLineInput.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AsyncImageView/AsyncImageView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CLImageEditor/CLImageEditor.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DatePickerDialog-ObjC/DatePickerDialog_ObjC.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HCSStarRatingView/HCSStarRatingView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManager/IQKeyboardManager.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KLCPopup/KLCPopup.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/NTMonthYearPicker/NTMonthYearPicker.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RESideMenu/RESideMenu.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RMPScrollingMenuBarController/RMPScrollingMenuBarController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SingleLineInput/SingleLineInput.framework"
+fi
+if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
+  wait
+fi

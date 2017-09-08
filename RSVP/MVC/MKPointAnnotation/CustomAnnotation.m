@@ -11,6 +11,7 @@
 @implementation CustomAnnotation
 
 -(instancetype)initWithAnnotation:(id<MKAnnotation>)annotation markerDict:(NSDictionary *)markerDict{
+    
     self = [super initWithAnnotation:annotation
                      reuseIdentifier:nil];
     
@@ -22,12 +23,15 @@
     //block = 2
     //steet = 3
     NSString *ParkingType = markerDict[@"ParkingType"];
-    if ([ParkingType  isEqual: @"Driway"]){
+    if ([ParkingType  isEqual: @"Driway"])
+    {
         self.image = [UIImage imageNamed:@"bluemarker"];
     }
-    if ([ParkingType  isEqual: @"Block"]){
+    else if ([ParkingType  isEqual: @"Block"])
+    {
         self.image = [UIImage imageNamed:@"blackmarker"];
-    }else{
+    }
+    else{
         self.image = [UIImage imageNamed:@"map-marker"];
     }
     return self;

@@ -14,7 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - authorizenet-sdk (2.0.7)
+  - AsyncImageView (1.6)
+  - CLImageEditor (0.2.0):
+    - CLImageEditor/Core (= 0.2.0)
+  - CLImageEditor/Core (0.2.0)
+  - DatePickerDialog-ObjC (1.1.8)
   - GoogleMaps (2.4.0):
     - GoogleMaps/Maps (= 2.4.0)
   - GoogleMaps/Base (2.4.0)
@@ -24,35 +28,48 @@ PODS:
     - GoogleMaps/Base (= 2.4.0)
   - HCSStarRatingView (1.5)
   - IQKeyboardManager (4.0.13)
+  - KLCPopup (1.0)
+  - NTMonthYearPicker (1.0.0)
   - RESideMenu (4.0.7)
+  - RMPScrollingMenuBarController (1.0.6)
   - SCLAlertView-Objective-C (1.1.2)
   - SingleLineInput (1.0.7)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - authorizenet-sdk
+  - AsyncImageView
+  - CLImageEditor
+  - DatePickerDialog-ObjC
   - GoogleMaps
   - GooglePlaces
   - HCSStarRatingView (~> 1.5)
   - IQKeyboardManager
+  - KLCPopup
+  - NTMonthYearPicker
   - RESideMenu
+  - RMPScrollingMenuBarController
   - SCLAlertView-Objective-C (~> 1.1)
   - SingleLineInput
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  authorizenet-sdk: e082ace28cda27ef5a68a6a2bbb86d3681ab02b7
+  AsyncImageView: 416e99402e5b1f20571de70ad619ced90f56a7d9
+  CLImageEditor: ec5ae50b3a54c9818c0bdb243b20665a1c6718e3
+  DatePickerDialog-ObjC: 4794403a051f326810ad7086ea41bfd983885d34
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
   HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
+  KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
+  NTMonthYearPicker: 27e1739d6e29428628c8275a7c1a9e4835c352f4
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  RMPScrollingMenuBarController: d94726545e0289affb0440e9145bb7b544cf79b8
   SCLAlertView-Objective-C: 0e54351fa4f98a5c7c6ad3727e6dbb46784534e5
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 1077d9ecf337d646fef414b74eee67bf6e052046
+PODFILE CHECKSUM: b3bae4be12d5a3248dab413c6138bc26ed5511d8
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

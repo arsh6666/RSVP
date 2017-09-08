@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DriveWayInfoVC : UIViewController{
-
-    
-}
-
+@interface DriveWayInfoVC : UIViewController
+@property (readwrite, nonatomic)BOOL isDrivayEdit;
+@property NSDictionary *myProfileDetail;
 
 
 @end

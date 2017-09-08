@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *plateTextField;
 @property (strong, nonatomic) IBOutlet UIButton *carMakeButton;
 @property (strong, nonatomic) IBOutlet UITextField *StateTextField;
+    
 @end
 
 @implementation VehicalDetail
@@ -138,26 +139,22 @@
 
 -(void)updatecarDetail{
     [SVProgressHUD show];
-    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
+    NSDictionary *dict = @{
+                           @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"Brand":_carMakeTextField.text,
                            @"Model": _modelTextfield.text,
                            @"Color":_coloTextField.text,
                            @"Class":_classTextField.text,
                            @"Plate":_plateTextField.text,
-                           @"ZelleEmail":_zellemail,
-                           @"ChaseQuickpayEmail":_quckpay,
-                           @"AddressMonthly":_address,
+                           @"ZelleEmail":@"",
+                           @"ChaseQuickpayEmail":@"",
+                           @"AddressMonthly":@"",
                            @"State":_StateTextField.text};
     
-    
-    PaymentVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentVC"];
-    //hvc.userDetail = _userDetail;
-    hvc.userCarDetail = dict;
-    [self.navigationController pushViewController:hvc animated:YES];
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveCar";
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 PUT:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager1 POST:url parameters:dict success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *jsonDict = responseObject;
         [SVProgressHUD dismiss];
         if ([jsonDict[@"Success"] boolValue]){

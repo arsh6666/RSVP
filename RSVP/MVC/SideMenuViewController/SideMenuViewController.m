@@ -27,7 +27,7 @@
 //        array = [NSMutableArray arrayWithObjects:@"",@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Logout", nil];
 //    }
 //    else{
-    array = [NSMutableArray arrayWithObjects:@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Logout", nil];
+    array = [NSMutableArray arrayWithObjects:@"My Profile",@"Looking for Parking",@"Park in my Driveway",@"Block my Driveway",@"I'm parked on the street",@"Active Session",@"Logout", nil];
    // }
     // Do any additional setup after loading the view.
 }
@@ -94,6 +94,14 @@
         
     }
     if (indexPath.row == 5) {
+        
+        ActiveSessionViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"ActiveSessionViewController"];
+        UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];
+        [self.sideMenuViewController setContentViewController:MainNav animated:YES];
+        [self.sideMenuViewController hideMenuViewController];
+        
+    }
+    if (indexPath.row == 6) {
         [NSUserDefaults.standardUserDefaults setBool:NO forKey:@"isLogin"];
         HomeViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
         UINavigationController *MainNav= [[UINavigationController alloc]initWithRootViewController:hvc];

@@ -11,7 +11,10 @@
 @interface ConfirmationVC ()<AuthNetDelegate>{
     NSString *token;
     NSString *uniqueIdentifier;
+    NSInteger walletBalance;
+    NSDictionary *userProfile;
 }
+    @property (strong, nonatomic) IBOutlet UILabel *lbl30min;
 
 @end
 
@@ -19,6 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([_Price isEqualToString:@"1"]) {
+        _lbl30min.hidden = YES;
+    }
+    
+    NSLog(@"%@",_markerData);
+    
+    [self GetUserProfile];
     // Do any additional setup after loading the view.
 }
 
@@ -28,19 +39,23 @@
 }
 
 - (IBAction)confirmationButton:(id)sender {
-
-    uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-
-    [AuthNet authNetWithEnvironment:ENV_TEST];
-    MobileDeviceLoginRequest *mobileDeviceLoginRequest = [MobileDeviceLoginRequest mobileDeviceLoginRequest];
-    mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.name = @"maninderbindra1991";
-    mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.password = @"Iphone_5s";
-    mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.mobileDeviceId = uniqueIdentifier;
-    AuthNet *an = [AuthNet getInstance];
-    [an setDelegate:self];
-    [an mobileDeviceLoginRequest: mobileDeviceLoginRequest];
+    
+    if (walletBalance > 10) {
+        
+        [self webService ];
+        
+    }
+    else
+    {
+        [SVProgressHUD dismiss];
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showWarning:self title:@"Alert" subTitle:@"Please remember to add funds to your wallet" closeButtonTitle:@"OK" duration:0.0f];
+    }
 }
-- (IBAction)cancelButton:(id)sender {
+    
+- (IBAction)cancelButton:(id)sender
+{
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)menuButton:(id)sender {
@@ -48,80 +63,43 @@
 }
 
 
--(void)paymentSucceeded:(CreateTransactionResponse *)response{
-    [SVProgressHUD dismiss];
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-    
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showSuccess:self title:@"Alert" subTitle:[NSString stringWithFormat:@"%@",response.responseReasonText] closeButtonTitle:@"Ok" duration:0.0f];
-    [alert alertIsDismissed:^{
-        [self webService];
-    }];
-    
-}
--(void)emvPaymentSucceeded:(AnetEMVTransactionResponse *)response{
-
-}
-
--(void)requestFailed:(AuthNetResponse *)response{
-    [SVProgressHUD dismiss];
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@",response.responseReasonText] closeButtonTitle:@"OK" duration:0.0f];
-}
-
-- (void) mobileDeviceLoginSucceeded:(MobileDeviceLoginResponse *)response {
-    token = response.sessionToken;
-    [SVProgressHUD show];
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    CreditCardType *creditCardType = [CreditCardType creditCardType];
-    creditCardType.cardNumber = [NSUserDefaults.standardUserDefaults objectForKey:@"cardNumber"];
-    creditCardType.cardCode = [NSUserDefaults.standardUserDefaults objectForKey:@"cvv"];
-    creditCardType.expirationDate = [NSUserDefaults.standardUserDefaults objectForKey:@"exipryDate"];
-    
-    PaymentType *paymentType = [PaymentType paymentType];
-    paymentType.creditCard = creditCardType;
-    
-    ExtendedAmountType *extendedAmountTypeTax = [ExtendedAmountType extendedAmountType];
-    extendedAmountTypeTax.amount = @"0";
-    extendedAmountTypeTax.name = @"Tax";
-    
-    ExtendedAmountType *extendedAmountTypeShipping = [ExtendedAmountType extendedAmountType];
-    extendedAmountTypeShipping.amount = @"0";
-    extendedAmountTypeShipping.name = @"Shipping";
-    
-    LineItemType *lineItem = [LineItemType lineItem];
-    lineItem.itemName = @"block";
-    lineItem.itemDescription = @"address";
-    lineItem.itemQuantity = @"1";
-    lineItem.itemPrice = @"10";
-    lineItem.itemID = @"1";
-    
-    TransactionRequestType *requestType = [TransactionRequestType transactionRequest];
-    requestType.lineItems = [NSMutableArray arrayWithObject:lineItem];
-    requestType.amount = lineItem.itemPrice;
-    requestType.payment = paymentType;
-    requestType.tax = extendedAmountTypeTax;
-    requestType.shipping = extendedAmountTypeShipping;
-    
-    CreateTransactionRequest *request = [CreateTransactionRequest createTransactionRequest];
-    request.transactionRequest = requestType;
-    request.transactionType = AUTH_CAPTURE;
-    request.anetApiRequest.merchantAuthentication.mobileDeviceId = uniqueIdentifier;
-    request.anetApiRequest.merchantAuthentication.sessionToken = token;
-    
-    AuthNet *an1 = [AuthNet getInstance];
-    [an1 setDelegate:self];
-    [an1 purchaseWithRequest:request];
-};
 
 
--(void)webService{
+-(void)webService
+{
+    NSInteger idID;
+    NSInteger typeID;
+    NSLog(@"%@",_markerData);
+    
+    if ([_markerData[@"ParkingType"]  isEqual: @"Driway"])
+    {
+        typeID = 1;
+    }
+    else if ([_markerData[@"ParkingType"]  isEqual: @"Block"])
+    {
+        typeID = 2;
+        
+    }
+    else{
+        typeID = 3;
+    }
+    
+    if ([self.Price isEqualToString:@"1"])
+    {
+        idID = [_markerData[@"StreetId"]integerValue];
+    }
+    else
+    {
+        idID = [_markerData[@"DriwayId"]integerValue];
+    }
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"ToUserId": _markerData[@"UserId"],
-                           @"Amount": @10};
+                           @"Amount": self.Price,
+                           @"ParkingType":[NSNumber numberWithInteger:typeID],
+                           @"ParkingId": [NSNumber numberWithInteger:idID]
+                           };
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SavePayment";
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
@@ -130,19 +108,72 @@
                [SVProgressHUD dismiss];
                [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                NSDictionary *jsonDict = responseObject;
-               if ([jsonDict[@"Success"] boolValue]){
+               if ([jsonDict[@"Success"] boolValue] == true){
+                   
+                   if (![_Price isEqualToString:@"1"])
+                   {
+                       AgreementVC *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"AgreementVC"];
+                       VC.markerData = _markerData;
+                       VC.UserProfile = userProfile;
+                       [self.navigationController pushViewController:VC animated:YES];
+                       
+                   }
+                   else
+                   {
+                       StreetAgreementPageVC *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"StreetAgreementPageVC"];
+                       VC.markerData = _markerData;
+                       VC.UserProfile = userProfile;
+                       [self.navigationController pushViewController:VC animated:YES];
+                       
+                   }
+
                    
                }else{
                   
                }
-               AgreementVC *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"AgreementVC"];
-               VC.markerData = _markerData;
-               [self.navigationController pushViewController:VC animated:YES];
-               NSLog(@"%@",responseObject);
+               
+                NSLog(@"%@",responseObject);
            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                [SVProgressHUD dismiss];
                NSLog(@"%@",error);
            }];
+    
+}
+    
+-(void)GetUserProfile{
+    
+    [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
+    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
+    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager1 GET: URLToHit parameters:nil progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+              
+              NSDictionary *jsonDict = responseObject;
+              userProfile = responseObject;
+              
+              [SVProgressHUD dismiss];
+              [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+              
+              if ([jsonDict[@"Success"] boolValue]){
+                  
+                  walletBalance = [[responseObject valueForKey:@"WalletBalance"]integerValue];
+                  
+                }
+              else
+              {
+                  SCLAlertView *alert = [[SCLAlertView alloc] init];
+                  [alert showWarning:self title:@"Alert" subTitle: @"Currently no bid available." closeButtonTitle:@"OK" duration:0.0f];
+              }
+              NSLog(@"%@",responseObject);
+          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+              [SVProgressHUD dismiss];
+              NSLog(@"%@",error);
+          }];
+    
+
     
 }
 

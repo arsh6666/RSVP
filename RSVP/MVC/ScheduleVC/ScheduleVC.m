@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *frontLabel = @"Schedule for ";
-    NSString *newString = [frontLabel stringByAppendingString:[NSString stringWithFormat:@"%@",_day]];
+    
+    NSString *newString = [NSString stringWithFormat:@"Schedule for %@",_day];
     _titleLabelForVC.text = newString;
     // Do any additional setup after loading the view.
 }
@@ -61,6 +61,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ParkInVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ParkInVC"];
+    vc.scheduleDict = scheduleArray[indexPath.row];
+    vc.EditBool = YES;
+    vc.day = _day;
+    vc.typeOfParking = _typeOfParking;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+    
 -(void)WebService{
     NSString *IntDay = [[NSString alloc]init];
     if ([_day isEqualToString:@"Monday"]){

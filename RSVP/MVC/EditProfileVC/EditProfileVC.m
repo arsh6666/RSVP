@@ -9,6 +9,7 @@
 #import "EditProfileVC.h"
 
 @interface EditProfileVC ()
+
 @property (strong, nonatomic) IBOutlet UITextField *firstName;
 @property (strong, nonatomic) IBOutlet UITextField *lastName;
 @property (strong, nonatomic) IBOutlet UITextField *nickName;
@@ -28,7 +29,9 @@
     // Do any additional setup after loading the view.
 }
 
--(void)setUpMyDetail{
+-(void)setUpMyDetail
+{
+   // NSLog(@"%@",self.myProfileDetail);
     _firstName.text = _myProfileDetail[@"FirstName"];
     _lastName.text = _myProfileDetail[@"LastName"];
     _nickName.text = _myProfileDetail[@"NickName"];
@@ -46,6 +49,7 @@
         _address.text = cardDict[@"AddressMonthly"];
     }
 }
+
 - (IBAction)backButtonACtion:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -82,7 +86,7 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
-    if (![self validateEmailWithString:_email.text]){
+    if (![Utils isValidEmail:_email.text]){
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter valid email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }else{
@@ -92,28 +96,21 @@
 }
 
 
-- (BOOL)validateEmailWithString:(NSString*)email
+
+- (IBAction)editCardDetailButton:(id)sender
 {
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:email];
-}
-- (IBAction)editCardDetailButton:(id)sender {
-    VehicalDetail *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicalDetail"];
-    vc.userDetailFromEdited = _myProfileDetail;
-    vc.zellemail = _zellemail.text;
-    vc.address = _address.text;
-    vc.quckpay = _qucikPayMail.text;
-    vc.isEditProfile = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-- (IBAction)editCardDetail:(id)sender {
-    PaymentVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentVC"];
-    vc.isEditProfile = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+//    VehicalDetail *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VehicalDetail"];
+//    vc.userDetailFromEdited = _myProfileDetail;
+//    vc.zellemail = _zellemail.text;
+//    vc.address = _address.text;
+//    vc.quckpay = _qucikPayMail.text;
+//    vc.isEditProfile = YES;
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
--(void)saveEditProfile{
+
+-(void)saveEditProfile
+{
     [SVProgressHUD show];
     
     NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
@@ -143,7 +140,8 @@
     
 }
 
--(void)updatecarDetail{
+-(void)updatecarDetail
+{
     [SVProgressHUD show];
     NSDictionary *cardDict = _myProfileDetail[@"Car"];
 
@@ -174,12 +172,15 @@
         }
         NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        
+        NSLog(@"%ld",(long)[response statusCode]);
+        NSData *dict2 = [error.userInfo valueForKey:@"com.alamofire.serialization.response.error.data"];
+        NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:dict2 options:0 error:NULL];
+    
         [SVProgressHUD dismiss];
         NSLog(@"%@",error);
     }];
 }
-
-
-
 
 @end

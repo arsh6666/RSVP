@@ -10,4 +10,5 @@
 
 @interface ConfirmationVC : UIViewController
 @property NSDictionary *markerData;
+    @property NSString *Price;
 @end

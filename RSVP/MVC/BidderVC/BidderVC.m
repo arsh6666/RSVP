@@ -57,7 +57,7 @@
     BidderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.userImageView.image = [UIImage imageNamed:@"man"];
     NSDictionary *biderName = bidder[indexPath.row];
-    cell.userNameLabel.text = biderName[@"FirstName"];
+    cell.userNameLabel.text = biderName[@"UserName"];
     cell.userCostLabel.text = [NSString stringWithFormat:@"%@",biderName[@"Amount"]];
     return cell;
 }
@@ -82,7 +82,7 @@
                    [_bidderTable reloadData];
                }else{
                    SCLAlertView *alert = [[SCLAlertView alloc] init];
-                   [alert showWarning:self title:@"Alert" subTitle: @"Currently no bid available." closeButtonTitle:@"OK" duration:0.0f];
+                   [alert showWarning:self title:@"Alert" subTitle: @"Waiting for other party" closeButtonTitle:@"OK" duration:0.0f];
                }
                NSLog(@"%@",responseObject);
            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

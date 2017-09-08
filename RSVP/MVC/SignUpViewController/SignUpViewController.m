@@ -34,6 +34,41 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if (textField == self.phoneNumber) {
+    NSCharacterSet *numSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789-"];
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    int charCount = (int)[newString length];
+    
+    if (charCount == 3 || charCount == 7) {
+        if ([string isEqualToString:@""]){
+            return YES;
+        }else{
+            newString = [newString stringByAppendingString:@"-"];
+        }
+    }
+    
+    if (charCount == 4 || charCount == 8) {
+        if (![string isEqualToString:@"-"]){
+            newString = [newString substringToIndex:[newString length]-1];
+            newString = [newString stringByAppendingString:@"-"];
+        }
+    }
+    
+    if ([newString rangeOfCharacterFromSet:[numSet invertedSet]].location != NSNotFound
+        || [string rangeOfString:@"-"].location != NSNotFound
+        || charCount > 12) {
+        return NO;
+    }
+    
+    textField.text = newString;
+    return NO;
+}
+    return YES;
+
+}
 - (IBAction)checkBoxButtonAction:(id)sender {
     if ([self.checkBoxButton.imageView.image isEqual:[UIImage imageNamed:@"box"]])
         [self.checkBoxButton setImage:[UIImage imageNamed:@"tick"] forState:UIControlStateNormal];
@@ -91,7 +126,7 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
-    if (![self validateEmailWithString:_emailTextField.text]){
+    if (![Utils isValidEmail:_emailTextField.text]){
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter valid email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
@@ -120,27 +155,26 @@
     }
 }
 
-- (BOOL)validateEmailWithString:(NSString*)email
+-(void)webService
 {
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:email];
-}
-
--(void)webService{
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSDictionary *dict = @{@"FirstName":_firstNameTextField.text,
+    NSDictionary *dict = @{
+                           @"DeviceToken":appDelegate().deviceToken,
+                           @"FirstName":_firstNameTextField.text,
                            @"LastName": _lastNameTextField.text,
                            @"Email":_emailTextField.text,
                            @"Password": _passwordTextField.text,
                            @"NickName": _nickNameTextField.text,
-                           @"PhoneNumber":_phoneNumber.text};
+                           @"PhoneNumber":[_phoneNumber.text stringByReplacingOccurrencesOfString:@"-" withString:@""]};
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Register";
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+      
     [manager1 POST:url parameters:dict progress:nil
-           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+     {
                [SVProgressHUD dismiss];
                [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                NSDictionary *jsonDict = responseObject;

@@ -8,7 +8,7 @@
 #import "MVPlaceSearchTextField.h"
 #import "DriveWayInfoVC.h"
 
-@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,PlaceSearchTextFieldDelegate>{
+@interface DriveWayInfoVC ()<MKMapViewDelegate,CLLocationManagerDelegate,PlaceSearchTextFieldDelegate,UIImagePickerControllerDelegate,CLImageEditorDelegate,UINavigationControllerDelegate>{
     CLLocationCoordinate2D location;
     NSString *isOwner;
     NSString *Rented;
@@ -18,9 +18,11 @@
     NSString *ParkingRule;
     NSString *blockAvailable;
     BOOL islocationEnable;
+    UIImage *imageUpload;
     
     
 }
+@property (strong, nonatomic) IBOutlet UIButton *btnBack;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UITextField *txtSpotName;
 @property (strong, nonatomic) IBOutlet MVPlaceSearchTextField *addressTextField;
@@ -34,6 +36,10 @@
 @property (strong, nonatomic) IBOutlet UISwitch *ruleSwitch;
 @property (strong, nonatomic) IBOutlet UIButton *adressButton;
 @property (strong, nonatomic) IBOutlet UITextField *rulesTextField;
+    @property (strong, nonatomic) IBOutlet UIImageView *imgDrrivey;
+
+- (IBAction)btnBack:(id)sender;
+
 @end
 
 @implementation DriveWayInfoVC
@@ -42,6 +48,13 @@ CLLocationManager *locationManager1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.btnBack.hidden = YES;
+    
+    if (_isDrivayEdit == YES)
+    {
+        self.btnBack.hidden = NO;
+    }
+    
     locationManager1 = [[CLLocationManager alloc] init];
     locationManager1.delegate = self;
     [locationManager1 requestAlwaysAuthorization];
@@ -49,14 +62,17 @@ CLLocationManager *locationManager1;
     
     self.addressTextField.placeSearchDelegate= self;
     self.addressTextField.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
-    //@"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+   
     self.addressTextField.superViewOfList= self.contentView;  // View, on which Autocompletion list should be appeared.
     self.addressTextField.autoCompleteShouldHideOnSelection= YES;
     self.addressTextField.maximumNumberOfAutoCompleteRows= 5;
+    
    
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
+    
+    
     
     self.addressTextField.autoCompleteRegularFontName =  @"HelveticaNeue-Bold";
     self.addressTextField.autoCompleteBoldFontName = @"HelveticaNeue";
@@ -66,10 +82,39 @@ CLLocationManager *locationManager1;
     self.addressTextField.autoCompleteFontSize=14;
     self.addressTextField.autoCompleteTableBorderWidth=1.0;
     self.addressTextField.showTextFieldDropShadowWhenAutoCompleteTableIsOpen=YES;
-    self.addressTextField.autoCompleteShouldHideOnSelection=YES;
     self.addressTextField.autoCompleteShouldHideClosingKeyboard=YES;
     self.addressTextField.autoCompleteShouldSelectOnExactMatchAutomatically = YES;
-    self.addressTextField.autoCompleteTableFrame = CGRectMake(20,95, self.addressTextField.frame.size.width, 300.0);
+    self.addressTextField.autoCompleteTableFrame = CGRectMake(20,self.addressTextField.frame.origin.y+50, self.addressTextField.frame.size.width, 300.0);
+    
+    if (_isDrivayEdit == YES)  {
+        [self DriveWayInfoMethod];
+    }
+  
+}
+
+-(void)DriveWayInfoMethod
+{
+    NSDictionary *DriveWayDict = _myProfileDetail[@"Driwayinfo"];
+    self.txtSpotName.text = [DriveWayDict valueForKey:@"Name"] ;
+    self.addressTextField.text = [DriveWayDict valueForKey:@"Address"] ;
+    self.blockAvailableSwitch.on = [[DriveWayDict valueForKey:@"AvailableBlock"]boolValue] ;
+    self.ownerSwitch.on = [[DriveWayDict valueForKey:@"Owner"]boolValue];
+    self.rentingSwitch.on = [[DriveWayDict valueForKey:@"Rented"]boolValue];
+    self.sharingSwitch.on = [[DriveWayDict valueForKey:@"Sharing"]boolValue];
+    self.spaceForRegularCarSwitch.on = [[DriveWayDict valueForKey:@"SpaceAvailableForRegularCar"]boolValue];
+    self.ruleSwitch.on = [[DriveWayDict valueForKey:@"ParkingRule"]boolValue];
+    
+    
+    if (DriveWayDict[@"Comment"] != [NSNull null]){
+       self.regularCarCommentTextField = [DriveWayDict valueForKey:@"Comment"];
+    }
+    if (DriveWayDict[@"CommentForSpace"] != [NSNull null]){
+        self.sharingCommentTextField.text = [DriveWayDict valueForKey:@"CommentForSpace"] ;
+    }
+    if (DriveWayDict[@"Rule"] != [NSNull null]){
+        self.rulesTextField.text = [DriveWayDict valueForKey:@"Rule"];
+    }
+
 }
 
 
@@ -168,7 +213,74 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
 }
 
 - (IBAction)uploadImageBurronAction:(id)sender {
+    
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+    
 }
+
+    
+#pragma mark- UIImageController delegate
+    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+    {
+        //You can retrieve the actual UIImage
+        UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+        
+        CLImageEditor *editor = [[CLImageEditor alloc] initWithImage:image];
+        editor.delegate = self;
+        
+        [picker pushViewController:editor animated:YES];
+        
+    }
+    
+#pragma mark- CLImageEditor delegate
+    
+- (void)imageEditor:(CLImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image
+    {
+        imageUpload = image;
+        self.imgDrrivey.image = image;
+        [editor dismissViewControllerAnimated:YES completion:nil];
+       
+        
+    }
+    
+-(void)SaveImageMethod:(UIImage*)Image{
+    [SVProgressHUD show];
+        
+    NSDictionary *dict = @{
+                            @"Type": [NSNumber numberWithInteger:1],
+                            @"Images":[NSArray arrayWithObject:[Utils encodeToBase64String:Image]],
+                            @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]
+                               };
+        
+        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/UploadImages";
+        AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+        manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+        
+        [manager1 POST:url parameters:dict progress:nil
+               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                   NSDictionary *jsonDict = responseObject;
+                   [SVProgressHUD dismiss];
+                   if ([jsonDict[@"Success"] boolValue]){
+                       
+                       SCLAlertView *alert = [[SCLAlertView alloc] init];
+                       [alert showSuccess:@"Alert" subTitle:[responseObject valueForKey:@"Message"] closeButtonTitle:@"Ok" duration:0.0f];
+                   }
+                   else
+                   {
+                       SCLAlertView *alert = [[SCLAlertView alloc] init];
+                       [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
+                   }
+                   NSLog(@"%@",responseObject);
+               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                   [SVProgressHUD dismiss];
+                   NSLog(@"%@",error);
+               }];
+
+    }
 
 - (IBAction)addressOnMap:(id)sender {
     GoogleMapVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"GoogleMapVC"];
@@ -181,7 +293,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
         [alert showWarning:self title:@"Alert" subTitle:@"Please allow location services." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
-    if (_addressTextField.text.length == 0){
+    NSLog(@"%@",self.addressTextField.text);
+    if (_addressTextField.text.length == 0 ){
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter Address." closeButtonTitle:@"OK" duration:0.0f];
         return;
@@ -190,6 +303,14 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter Spot Name." closeButtonTitle:@"OK" duration:0.0f];
         return;
+    }
+    if (!_isDrivayEdit) {
+        
+        if (imageUpload == nil)
+        {
+            SCLAlertView *alert = [[SCLAlertView alloc] init];
+            [alert showWarning:self title:@"Alert" subTitle:@"Please add image" closeButtonTitle:@"OK" duration:0.0f];
+        }
     }
     if (_ownerSwitch.isOn){
         isOwner = @"true";
@@ -257,8 +378,10 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
 
 
 
--(void)webService{
+-(void)webService
+    {
     [SVProgressHUD show];
+        
     NSDictionary *dict = @{
                            @"Owner": [NSString stringWithFormat:@"%@",isOwner],
                            @"Rented": [NSString stringWithFormat:@"%@",Rented],
@@ -282,9 +405,22 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                NSDictionary *jsonDict = responseObject;
                [SVProgressHUD dismiss];
-               if ([jsonDict[@"Success"] boolValue]){
+               if ([jsonDict[@"Success"] boolValue])
+               {
+                   if (imageUpload != nil) {
+                   [self SaveImageMethod:imageUpload];
+                   }
+                   if (_isDrivayEdit)
+                   {
+                       SCLAlertView *alert = [[SCLAlertView alloc] init];
+                       [alert showSuccess:self title:@"Alert" subTitle:@"Update Sucessfully" closeButtonTitle:@"OK" duration:0.0f];
+                       
+                   }
+                   else
+                   {
                    MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
                    [self.navigationController pushViewController:hvc animated:YES];
+                   }
                    
                }else{
                    SCLAlertView *alert = [[SCLAlertView alloc] init];
@@ -298,4 +434,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     
 }
 
+- (IBAction)btnBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

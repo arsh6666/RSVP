@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (readonly, nonatomic) BOOL isLogin;
+@property (strong, nonatomic) NSString *deviceToken;
 
 AppDelegate *appDelegate(void);
 @end

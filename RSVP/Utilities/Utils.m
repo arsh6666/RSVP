@@ -192,4 +192,80 @@
     return image;
 }
 
+
+//>>>>>> Remove HTML Tag <<<<<<<<<<<<//
+
++(NSString *) stringByStrippingHTML:(NSString *)str{
+    NSAttributedString *attr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUTF8StringEncoding]
+                                                                options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                                                                          NSCharacterEncodingDocumentAttribute:@(NSUTF8StringEncoding)}
+                                                     documentAttributes:nil
+                                                                  error:nil];
+    return [attr string];
+
+}
+
+//>>>>> Time Compare <<<<<<<<<<<<//
+
++(NSString*)remaningTime:(NSDate*)startDate endDate:(NSDate*)endDate {
+    
+    NSDateComponents *components;
+    NSInteger days;
+    NSInteger hour;
+    NSInteger minutes;
+    NSString *durationString;
+    
+    components = [[NSCalendar currentCalendar] components: NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute
+                                                 fromDate: startDate toDate: endDate options: 0];
+    days = [components day];
+    hour = [components hour];
+    minutes = [components minute];
+    
+    if (days > 0) {
+        
+        if (days > 1) {
+            
+           // days
+            
+            durationString = [NSString stringWithFormat:@"%ld", (long)days];
+        }
+        else {
+            
+           // day
+            durationString = [NSString stringWithFormat:@"%ld", (long)days];
+        }
+        return durationString;
+    }
+    
+    if (hour > 0) {
+        
+        if (hour > 1) {
+           // hours
+            durationString = [NSString stringWithFormat:@"%ld", (long)hour];
+        }
+        else {
+            //hour
+            durationString = [NSString stringWithFormat:@"%ld", (long)hour];
+        }
+        return durationString;
+    }
+    
+    if (minutes > 0) {
+        
+        if (minutes > 1) {
+            
+            //minutes
+            durationString = [NSString stringWithFormat:@"%ld", (long)minutes];
+        }
+        else {
+            //minute
+            durationString = [NSString stringWithFormat:@"%ld", (long)minutes];
+        }
+        return durationString;
+    }
+    
+    return @"";
+}
+
+
 @end

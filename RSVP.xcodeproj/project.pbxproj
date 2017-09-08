@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A7A9D417E2C6FBD81D3BDD /* Pods_RSVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A87581ACA13ED0A1181497 /* Pods_RSVPTests.framework */; };
 		37018A0C1F4270CD00125B55 /* StreetParkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37018A0B1F4270CD00125B55 /* StreetParkingVC.m */; };
 		37175B141F38D0D400D6E535 /* BillingDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B131F38D0D400D6E535 /* BillingDetailVC.m */; };
 		37175B191F38D13900D6E535 /* ParkInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37175B181F38D13900D6E535 /* ParkInVC.m */; };
@@ -44,12 +45,10 @@
 		37E0710C1F3B990900AB23F5 /* DriveWayInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */; };
 		37FE719D1F4E014D0069729D /* blackmarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FE719B1F4E014D0069729D /* blackmarker.png */; };
 		37FE719E1F4E014D0069729D /* bluemarker.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FE719C1F4E014D0069729D /* bluemarker.png */; };
-		811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4143DBFD729961195176AC80 /* libPods-RSVP.a */; };
-		CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */; };
-		F3E85453C9B0CDAD0155734C /* libPods-RSVPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */; };
+		88383CA5C69E57AD4DE3FF06 /* Pods_RSVPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B6B40221E4A2223D6F36E1 /* Pods_RSVPUITests.framework */; };
+		945579A999D187153828241E /* Pods_RSVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A0A0BDB1C7A57428F688D2 /* Pods_RSVP.framework */; };
 		FC3EF4311F2BB89F008D3BFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4301F2BB89F008D3BFD /* main.m */; };
 		FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */; };
-		FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4381F2BB89F008D3BFD /* Main.storyboard */; };
 		FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */; };
 		FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */; };
 		FC3EF44A1F2BB89F008D3BFD /* RSVPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EF4491F2BB89F008D3BFD /* RSVPTests.m */; };
@@ -78,11 +77,24 @@
 		FC3EF4A81F2BF1A7008D3BFD /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A61F2BF1A7008D3BFD /* pass.png */; };
 		FC3EF4A91F2BF1A7008D3BFD /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4A71F2BF1A7008D3BFD /* user.png */; };
 		FC3EF4AB1F2BF34B008D3BFD /* Msg.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3EF4AA1F2BF34B008D3BFD /* Msg.png */; };
+		FC48AB6E1F5740E200630E48 /* Wallet2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC48AB6D1F5740E200630E48 /* Wallet2.png */; };
+		FC48AB701F57418900630E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC48AB6F1F57418900630E48 /* Main.storyboard */; };
+		FC48AB8E1F59F4AE00630E48 /* DateView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48AB8D1F59F4AE00630E48 /* DateView.m */; };
+		FC48AB901F59F5A700630E48 /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC48AB8F1F59F5A700630E48 /* DateView.xib */; };
+		FC48AB941F5A0D4C00630E48 /* ActiveSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48AB931F5A0D4C00630E48 /* ActiveSessionViewController.m */; };
+		FC48AB981F5A10DA00630E48 /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48AB971F5A10DA00630E48 /* SessionTableViewCell.m */; };
+		FC48AB9E1F5C542400630E48 /* RSVP_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC48AB9D1F5C542400630E48 /* RSVP_Logo.png */; };
+		FC48ABA21F5C69A400630E48 /* StreetAgreementPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48ABA11F5C69A400630E48 /* StreetAgreementPageVC.m */; };
+		FC48ABA41F5C6A7200630E48 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = FC48ABA31F5C6A7200630E48 /* background.png */; };
+		FC48ABA81F5DDAEF00630E48 /* ShowActiveSessionDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48ABA71F5DDAEF00630E48 /* ShowActiveSessionDetail.m */; };
+		FC58C8E01F55F87600C23BC4 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58C8DF1F55F87600C23BC4 /* EditViewController.m */; };
 		FCAE95C41F4DE746006936BA /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */; };
 		FCAE95C51F4DE746006936BA /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95BD1F4DE746006936BA /* NSString+Levenshtein.m */; };
 		FCAE95C61F4DE746006936BA /* MVPlaceSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95BF1F4DE746006936BA /* MVPlaceSearchTextField.m */; };
 		FCAE95C71F4DE746006936BA /* PlaceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95C11F4DE746006936BA /* PlaceDetail.m */; };
 		FCAE95C81F4DE746006936BA /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95C31F4DE746006936BA /* PlaceObject.m */; };
+		FCE6676F1F522A1A001FF5EC /* AnetEMVSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCE667741F522AC0001FF5EC /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE667731F522AC0001FF5EC /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +114,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FCE667701F522A1A001FF5EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FCE6676F1F522A1A001FF5EC /* AnetEMVSdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.debug.xcconfig"; sourceTree = "<group>"; };
+		28A0A0BDB1C7A57428F688D2 /* Pods_RSVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37018A0A1F4270CD00125B55 /* StreetParkingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreetParkingVC.h; path = StreetParkingVC/StreetParkingVC.h; sourceTree = "<group>"; };
 		37018A0B1F4270CD00125B55 /* StreetParkingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreetParkingVC.m; path = StreetParkingVC/StreetParkingVC.m; sourceTree = "<group>"; };
 		37175B121F38D0D400D6E535 /* BillingDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillingDetailVC.h; path = BillingDetailVC/BillingDetailVC.h; sourceTree = "<group>"; };
@@ -165,20 +192,18 @@
 		37E0710B1F3B990900AB23F5 /* DriveWayInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DriveWayInfoVC.m; path = DriveWayInfoVC/DriveWayInfoVC.m; sourceTree = "<group>"; };
 		37FE719B1F4E014D0069729D /* blackmarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackmarker.png; sourceTree = "<group>"; };
 		37FE719C1F4E014D0069729D /* bluemarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluemarker.png; sourceTree = "<group>"; };
-		4143DBFD729961195176AC80 /* libPods-RSVP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFA6E3516E671F9563A106 /* Pods-RSVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.release.xcconfig"; sourceTree = "<group>"; };
-		9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A87581ACA13ED0A1181497 /* Pods_RSVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A211F6819E2EBB1EBDC5ACCC /* Pods-RSVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B753B9767D936FFA4A66B4 /* Pods-RSVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B8B6B40221E4A2223D6F36E1 /* Pods_RSVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.release.xcconfig"; sourceTree = "<group>"; };
-		D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSVPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC16D65D1F39157F00A15C56 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FC2A054CCD00A1F9AA7CF406 /* Pods-RSVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC3EF42C1F2BB89F008D3BFD /* RSVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EF4301F2BB89F008D3BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC3EF4321F2BB89F008D3BFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC3EF4391F2BB89F008D3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3EF43E1F2BB89F008D3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3EF4401F2BB89F008D3BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,6 +248,23 @@
 		FC3EF4A61F2BF1A7008D3BFD /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
 		FC3EF4A71F2BF1A7008D3BFD /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		FC3EF4AA1F2BF34B008D3BFD /* Msg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Msg.png; sourceTree = "<group>"; };
+		FC48AB6D1F5740E200630E48 /* Wallet2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wallet2.png; sourceTree = "<group>"; };
+		FC48AB6F1F57418900630E48 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC48AB8C1F59F4AE00630E48 /* DateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateView.h; path = DateView/DateView.h; sourceTree = "<group>"; };
+		FC48AB8D1F59F4AE00630E48 /* DateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateView.m; path = DateView/DateView.m; sourceTree = "<group>"; };
+		FC48AB8F1F59F5A700630E48 /* DateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateView.xib; path = DateView/DateView.xib; sourceTree = "<group>"; };
+		FC48AB921F5A0D4C00630E48 /* ActiveSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActiveSessionViewController.h; path = ActiveSessionViewController/ActiveSessionViewController.h; sourceTree = "<group>"; };
+		FC48AB931F5A0D4C00630E48 /* ActiveSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActiveSessionViewController.m; path = ActiveSessionViewController/ActiveSessionViewController.m; sourceTree = "<group>"; };
+		FC48AB961F5A10DA00630E48 /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionTableViewCell.h; path = SessionTableViewCell/SessionTableViewCell.h; sourceTree = "<group>"; };
+		FC48AB971F5A10DA00630E48 /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionTableViewCell.m; path = SessionTableViewCell/SessionTableViewCell.m; sourceTree = "<group>"; };
+		FC48AB9D1F5C542400630E48 /* RSVP_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RSVP_Logo.png; sourceTree = "<group>"; };
+		FC48ABA01F5C69A400630E48 /* StreetAgreementPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreetAgreementPageVC.h; path = StreetAgreementPageVC/StreetAgreementPageVC.h; sourceTree = "<group>"; };
+		FC48ABA11F5C69A400630E48 /* StreetAgreementPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreetAgreementPageVC.m; path = StreetAgreementPageVC/StreetAgreementPageVC.m; sourceTree = "<group>"; };
+		FC48ABA31F5C6A7200630E48 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		FC48ABA61F5DDAEF00630E48 /* ShowActiveSessionDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowActiveSessionDetail.h; path = ShowActiveSessionDetail/ShowActiveSessionDetail.h; sourceTree = "<group>"; };
+		FC48ABA71F5DDAEF00630E48 /* ShowActiveSessionDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowActiveSessionDetail.m; path = ShowActiveSessionDetail/ShowActiveSessionDetail.m; sourceTree = "<group>"; };
+		FC58C8DE1F55F87600C23BC4 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = EditViewController/EditViewController.h; sourceTree = "<group>"; };
+		FC58C8DF1F55F87600C23BC4 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = EditViewController/EditViewController.m; sourceTree = "<group>"; };
 		FCAE95B71F4DE746006936BA /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
 		FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
 		FCAE95B91F4DE746006936BA /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
@@ -236,6 +278,9 @@
 		FCAE95C11F4DE746006936BA /* PlaceDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetail.m; sourceTree = "<group>"; };
 		FCAE95C21F4DE746006936BA /* PlaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceObject.h; sourceTree = "<group>"; };
 		FCAE95C31F4DE746006936BA /* PlaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceObject.m; sourceTree = "<group>"; };
+		FCD1777A1F62F2D800D2B917 /* RSVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSVP.entitlements; sourceTree = "<group>"; };
+		FCE667711F522A43001FF5EC /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		FCE667731F522AC0001FF5EC /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,9 +288,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE667741F522AC0001FF5EC /* libxml2.tbd in Frameworks */,
 				FC3EF4991F2BD41B008D3BFD /* MapKit.framework in Frameworks */,
-				811194324B1360A17F1118F1 /* libPods-RSVP.a in Frameworks */,
 				37B3E2271F50217A0092F778 /* AnetEMVSdk.framework in Frameworks */,
+				945579A999D187153828241E /* Pods_RSVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3E85453C9B0CDAD0155734C /* libPods-RSVPTests.a in Frameworks */,
+				09A7A9D417E2C6FBD81D3BDD /* Pods_RSVPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +307,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA75DEA7A35903638E25D308 /* libPods-RSVPUITests.a in Frameworks */,
+				88383CA5C69E57AD4DE3FF06 /* Pods_RSVPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,10 +526,12 @@
 		D6A9D55A180D33459A0643DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCE667731F522AC0001FF5EC /* libxml2.tbd */,
+				FCE667711F522A43001FF5EC /* libxml2.2.tbd */,
 				FC3EF4981F2BD41B008D3BFD /* MapKit.framework */,
-				4143DBFD729961195176AC80 /* libPods-RSVP.a */,
-				D20DE84D11D6086D76312FA6 /* libPods-RSVPTests.a */,
-				9C9BF648DD3BEAB4DDAE52F7 /* libPods-RSVPUITests.a */,
+				28A0A0BDB1C7A57428F688D2 /* Pods_RSVP.framework */,
+				73A87581ACA13ED0A1181497 /* Pods_RSVPTests.framework */,
+				B8B6B40221E4A2223D6F36E1 /* Pods_RSVPUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -534,6 +582,8 @@
 		FC3EF42E1F2BB89F008D3BFD /* RSVP */ = {
 			isa = PBXGroup;
 			children = (
+				FCD1777A1F62F2D800D2B917 /* RSVP.entitlements */,
+				FC48AB8A1F59F48300630E48 /* CustomViews */,
 				FC16D65C1F39157F00A15C56 /* Constants */,
 				FC3EF4751F2BC785008D3BFD /* Fonts */,
 				FC3EF4621F2BBC45008D3BFD /* Cell */,
@@ -544,7 +594,6 @@
 				FC3EF46A1F2BBC45008D3BFD /* Utilities */,
 				FC3EF4321F2BB89F008D3BFD /* AppDelegate.h */,
 				FC3EF4331F2BB89F008D3BFD /* AppDelegate.m */,
-				FC3EF4381F2BB89F008D3BFD /* Main.storyboard */,
 				FC3EF43B1F2BB89F008D3BFD /* Assets.xcassets */,
 				FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */,
 				FC3EF4401F2BB89F008D3BFD /* Info.plist */,
@@ -556,6 +605,7 @@
 		FC3EF42F1F2BB89F008D3BFD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC48AB6F1F57418900630E48 /* Main.storyboard */,
 				FC3EF4301F2BB89F008D3BFD /* main.m */,
 				FC3EF4741F2BC13E008D3BFD /* RSVP-Prefix.pch */,
 			);
@@ -583,6 +633,7 @@
 		FC3EF4621F2BBC45008D3BFD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FC48AB951F5A10B700630E48 /* SessionTableViewCell */,
 				37DD5A881F46BAFE0095F7E8 /* ScheduleCell */,
 				37AC9D781F4429CD00751851 /* MyDrivewayListcell */,
 				379B833B1F42D71B001D1A2C /* MyProfileCell */,
@@ -596,6 +647,9 @@
 		FC3EF4631F2BBC45008D3BFD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FC48ABA31F5C6A7200630E48 /* background.png */,
+				FC48AB9D1F5C542400630E48 /* RSVP_Logo.png */,
+				FC48AB6D1F5740E200630E48 /* Wallet2.png */,
 				379B83321F42BC90001D1A2C /* box.png */,
 				379B83351F42BCFE001D1A2C /* tick.png */,
 				3717728D1F407312001DC1D7 /* map-marker.png */,
@@ -643,6 +697,10 @@
 		FC3EF4681F2BBC45008D3BFD /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				FC48ABA51F5DDAD500630E48 /* ShowActiveSessionDetail */,
+				FC48AB9F1F5C694A00630E48 /* StreetAgreementPage */,
+				FC48AB911F5A0D3300630E48 /* ActiveSessionViewController */,
+				FC58C8DD1F55F85100C23BC4 /* EditViewController */,
 				37CE63D11F51CF0100D7E1F9 /* RatingVC */,
 				373B29211F4F6749002C02B0 /* AgreementVC */,
 				373B29201F4F6738002C02B0 /* ConfirmationVC */,
@@ -763,6 +821,69 @@
 			name = HomeViewController;
 			sourceTree = "<group>";
 		};
+		FC48AB8A1F59F48300630E48 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FC48AB8B1F59F48800630E48 /* DateView */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FC48AB8B1F59F48800630E48 /* DateView */ = {
+			isa = PBXGroup;
+			children = (
+				FC48AB8C1F59F4AE00630E48 /* DateView.h */,
+				FC48AB8D1F59F4AE00630E48 /* DateView.m */,
+				FC48AB8F1F59F5A700630E48 /* DateView.xib */,
+			);
+			name = DateView;
+			sourceTree = "<group>";
+		};
+		FC48AB911F5A0D3300630E48 /* ActiveSessionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC48AB921F5A0D4C00630E48 /* ActiveSessionViewController.h */,
+				FC48AB931F5A0D4C00630E48 /* ActiveSessionViewController.m */,
+			);
+			name = ActiveSessionViewController;
+			sourceTree = "<group>";
+		};
+		FC48AB951F5A10B700630E48 /* SessionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC48AB961F5A10DA00630E48 /* SessionTableViewCell.h */,
+				FC48AB971F5A10DA00630E48 /* SessionTableViewCell.m */,
+			);
+			name = SessionTableViewCell;
+			sourceTree = "<group>";
+		};
+		FC48AB9F1F5C694A00630E48 /* StreetAgreementPage */ = {
+			isa = PBXGroup;
+			children = (
+				FC48ABA01F5C69A400630E48 /* StreetAgreementPageVC.h */,
+				FC48ABA11F5C69A400630E48 /* StreetAgreementPageVC.m */,
+			);
+			name = StreetAgreementPage;
+			sourceTree = "<group>";
+		};
+		FC48ABA51F5DDAD500630E48 /* ShowActiveSessionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FC48ABA61F5DDAEF00630E48 /* ShowActiveSessionDetail.h */,
+				FC48ABA71F5DDAEF00630E48 /* ShowActiveSessionDetail.m */,
+			);
+			name = ShowActiveSessionDetail;
+			sourceTree = "<group>";
+		};
+		FC58C8DD1F55F85100C23BC4 /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC58C8DE1F55F87600C23BC4 /* EditViewController.h */,
+				FC58C8DF1F55F87600C23BC4 /* EditViewController.m */,
+			);
+			name = EditViewController;
+			sourceTree = "<group>";
+		};
 		FCAE95B51F4DE746006936BA /* MVPlaceSearchTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +925,7 @@
 				FC3EF42A1F2BB89F008D3BFD /* Resources */,
 				D5F1DD55CC3026CFFB766376 /* [CP] Embed Pods Frameworks */,
 				4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */,
+				FCE667701F522A1A001FF5EC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -867,10 +989,13 @@
 				TargetAttributes = {
 					FC3EF42B1F2BB89F008D3BFD = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = AV3C87DRLW;
+						DevelopmentTeam = CK3BGCAVDY;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -915,12 +1040,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				378AE4481F3890A30037EE8B /* star.png in Resources */,
+				FC48ABA41F5C6A7200630E48 /* background.png in Resources */,
 				FC3EF47C1F2BC785008D3BFD /* 29ltbukralight.otf in Resources */,
 				FC3EF4AB1F2BF34B008D3BFD /* Msg.png in Resources */,
 				379B83341F42BC90001D1A2C /* box.png in Resources */,
+				FC48AB901F59F5A700630E48 /* DateView.xib in Resources */,
 				378AE44A1F3891260037EE8B /* man.png in Resources */,
 				37175B2F1F38EA3900D6E535 /* menu-icon.png in Resources */,
 				FC3EF4831F2BCB2B008D3BFD /* signUp.png in Resources */,
+				FC48AB9E1F5C542400630E48 /* RSVP_Logo.png in Resources */,
 				37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */,
 				FC3EF43F1F2BB89F008D3BFD /* LaunchScreen.storyboard in Resources */,
 				FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */,
@@ -934,12 +1062,13 @@
 				FC3EF47B1F2BC785008D3BFD /* 29ltbukrabolditalic.otf in Resources */,
 				FC3EF49B1F2BD4EB008D3BFD /* menuBtn.png in Resources */,
 				FC3EF4821F2BCB2B008D3BFD /* img2.png in Resources */,
+				FC48AB6E1F5740E200630E48 /* Wallet2.png in Resources */,
 				3717728E1F407312001DC1D7 /* map-marker.png in Resources */,
 				FC3EF4A91F2BF1A7008D3BFD /* user.png in Resources */,
 				FC3EF47D1F2BC785008D3BFD /* 29ltbukraregular.otf in Resources */,
+				FC48AB701F57418900630E48 /* Main.storyboard in Resources */,
 				37FE719E1F4E014D0069729D /* bluemarker.png in Resources */,
 				FC3EF43C1F2BB89F008D3BFD /* Assets.xcassets in Resources */,
-				FC3EF43A1F2BB89F008D3BFD /* Main.storyboard in Resources */,
 				378AE44C1F3891770037EE8B /* parking.jpg in Resources */,
 				37AC9D771F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf in Resources */,
 			);
@@ -974,7 +1103,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4C8039369BE31EE00D67792F /* [CP] Copy Pods Resources */ = {
@@ -1004,7 +1133,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		679D029362722BC91899E1C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -1019,7 +1148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		886B0042051094AD9C1E0E3D /* [CP] Embed Pods Frameworks */ = {
@@ -1114,11 +1243,14 @@
 				FC3EF4971F2BD270008D3BFD /* DEMORootViewController.m in Sources */,
 				37175B191F38D13900D6E535 /* ParkInVC.m in Sources */,
 				37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */,
+				FC58C8E01F55F87600C23BC4 /* EditViewController.m in Sources */,
+				FC48AB981F5A10DA00630E48 /* SessionTableViewCell.m in Sources */,
 				37175B1F1F38D1DB00D6E535 /* ForgotPasswordVC.m in Sources */,
 				FC3EF4341F2BB89F008D3BFD /* AppDelegate.m in Sources */,
 				37018A0C1F4270CD00125B55 /* StreetParkingVC.m in Sources */,
 				FC3EF4711F2BBC45008D3BFD /* Utils.m in Sources */,
 				FC3EF4701F2BBC45008D3BFD /* UIImage+animatedGIF.m in Sources */,
+				FC48AB8E1F59F4AE00630E48 /* DateView.m in Sources */,
 				37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */,
 				FC3EF49F1F2BDC08008D3BFD /* SideMenuTableViewCell.m in Sources */,
 				37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */,
@@ -1138,13 +1270,16 @@
 				FC3EF48F1F2BD126008D3BFD /* SignUpViewController.m in Sources */,
 				371FE25C1F4A155E00AC4680 /* EditProfileVC.m in Sources */,
 				37175B2D1F38E37800D6E535 /* BidderCell.m in Sources */,
+				FC48ABA21F5C69A400630E48 /* StreetAgreementPageVC.m in Sources */,
 				FCAE95C41F4DE746006936BA /* MLPAutoCompleteTextField.m in Sources */,
 				371772851F403243001DC1D7 /* CarMakeCell.m in Sources */,
 				FCAE95C51F4DE746006936BA /* NSString+Levenshtein.m in Sources */,
+				FC48AB941F5A0D4C00630E48 /* ActiveSessionViewController.m in Sources */,
 				FC3EF4A31F2BDDF1008D3BFD /* HomeViewController.m in Sources */,
 				373B29271F4F6799002C02B0 /* ConfirmationVC.m in Sources */,
 				371772891F406836001DC1D7 /* CustomAnnotation.m in Sources */,
 				3717728C1F4070D2001DC1D7 /* PointAnnotation.m in Sources */,
+				FC48ABA81F5DDAEF00630E48 /* ShowActiveSessionDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,14 +1315,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC3EF4381F2BB89F008D3BFD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC3EF4391F2BB89F008D3BFD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC3EF43D1F2BB89F008D3BFD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1224,7 +1351,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1274,7 +1401,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1298,7 +1425,8 @@
 			baseConfigurationReference = 2548B349A7D5F75AF0604679 /* Pods-RSVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 96D398C43S;
+				CODE_SIGN_ENTITLEMENTS = RSVP/RSVP.entitlements;
+				DEVELOPMENT_TEAM = CK3BGCAVDY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1306,14 +1434,25 @@
 					"$(PROJECT_DIR)/RSVP/Libraries",
 				);
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/GooglePlaces\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = RSVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RSVP/Libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVP-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -1322,7 +1461,8 @@
 			baseConfigurationReference = CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 96D398C43S;
+				CODE_SIGN_ENTITLEMENTS = RSVP/RSVP.entitlements;
+				DEVELOPMENT_TEAM = CK3BGCAVDY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1330,14 +1470,25 @@
 					"$(PROJECT_DIR)/RSVP/Libraries",
 				);
 				GCC_PREFIX_HEADER = "RSVP/RSVP-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/GooglePlaces\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = RSVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RSVP/Libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVPTest-";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVP-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

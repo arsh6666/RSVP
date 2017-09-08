@@ -35,7 +35,7 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
-    if (![self validateEmailWithString:_emailTextField.text]){
+    if (![Utils isValidEmail:_emailTextField.text]){
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter valid email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
@@ -51,22 +51,19 @@
     }
 }
 
-- (BOOL)validateEmailWithString:(NSString*)email
-{
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:email];
-}
 
 -(void)webService{
     [SVProgressHUD show];
-    NSDictionary *dict = @{@"UserName":_emailTextField.text,
+    NSDictionary *dict = @{
+                           @"DeviceToken":appDelegate().deviceToken,
+                           @"UserName":_emailTextField.text,
                            @"Password": _passwordTextField.text};
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Login";
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     [manager1 POST:url parameters:dict progress:nil
-           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+     {
                NSDictionary *jsonDict = responseObject;
                [SVProgressHUD dismiss];
                if ([jsonDict[@"Success"] boolValue]){
