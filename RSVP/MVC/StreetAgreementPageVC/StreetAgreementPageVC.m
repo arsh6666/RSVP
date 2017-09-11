@@ -87,9 +87,9 @@
     NSDictionary *BuyerCar = [self.UserProfile valueForKey:@"Car"];
     NSDictionary *sellerCar = [sellerProfile valueForKey:@"Car"];
     
-    self.lbl_B_Detail.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ Plate : %@",[BuyerCar valueForKey:@"Color"],[BuyerCar valueForKey:@"Brand"],[BuyerCar valueForKey:@"Class"],[BuyerCar valueForKey:@"Plate"]];
+    self.lbl_B_Detail.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ %@ Plate : %@",[BuyerCar valueForKey:@"Color"],[BuyerCar valueForKey:@"Brand"],[BuyerCar valueForKey:@"Model"],[BuyerCar valueForKey:@"Class"],[BuyerCar valueForKey:@"Plate"]];
     
-    self.lbl_S_Detail.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ Plate : %@",[sellerCar valueForKey:@"Color"],[sellerCar valueForKey:@"Brand"],[sellerCar valueForKey:@"Class"],[sellerCar valueForKey:@"Plate"]];
+    self.lbl_S_Detail.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ %@ Plate : %@",[sellerCar valueForKey:@"Color"],[sellerCar valueForKey:@"Brand"],[sellerCar valueForKey:@"Model"],[sellerCar valueForKey:@"Class"],[sellerCar valueForKey:@"Plate"]];
     
     self.lblPhone.text =[NSString stringWithFormat:@"My Phone number %@", [self.UserProfile valueForKey:@"PhoneNumber"]];
     self.lbl_S_Phone.text =[NSString stringWithFormat:@"My Phone number %@", [sellerProfile valueForKey:@"PhoneNumber"]];

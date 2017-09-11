@@ -41,61 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSVP/MVC/ActiveSessionViewController/ActiveSessionViewController.m"
-            timestampString = "526586388.244591"
+            filePath = "RSVP/MVC/ConfirmationVC/ConfirmationVC.m"
+            timestampString = "526829310.889778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-buttonCancel:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ActiveSessionViewController buttonCancel:]"
-                  moduleName = "RSVP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arshdeepsingh/Dropbox/Current%20Projects/Projects/RSVP/RSVP/MVC/ActiveSessionViewController/ActiveSessionViewController.m"
-                  timestampString = "526595020.96146"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "600">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__44-[ActiveSessionViewController buttonCancel:]_block_invoke"
-                  moduleName = "RSVP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/arshdeepsingh/Dropbox/Current%20Projects/Projects/RSVP/RSVP/MVC/ActiveSessionViewController/ActiveSessionViewController.m"
-                  timestampString = "526595020.963034"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSVP/MVC/ShowActiveSessionDetail/ShowActiveSessionDetail.m"
-            timestampString = "526586388.244591"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "-viewUpdate"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "-webService"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,28 +57,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RSVP/AppDelegate.m"
-            timestampString = "526593931.802781"
+            filePath = "RSVP/MVC/DriveWayInfoVC/DriveWayInfoVC.m"
+            timestampString = "526842740.80678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RSVP/MVC/LoginViewController/LoginViewController.m"
-            timestampString = "526593931.802781"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "461"
+            endingLineNumber = "461"
             landmarkName = "-webService"
             landmarkType = "7">
          </BreakpointContent>

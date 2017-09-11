@@ -142,22 +142,24 @@
         }
     }
 
--(void)BuyerDetail{
+-(void)BuyerDetail
+{
     
     NSDictionary *sellerCar = [Userprofile valueForKey:@"Car"];
     
     self.lbl_B_Name.text = [Userprofile valueForKey:@"FirstName"];
-    self.lbl_B_Details.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ Plate : %@",[sellerCar valueForKey:@"Color"],[sellerCar valueForKey:@"Brand"],[sellerCar valueForKey:@"Class"],[sellerCar valueForKey:@"Plate"]];
+    self.lbl_B_Details.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ %@ Plate : %@",[sellerCar valueForKey:@"Color"],[sellerCar valueForKey:@"Brand"],[sellerCar valueForKey:@"Model"],[sellerCar valueForKey:@"Class"],[sellerCar valueForKey:@"Plate"]];
     
     self.lbl_B_PhoneNumber.text =[NSString stringWithFormat:@"My Phone number %@", [Userprofile valueForKey:@"PhoneNumber"]];
     
 }
+
 -(void)SellerDetail{
     
     NSDictionary *BuyerCar = [profile valueForKey:@"Car"];
     
     self.lbl_S_Name.text = [profile valueForKey:@"FirstName"];
-    self.lbl_s_Details.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ Plate : %@",[BuyerCar valueForKey:@"Color"],[BuyerCar valueForKey:@"Brand"],[BuyerCar valueForKey:@"Class"],[BuyerCar valueForKey:@"Plate"]];
+    self.lbl_s_Details.text = [NSString stringWithFormat:@"I Drive a %@ %@ %@ %@ Plate : %@",[BuyerCar valueForKey:@"Color"],[BuyerCar valueForKey:@"Brand"],[BuyerCar valueForKey:@"Model"],[BuyerCar valueForKey:@"Class"],[BuyerCar valueForKey:@"Plate"]];
     self.lbl_s_PhoneNumber.text =[NSString stringWithFormat:@"My Phone number %@",  [profile valueForKey:@"PhoneNumber"]];
 }
 
@@ -260,7 +262,11 @@
            
              NSMutableArray *imageArray = [responseObject valueForKey:@"ImageList"];
              NSString *urlString = [NSString stringWithFormat:@"http://rsvp.rootflyinfo.com%@",[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
-            self.img.imageURL = [NSURL URLWithString:urlString];
+                
+                self.img.backgroundColor = [UIColor grayColor];
+                self.img.imageURL = [NSURL URLWithString:urlString];
+                self.img.showActivityIndicator = YES;
+                self.img.activityIndicatorColor = [UIColor blackColor];
             }
                          NSLog(@"%@",responseObject);
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

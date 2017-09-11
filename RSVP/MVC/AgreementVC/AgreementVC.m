@@ -34,6 +34,9 @@
    
     currMinute=30;
     currSeconds=00;
+    
+    [Utils okAlert:@"Message" message:@"Your 30 min start now, Please move your car to spot"];
+    
     [self webServiceUserDetail];
     [self start];
 
@@ -164,7 +167,10 @@
              [self UpdateView];
              NSMutableArray *imageArray = [responseObject valueForKey:@"ImageList"];
              NSString *urlString = [NSString stringWithFormat:@"http://rsvp.rootflyinfo.com%@",[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
+             self.imgSpot.backgroundColor = [UIColor grayColor];
              self.imgSpot.imageURL = [NSURL URLWithString:urlString];
+             self.imgSpot.showActivityIndicator = YES;
+             self.imgSpot.activityIndicatorColor = [UIColor blackColor];
          }
         
          NSLog(@"%@",responseObject);

@@ -42,8 +42,10 @@
         return sessionArray.count;
     }
     
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     SessionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"sessionCell"];
+    
     cell.btnCancel.tag = indexPath.row;
     
     if ([[[sessionArray valueForKey:@"ParkingType"]objectAtIndex:indexPath.row]isEqual: @"Driway"]||[[[sessionArray valueForKey:@"ParkingType"]objectAtIndex:indexPath.row]isEqual: @"Block"])

@@ -20,6 +20,8 @@
     BOOL islocationEnable;
     UIImage *imageUpload;
     
+    NSDictionary *DriveWayDict;
+    
     
 }
 @property (strong, nonatomic) IBOutlet UIButton *btnBack;
@@ -36,7 +38,7 @@
 @property (strong, nonatomic) IBOutlet UISwitch *ruleSwitch;
 @property (strong, nonatomic) IBOutlet UIButton *adressButton;
 @property (strong, nonatomic) IBOutlet UITextField *rulesTextField;
-    @property (strong, nonatomic) IBOutlet UIImageView *imgDrrivey;
+    @property (strong, nonatomic) IBOutlet AsyncImageView *imgDrrivey;
 
 - (IBAction)btnBack:(id)sender;
 
@@ -53,6 +55,7 @@ CLLocationManager *locationManager1;
     if (_isDrivayEdit == YES)
     {
         self.btnBack.hidden = NO;
+        [self DriveWayInfoMethod];
     }
     
     locationManager1 = [[CLLocationManager alloc] init];
@@ -86,15 +89,16 @@ CLLocationManager *locationManager1;
     self.addressTextField.autoCompleteShouldSelectOnExactMatchAutomatically = YES;
     self.addressTextField.autoCompleteTableFrame = CGRectMake(20,self.addressTextField.frame.origin.y+50, self.addressTextField.frame.size.width, 300.0);
     
-    if (_isDrivayEdit == YES)  {
-        [self DriveWayInfoMethod];
-    }
+    
   
 }
 
 -(void)DriveWayInfoMethod
 {
-    NSDictionary *DriveWayDict = _myProfileDetail[@"Driwayinfo"];
+    DriveWayDict = _myProfileDetail[@"Driwayinfo"];
+    
+    [self GetUserImages];
+    
     self.txtSpotName.text = [DriveWayDict valueForKey:@"Name"] ;
     self.addressTextField.text = [DriveWayDict valueForKey:@"Address"] ;
     self.blockAvailableSwitch.on = [[DriveWayDict valueForKey:@"AvailableBlock"]boolValue] ;
@@ -104,6 +108,11 @@ CLLocationManager *locationManager1;
     self.spaceForRegularCarSwitch.on = [[DriveWayDict valueForKey:@"SpaceAvailableForRegularCar"]boolValue];
     self.ruleSwitch.on = [[DriveWayDict valueForKey:@"ParkingRule"]boolValue];
     
+    NSString *latStr = [DriveWayDict valueForKey:@"Latitude"];
+    NSString *longStr = [DriveWayDict valueForKey:@"Longitude"];
+    
+    location.latitude = [latStr doubleValue];
+    location.longitude = [longStr doubleValue];
     
     if (DriveWayDict[@"Comment"] != [NSNull null]){
        self.regularCarCommentTextField = [DriveWayDict valueForKey:@"Comment"];
@@ -267,7 +276,13 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                    if ([jsonDict[@"Success"] boolValue]){
                        
                        SCLAlertView *alert = [[SCLAlertView alloc] init];
+                       if (_isDrivayEdit == YES) {
+                           
+                           [alert showSuccess:self title:@"Alert" subTitle:@"Update Sucessfully" closeButtonTitle:@"OK" duration:0.0f];
+                       }
+                       else{
                        [alert showSuccess:@"Alert" subTitle:[responseObject valueForKey:@"Message"] closeButtonTitle:@"Ok" duration:0.0f];
+                       }
                    }
                    else
                    {
@@ -282,11 +297,55 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
 
     }
 
+-(void)GetUserImages{
+    
+     [SVProgressHUD show];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayImageList?DriwayId=";
+    
+    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[DriveWayDict valueForKey:@"DriwayId"]]];
+    
+    AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
+    manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager1 GET: URLToHit parameters:nil progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
+     {
+         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+         NSDictionary *jsonDict = responseObject;
+         [SVProgressHUD dismiss];
+         if ([jsonDict[@"Success"] boolValue])
+         {
+             
+             NSMutableArray *imageArray = [responseObject valueForKey:@"ImageList"];
+             NSString *urlString = [NSString stringWithFormat:@"http://rsvp.rootflyinfo.com%@",[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
+             
+             self.imgDrrivey.backgroundColor = [UIColor grayColor];
+             self.imgDrrivey.imageURL = [NSURL URLWithString:urlString];
+             self.imgDrrivey.showActivityIndicator = YES;
+             self.imgDrrivey.activityIndicatorColor = [UIColor blackColor];
+             
+         }
+         NSLog(@"%@",responseObject);
+         
+     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+         [SVProgressHUD dismiss];
+         NSLog(@"%@",error);
+     }];
+    
+    
+    
+}
+
+
 - (IBAction)addressOnMap:(id)sender {
     GoogleMapVC *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"GoogleMapVC"];
     hvc.delegate = self;
     [self.navigationController pushViewController:hvc animated:YES];
 }
+
+
 - (IBAction)submitButtonAction:(id)sender {
     if (!islocationEnable){
         SCLAlertView *alert = [[SCLAlertView alloc] init];
@@ -398,28 +457,34 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                            @"Name":self.txtSpotName.text,
                            @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]
                            };
+        
     NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveDriwayinfo";
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     [manager1 POST:url parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                NSDictionary *jsonDict = responseObject;
-               [SVProgressHUD dismiss];
+               
                if ([jsonDict[@"Success"] boolValue])
                {
-                   if (imageUpload != nil) {
-                   [self SaveImageMethod:imageUpload];
+                   if (imageUpload != nil)
+                   {
+                       [self SaveImageMethod:imageUpload];
                    }
                    if (_isDrivayEdit)
                    {
+                       if (imageUpload == nil) {
+                         [SVProgressHUD dismiss];
                        SCLAlertView *alert = [[SCLAlertView alloc] init];
                        [alert showSuccess:self title:@"Alert" subTitle:@"Update Sucessfully" closeButtonTitle:@"OK" duration:0.0f];
-                       
+                       }
+                   
                    }
                    else
                    {
-                   MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
-                   [self.navigationController pushViewController:hvc animated:YES];
+                       [SVProgressHUD dismiss];
+                       MapViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
+                       [self.navigationController pushViewController:hvc animated:YES];
                    }
                    
                }else{

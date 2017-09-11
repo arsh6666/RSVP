@@ -14,6 +14,7 @@
     NSString *token;
     NSString *uniqueIdentifier;
     NSString *amounts;
+    NSDateFormatter *formate;
 }
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *emailLabel;
@@ -31,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    
+    
 
     // Do any additional setup after loading the view.
 }
@@ -82,14 +85,33 @@
     
     MyProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyProfileCell"];
     
-    if (_segment.selectedSegmentIndex == 0){
-                
-        cell.leftLabel.text =[NSString stringWithFormat:@"%@ \n %@", [[sendArray valueForKey:@"Address"]objectAtIndex:indexPath.row],[[sendArray valueForKey:@"Date"]objectAtIndex:indexPath.row]];
+        formate = [[NSDateFormatter alloc]init];
+        [formate setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+        formate.dateFormat = @"MM/dd/yyyy hh:mm:ss a";
+        
+    if (_segment.selectedSegmentIndex == 0)
+    {
+        
+        
+        NSString *dateSTR = [[sendArray valueForKey:@"Date"]objectAtIndex:indexPath.row];
+        NSDate *date = [formate dateFromString:dateSTR];
+        [formate setTimeZone:[NSTimeZone systemTimeZone]];
+        NSString *finalDate = [formate stringFromDate:date];
+        
+        
+        cell.leftLabel.text =[NSString stringWithFormat:@"%@ \n %@", [[sendArray valueForKey:@"Address"]objectAtIndex:indexPath.row],finalDate];
         cell.rightLabel.text = [NSString stringWithFormat:@"$ %@", [[sendArray valueForKey:@"Amount"]objectAtIndex:indexPath.row]];
     }
     else
     {
-        cell.leftLabel.text =[NSString stringWithFormat:@"%@ \n %@", [[recivedArray valueForKey:@"Address"]objectAtIndex:indexPath.row],[[recivedArray valueForKey:@"Date"]objectAtIndex:indexPath.row]];
+        
+        
+        NSString *dateSTR = [[recivedArray valueForKey:@"Date"]objectAtIndex:indexPath.row];
+        NSDate *date = [formate dateFromString:dateSTR];
+        [formate setTimeZone:[NSTimeZone systemTimeZone]];
+        NSString *finalDate = [formate stringFromDate:date];
+
+        cell.leftLabel.text =[NSString stringWithFormat:@"%@ \n %@", [[recivedArray valueForKey:@"Address"]objectAtIndex:indexPath.row],finalDate];
         cell.rightLabel.text = [NSString stringWithFormat:@"$ %@", [[recivedArray valueForKey:@"Amount"]objectAtIndex:indexPath.row]];
         
     }

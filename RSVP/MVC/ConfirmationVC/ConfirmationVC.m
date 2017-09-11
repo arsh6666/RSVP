@@ -134,13 +134,15 @@
                
                 NSLog(@"%@",responseObject);
            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                [SVProgressHUD dismiss];
                NSLog(@"%@",error);
            }];
     
 }
     
--(void)GetUserProfile{
+-(void)GetUserProfile
+{
     
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];

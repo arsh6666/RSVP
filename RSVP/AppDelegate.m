@@ -115,10 +115,13 @@
     NSDictionary *dict = [userInfo valueForKey:@"aps"];
     
     if(application.applicationState == UIApplicationStateActive) {
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Notification" message:[dict valueForKey:@"messageText"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
 //        
 //        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Notification" message:<#(nullable NSString *)#> preferredStyle:<#(UIAlertControllerStyle)#>]
         
-        [Utils okAlert:@"Notification" message:[dict valueForKey:@"messageText"]];
+  //      [Utils okAlert:@"Notification" message:[dict valueForKey:@"messageText"]];
         //app is currently active, can update badges count here
         
     }
@@ -224,6 +227,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 AppDelegate *appDelegate (void)
 {
