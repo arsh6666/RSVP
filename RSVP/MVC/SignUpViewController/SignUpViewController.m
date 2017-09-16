@@ -167,12 +167,12 @@
                            @"Password": _passwordTextField.text,
                            @"NickName": _nickNameTextField.text,
                            @"PhoneNumber":[_phoneNumber.text stringByReplacingOccurrencesOfString:@"-" withString:@""]};
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/Register";
+   
     
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
       
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:Register parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
      {
                [SVProgressHUD dismiss];

@@ -8,7 +8,7 @@
 
 #import "ConfirmationVC.h"
 
-@interface ConfirmationVC ()<AuthNetDelegate>{
+@interface ConfirmationVC (){
     NSString *token;
     NSString *uniqueIdentifier;
     NSInteger walletBalance;
@@ -94,16 +94,19 @@
     }
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
+    
+    NSDictionary *dict = @{
+                           @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"ToUserId": _markerData[@"UserId"],
                            @"Amount": self.Price,
                            @"ParkingType":[NSNumber numberWithInteger:typeID],
                            @"ParkingId": [NSNumber numberWithInteger:idID]
                            };
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SavePayment";
+    
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:SavePayment parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                [SVProgressHUD dismiss];
                [[UIApplication sharedApplication] endIgnoringInteractionEvents];
@@ -128,8 +131,11 @@
                    }
 
                    
-               }else{
-                  
+               }
+               else
+               {
+                   SCLAlertView *alert = [[SCLAlertView alloc] init];
+                   [alert showWarning:self title:@"Alert" subTitle: [responseObject valueForKey:@"Message"] closeButtonTitle:@"OK" duration:0.0f];
                }
                
                 NSLog(@"%@",responseObject);
@@ -146,11 +152,13 @@
     
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetProfile,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
+ 
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 GET: URLToHit parameters:nil progress:nil
+    [manager1 GET: URL parameters:nil progress:nil
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
               
               NSDictionary *jsonDict = responseObject;

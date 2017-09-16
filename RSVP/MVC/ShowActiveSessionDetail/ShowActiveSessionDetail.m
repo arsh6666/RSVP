@@ -19,6 +19,8 @@
     NSString *buyerID;
     NSString *sellerID;
     NSString *UserID;
+    NSMutableArray *photos;
+    NSDictionary *jsonDictImages;
     
 }
 @property (strong, nonatomic) IBOutlet UILabel *txtLBL;
@@ -36,6 +38,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblAddress;
     
 - (IBAction)btnBack:(id)sender;
+- (IBAction)btnImageView:(id)sender;
     
 
 @end
@@ -73,6 +76,12 @@
     [self GetSellerUserProfile];
     
     // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    self.navigationController.navigationBarHidden = YES;
+    
 }
 
     -(void)viewUpdate
@@ -169,13 +178,11 @@
       //  [SVProgressHUD show];
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
         
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-        
-        
-        NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[self.dict valueForKey:@"ByerId"]]];
+        NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetProfile,[self.dict valueForKey:@"ByerId"]];
+    
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 GET: URLToHit parameters:nil progress:nil
+        [manager1 GET: URL parameters:nil progress:nil
               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
          {
              //NSDictionary *jsonDict = responseObject;
@@ -210,12 +217,13 @@
     -(void)GetSellerUserProfile{
         
         [SVProgressHUD show];
+        
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-        NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[self.dict valueForKey:@"UserId"]]];
+        NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetProfile,[self.dict valueForKey:@"UserId"]];
+        
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 GET: URLToHit parameters:nil progress:nil
+        [manager1 GET: URL parameters:nil progress:nil
               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
          {
              NSDictionary *jsonDict = responseObject;
@@ -247,17 +255,16 @@
         
        // [SVProgressHUD show];
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayImageList?DriwayId=";
-        NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[self.dict valueForKey:@"DriwayId"]]];
+      NSString *URL = [NSString stringWithFormat:@"%@?DriwayId=%@",GetDriwayImageList,[self.dict valueForKey:@"DriwayId"]];
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 GET: URLToHit parameters:nil progress:nil
+        [manager1 GET: URL parameters:nil progress:nil
               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
          {
              [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-             NSDictionary *jsonDict = responseObject;
+             jsonDictImages = responseObject;
              [SVProgressHUD dismiss];
-            if ([jsonDict[@"Success"] boolValue]){
+            if ([jsonDictImages[@"Success"] boolValue]){
                 
            
              NSMutableArray *imageArray = [responseObject valueForKey:@"ImageList"];
@@ -323,8 +330,56 @@
 
 - (IBAction)btnBack:(id)sender{
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+ //   [self dismissViewControllerAnimated:YES completion:nil];
     
-//    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)btnImageView:(id)sender {
+    
+    photos = [NSMutableArray array];
+    NSMutableArray *imageArray = [jsonDictImages valueForKey:@"ImageList"];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",BaseURL,[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
+    [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:urlString]]];
+    
+    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    
+    // Set options
+    browser.displayActionButton = NO; // Show action button to allow sharing, copying, etc (defaults to YES)
+    browser.displayNavArrows = NO; // Whether to display left and right nav arrows on toolbar (defaults to NO)
+    browser.displaySelectionButtons = NO; // Whether selection buttons are shown on each image (defaults to NO)
+    browser.zoomPhotosToFill = YES; // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
+    browser.alwaysShowControls = NO; // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
+    browser.enableGrid = YES; // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
+    browser.startOnGrid = NO; // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+    browser.autoPlayOnAppear = NO; // Auto-play first video
+    
+    // Customise selection images to change colours if required
+    browser.customImageSelectedIconName = @"ImageSelected.png";
+    browser.customImageSelectedSmallIconName = @"ImageSelectedSmall.png";
+    
+    // Optionally set the current visible photo before displaying
+    [browser setCurrentPhotoIndex:1];
+    
+    
+    // Present
+    [self.navigationController pushViewController:browser animated:YES];
+    
+    // Manipulate
+    [browser showNextPhotoAnimated:YES];
+    [browser showPreviousPhotoAnimated:YES];
+    [browser setCurrentPhotoIndex:10];
+    
+}
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return photos.count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < photos.count) {
+        return [photos objectAtIndex:index];
+    }
+    return nil;
 }
 @end

@@ -69,8 +69,7 @@
 
 -(void)webService{
     [SVProgressHUD show];
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayBidList?DriwayId=";
-    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",_drivewayID]];
+    NSString *URLToHit = [NSString stringWithFormat:@"%@?DriwayId=%@",GetDriwayBidList,_drivewayID];
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     [manager1 GET: URLToHit parameters:nil progress:nil

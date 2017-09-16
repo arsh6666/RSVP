@@ -64,7 +64,7 @@ CLLocationManager *locationManager1;
     [locationManager1 startUpdatingLocation];
     
     self.addressTextField.placeSearchDelegate= self;
-    self.addressTextField.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+    self.addressTextField.strApiKey= GooglePlaceAPI;
    
     self.addressTextField.superViewOfList= self.contentView;  // View, on which Autocompletion list should be appeared.
     self.addressTextField.autoCompleteShouldHideOnSelection= YES;
@@ -130,9 +130,11 @@ CLLocationManager *locationManager1;
 #pragma mark - Place search Textfield Delegates
 
 -(void)placeSearch:(MVPlaceSearchTextField *)textField ResponseForSelectedPlace:(GMSPlace *)responseDict{
+    
     location = responseDict.coordinate;
     [self.view endEditing:YES];
     NSLog(@"SELECTED ADDRESS :%@",responseDict);
+    
 }
 
 -(void)placeSearchWillShowResult:(MVPlaceSearchTextField*)textField{
@@ -256,20 +258,23 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
         
     }
     
--(void)SaveImageMethod:(UIImage*)Image{
+-(void)SaveImageMethod:(UIImage*)Image
+{
     [SVProgressHUD show];
+    
+    UIImage *compressImage = [Utils resizeImage:Image];
         
     NSDictionary *dict = @{
                             @"Type": [NSNumber numberWithInteger:1],
-                            @"Images":[NSArray arrayWithObject:[Utils encodeToBase64String:Image]],
+                            @"Images":[NSArray arrayWithObject:[Utils encodeToBase64String:compressImage]],
                             @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]
                                };
         
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/UploadImages";
+    
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
         
-        [manager1 POST:url parameters:dict progress:nil
+        [manager1 POST:UploadImages parameters:dict progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                    NSDictionary *jsonDict = responseObject;
                    [SVProgressHUD dismiss];
@@ -290,7 +295,14 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                        [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
                    }
                    NSLog(@"%@",responseObject);
-               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
+    {
+        NSData *dict2 = [error.userInfo valueForKey:@"com.alamofire.serialization.response.error.data"];
+        
+        NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:dict2 options:0 error:NULL];
+        
+                   SCLAlertView *alert = [[SCLAlertView alloc] init];
+                   [alert showWarning:self title:@"Image Upload Error" subTitle:[responseDict valueForKey:@"message"] closeButtonTitle:@"OK" duration:0.0f];
                    [SVProgressHUD dismiss];
                    NSLog(@"%@",error);
                }];
@@ -302,9 +314,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
      [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayImageList?DriwayId=";
-    
-    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[DriveWayDict valueForKey:@"DriwayId"]]];
+    NSString *URLToHit = [NSString stringWithFormat:@"%@?DriwayId=%@",GetDriwayImageList,[DriveWayDict valueForKey:@"DriwayId"]];
     
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
@@ -318,7 +328,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
          {
              
              NSMutableArray *imageArray = [responseObject valueForKey:@"ImageList"];
-             NSString *urlString = [NSString stringWithFormat:@"http://rsvp.rootflyinfo.com%@",[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
+             NSString *urlString = [NSString stringWithFormat:@"%@%@",BaseURL,[[imageArray valueForKey:@"Path"]objectAtIndex:0]];
              
              self.imgDrrivey.backgroundColor = [UIColor grayColor];
              self.imgDrrivey.imageURL = [NSURL URLWithString:urlString];
@@ -458,10 +468,9 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                            @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]
                            };
         
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveDriwayinfo";
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:SaveDriwayinfo parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                NSDictionary *jsonDict = responseObject;
                
@@ -476,7 +485,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                        if (imageUpload == nil) {
                          [SVProgressHUD dismiss];
                        SCLAlertView *alert = [[SCLAlertView alloc] init];
-                       [alert showSuccess:self title:@"Alert" subTitle:@"Update Sucessfully" closeButtonTitle:@"OK" duration:0.0f];
+                       [alert showSuccess:self title:@"Alert" subTitle:@"Driveway Info Update Sucessfully" closeButtonTitle:@"OK" duration:0.0f];
                        }
                    
                    }
@@ -493,6 +502,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
                }
                NSLog(@"%@",responseObject);
            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+               SCLAlertView *alert = [[SCLAlertView alloc] init];
+               [alert showWarning:self title:@"Alert" subTitle:@"Driveway Upload Error" closeButtonTitle:@"OK" duration:0.0f];
                [SVProgressHUD dismiss];
                NSLog(@"%@",error);
            }];

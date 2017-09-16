@@ -11,6 +11,7 @@
 
 
 #import "Utils.h"
+#import "Constants2.h"
 
 #import "AppDelegate.h"
 #import "SingleLineTextField.h"
@@ -57,7 +58,6 @@
 #import <GooglePlaces/GooglePlaces.h>
 #import "SVProgressHUD.h"
 #import "HCSStarRatingView.h"
-#import <AnetEMVSdk/AnetEMVSdk.h>
 #import <MapKit/MapKit.h>
 #import <RESideMenu/RESideMenu.h>
 #import "SCLAlertView.h"
@@ -67,10 +67,16 @@
 #import "NTMonthYearPicker.h"
 #import "KLCPopup.h"
 #import "AsyncImageView.h"
+#import "MWPhotoBrowser.h"
 
 
 
 #import "DateView.h"
+//------------//
+#import "CreditCardPayment.h"
+#import "ueConnection.h"
+#import "uesoapTransactionResponse.h" //Needed to output the result response
+#import "Constants.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

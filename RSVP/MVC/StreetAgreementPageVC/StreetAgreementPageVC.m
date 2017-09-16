@@ -8,7 +8,7 @@
 
 #import "StreetAgreementPageVC.h"
 
-@interface StreetAgreementPageVC (){
+@interface StreetAgreementPageVC ()<MFMailComposeViewControllerDelegate>{
     NSDictionary *sellerProfile;
 }
     
@@ -46,11 +46,11 @@
         
         [SVProgressHUD show];
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-        NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[self.markerData valueForKey:@"UserId"]]];
+        
+        NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetProfile,[self.markerData valueForKey:@"UserId"]];
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 GET: URLToHit parameters:nil progress:nil
+        [manager1 GET: URL parameters:nil progress:nil
               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
         {
                   NSDictionary *jsonDict = responseObject;

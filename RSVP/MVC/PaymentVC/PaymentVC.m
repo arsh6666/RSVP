@@ -63,8 +63,10 @@
 - (IBAction)backButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-- (IBAction)nextButtonAction:(id)sender {
-    if (_isEditProfile){
+- (IBAction)nextButtonAction:(id)sender
+{
+    if (_isEditProfile)
+    {
         [NSUserDefaults.standardUserDefaults setObject:_cardNumber.text forKey:@"cardNumber"];
         [NSUserDefaults.standardUserDefaults setObject:_expriyDate.text forKey:@"exipryDate"];
         [NSUserDefaults.standardUserDefaults setObject:_billingzip.text forKey:@"billingZip"];
@@ -159,7 +161,8 @@
 
 }
     
-- (void)onDatePicked:(UITapGestureRecognizer *)gestureRecognizer {
+- (void)onDatePicked:(UITapGestureRecognizer *)gestureRecognizer
+{
    // [self updateLabel];
 }
     

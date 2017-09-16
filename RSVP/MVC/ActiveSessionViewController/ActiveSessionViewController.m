@@ -72,7 +72,8 @@
     
         ShowActiveSessionDetail *sasd = [self.storyboard instantiateViewControllerWithIdentifier:@"ShowActiveSessionDetail"];
         sasd.dict =[sessionArray objectAtIndex:indexPath.row];
-    [self presentViewController:sasd animated:YES completion:nil];
+    [self.navigationController pushViewController:sasd animated:YES];
+ //   [self presentViewController:sasd animated:YES completion:nil];
  
  
 }
@@ -134,10 +135,10 @@
                            @"ActiveSession": [NSNumber numberWithBool:false]
                            };
     
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/ActiveDeactiveSession";
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:ActiveDeactiveSession parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                NSDictionary *jsonDict = responseObject;
                [SVProgressHUD dismiss];
@@ -191,10 +192,10 @@
     -(void)webService
     {
         [SVProgressHUD show];
-        NSString *url=[NSString stringWithFormat:@"http://rsvp.rootflyinfo.com/api/Values/GetActiveDriwayinfoList?UserId=%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
+        NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetDriwayinfoList,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 GET:url parameters:Nil progress:nil
+        [manager1 GET:URL parameters:Nil progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
         {
                    NSDictionary *jsonDict = responseObject;

@@ -109,7 +109,7 @@
     if([_typeOfParking isEqualToString:@"Street"]){
         IntParkingType = @"3";
     }
-    NSString *url=[NSString stringWithFormat:@"http://rsvp.rootflyinfo.com/api/Values/GetScheduleList?UserId=%@&Day=%@&Type=%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],IntDay,IntParkingType];
+    NSString *url=[NSString stringWithFormat:@"%@?UserId=%@&Day=%@&Type=%@",GetScheduleList,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],IntDay,IntParkingType];
     
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];

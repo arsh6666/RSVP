@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1CC21E8867E4D6B4A7F020FAE75D52A5'
+               BlueprintIdentifier = 'AFA78E08BC1056C836C5B7C516AC4A11'
                BlueprintName = 'RMPScrollingMenuBarController-RMPScrollingMenuBarController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'RMPScrollingMenuBarController.bundle'>

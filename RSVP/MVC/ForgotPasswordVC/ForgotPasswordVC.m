@@ -33,7 +33,7 @@
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }
-    if (![self validateEmailWithString:_emailTextField.text]){
+    else if (![Utils isValidEmail:_emailTextField.text]){
         [alert showWarning:self title:@"Alert" subTitle:@"Please enter valid email address." closeButtonTitle:@"OK" duration:0.0f];
         return;
     }else{
@@ -41,28 +41,24 @@
     }
 }
 
-- (BOOL)validateEmailWithString:(NSString*)email
-{
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:email];
-}
-
 -(void)webService{
     [SVProgressHUD show];
-    NSDictionary *dict = @{@"Email":_emailTextField.text};
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Account/ForgetPassword";
+    NSDictionary *dict = @{
+                           @"Email":_emailTextField.text
+                           };
+    
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:ForgetPassword parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                NSDictionary *jsonDict = responseObject;
                [SVProgressHUD dismiss];
-               if ([jsonDict[@"Success"] boolValue]){
+               if ([jsonDict[@"Success"] boolValue])
+               {
                    SCLAlertView *alert = [[SCLAlertView alloc] init];
-                   [alert addButton:@"OK" actionBlock:^(void) {
-                       [self.navigationController popViewControllerAnimated:YES];
-                   }];
+                   [alert showSuccess:@"Message" subTitle:@"Password Sent on your register email Id" closeButtonTitle:@"Ok" duration:1.0f];
+                   
                    
                }else{
                    SCLAlertView *alert = [[SCLAlertView alloc] init];

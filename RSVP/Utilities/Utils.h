@@ -25,5 +25,5 @@
 + (NSDictionary *)dictionaryByReplacingNullsWithStrings :(NSDictionary *)Dict;
 +(NSString *) stringByStrippingHTML:(NSString *)str;
 +(NSString*)remaningTime:(NSDate*)startDate endDate:(NSDate*)endDate;
-
++(UIImage *)resizeImage:(UIImage *)image;
 @end

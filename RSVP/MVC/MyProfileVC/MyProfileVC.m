@@ -8,20 +8,24 @@
 
 #import "MyProfileVC.h"
 
-@interface MyProfileVC ()<UITableViewDataSource,UITableViewDelegate,AuthNetDelegate>{
+@interface MyProfileVC ()<UITableViewDataSource,UITableViewDelegate>{
+    
     NSDictionary *myDetail;
     NSMutableArray *sendArray,*recivedArray;
     NSString *token;
     NSString *uniqueIdentifier;
     NSString *amounts;
     NSDateFormatter *formate;
+    
 }
+
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *emailLabel;
 @property (strong, nonatomic) IBOutlet UILabel *totalBalanceLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *userImageView;
 @property (strong, nonatomic) IBOutlet UITableView *historyTableView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segment;
+@property(nonatomic, retain)CreditCardPayment *ccPayment;
 
 - (IBAction)btnAddBalance:(id)sender;
 
@@ -118,15 +122,21 @@
     return cell;
 
 }
--(void)webService{
+
+
+-(void)webService
+{
     [SVProgressHUD show];
+    
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetProfile,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 GET: URLToHit parameters:nil progress:nil
+    [manager1 GET: URL parameters:nil progress:nil
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+              
               NSDictionary *jsonDict = responseObject;
               [SVProgressHUD dismiss];
               [[UIApplication sharedApplication] endIgnoringInteractionEvents];
@@ -197,16 +207,43 @@
         
         uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         
-        [AuthNet authNetWithEnvironment:ENV_TEST];
-        MobileDeviceLoginRequest *mobileDeviceLoginRequest = [MobileDeviceLoginRequest mobileDeviceLoginRequest];
-        mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.name = @"maninderbindra1991";
-        mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.password = @"Iphone_5s";
-        mobileDeviceLoginRequest.anetApiRequest.merchantAuthentication.mobileDeviceId = uniqueIdentifier;
-        AuthNet *an = [AuthNet getInstance];
-        [an setDelegate:self];
-        [an mobileDeviceLoginRequest: mobileDeviceLoginRequest];
+            Constants *shareManager = [Constants sharedManager];
+            
+            /*
+             * This are the required information, which need to initialize
+             * Before doing any transactions
+             */
+            shareManager.isProduction = true;
+            shareManager.sourceKey = USAePaySourceKey;
+            shareManager.pinNum = USAePayPin;
+            
+            /*
+             * Before we call the process payment method,
+             * We need to set the required values in credit card payment class
+             */
+            
+            
+            
+            NSString *cardNumber = [NSUserDefaults.standardUserDefaults objectForKey:@"cardNumber"];
+            NSString *cvv = [NSUserDefaults.standardUserDefaults objectForKey:@"cvv"];
+            NSString *billingZip = [NSUserDefaults.standardUserDefaults objectForKey:@"billingZip"];
+            NSString *expire = [NSUserDefaults.standardUserDefaults objectForKey:@"exipryDate"];
+            
+            NSString *expireDate = [expire stringByReplacingOccurrencesOfString:@"/" withString:@""];
+            
+            _ccPayment = [[CreditCardPayment alloc]init];
+            _ccPayment.delegate = self;
+            
+            _ccPayment.creditCardHolderName = myDetail[@"FirstName"];
+            _ccPayment.creditCardNumber = cardNumber;
+            _ccPayment.creditCardExpDate = expireDate;
+            _ccPayment.creditCardCVV = cvv ;
+            _ccPayment.creditCardAvsStreet = @"123";
+            _ccPayment.creditCardAvsZip = billingZip;
+            _ccPayment.creditCardChargeAmount = amounts;
+            
+            [_ccPayment processCCPayment];
         }
-        
     }]];
     
     [self presentViewController:alert animated:YES completion:nil];
@@ -230,87 +267,42 @@
     sender.text = @"$ ";
 }
 
--(void)paymentSucceeded:(CreateTransactionResponse *)response
+
+
+-(void)finishProcessingPayment :(uesoapTransactionResponse *)response
 {
+    NSLog(@"%@",response.Error);
     [SVProgressHUD dismiss];
+    
+    /*
+     * Use an alert to display the payment result status
+     */
     [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     
     SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showSuccess:self title:@"Alert" subTitle:[NSString stringWithFormat:@"%@",response.responseReasonText] closeButtonTitle:@"Ok" duration:0.0f];
+    [alert showSuccess:self title:@"Alert" subTitle:[NSString stringWithFormat:@"%@",response.Result] closeButtonTitle:@"Ok" duration:0.0f];
     [alert alertIsDismissed:^{
-        [self webService2];
+        [self AddFundMethod];
     }];
     
 }
--(void)emvPaymentSucceeded:(AnetEMVTransactionResponse *)response{
+
+-(void)AddFundMethod
+{
     
-}
-
--(void)requestFailed:(AuthNetResponse *)response{
-    [SVProgressHUD dismiss];
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@",response.responseReasonText] closeButtonTitle:@"OK" duration:0.0f];
-}
-
-- (void) mobileDeviceLoginSucceeded:(MobileDeviceLoginResponse *)response {
-    token = response.sessionToken;
     [SVProgressHUD show];
-    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    CreditCardType *creditCardType = [CreditCardType creditCardType];
-    creditCardType.cardNumber = [NSUserDefaults.standardUserDefaults objectForKey:@"cardNumber"];
-    creditCardType.cardCode = [NSUserDefaults.standardUserDefaults objectForKey:@"cvv"];
-    creditCardType.expirationDate = [NSUserDefaults.standardUserDefaults objectForKey:@"exipryDate"];
     
-    PaymentType *paymentType = [PaymentType paymentType];
-    paymentType.creditCard = creditCardType;
-    
-    ExtendedAmountType *extendedAmountTypeTax = [ExtendedAmountType extendedAmountType];
-    extendedAmountTypeTax.amount = @"0";
-    extendedAmountTypeTax.name = @"Tax";
-    
-    ExtendedAmountType *extendedAmountTypeShipping = [ExtendedAmountType extendedAmountType];
-    extendedAmountTypeShipping.amount = @"0";
-    extendedAmountTypeShipping.name = @"Shipping";
-    
-    LineItemType *lineItem = [LineItemType lineItem];
-    lineItem.itemName = @"block";
-    lineItem.itemDescription = @"address";
-    lineItem.itemQuantity = @"1";
-    lineItem.itemPrice = amounts ;
-    lineItem.itemID = @"1";
-    
-    TransactionRequestType *requestType = [TransactionRequestType transactionRequest];
-    requestType.lineItems = [NSMutableArray arrayWithObject:lineItem];
-    requestType.amount = lineItem.itemPrice;
-    requestType.payment = paymentType;
-    requestType.tax = extendedAmountTypeTax;
-    requestType.shipping = extendedAmountTypeShipping;
-    
-    CreateTransactionRequest *request = [CreateTransactionRequest createTransactionRequest];
-    request.transactionRequest = requestType;
-    request.transactionType = AUTH_CAPTURE;
-    request.anetApiRequest.merchantAuthentication.mobileDeviceId = uniqueIdentifier;
-    request.anetApiRequest.merchantAuthentication.sessionToken = token;
-    
-    AuthNet *an1 = [AuthNet getInstance];
-    [an1 setDelegate:self];
-    [an1 purchaseWithRequest:request];
-};
-
-
--(void)webService2{
-    [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     
     NSDictionary *dict = @{
                            @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"Amount": amounts
                            };
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/AddFund";
+    
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:AddFund parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                [SVProgressHUD dismiss];
                [[UIApplication sharedApplication] endIgnoringInteractionEvents];

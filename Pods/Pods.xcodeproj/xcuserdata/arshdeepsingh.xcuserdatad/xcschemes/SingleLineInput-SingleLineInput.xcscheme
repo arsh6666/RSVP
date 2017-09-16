@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EED28939C2D4075F82BD26C2005B539B'
+               BlueprintIdentifier = '35336A80BF3CB5B686C15CEAC5005DBE'
                BlueprintName = 'SingleLineInput-SingleLineInput'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SingleLineInput.bundle'>

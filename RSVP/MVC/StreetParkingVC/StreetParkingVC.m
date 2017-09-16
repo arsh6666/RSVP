@@ -28,7 +28,7 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     self.aproxAddress.placeSearchDelegate = self;
-    self.aproxAddress.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+    self.aproxAddress.strApiKey= GooglePlaceAPI;
     self.aproxAddress.superViewOfList= self.scrollVew;  // View, on which Autocompletion list should be appeared.
     self.aproxAddress.autoCompleteShouldHideOnSelection= YES;
     self.aproxAddress.maximumNumberOfAutoCompleteRows= 5;
@@ -36,7 +36,7 @@
     
 
     self.pprovedAddress.placeSearchDelegate = self;
-    self.pprovedAddress.strApiKey= @"AIzaSyAT4NNoOQrBYgaUBqLsJmDaw1CnfkOe4CY";
+    self.pprovedAddress.strApiKey= GooglePlaceAPI;
     self.pprovedAddress.superViewOfList= self.scrollVew;  // View, on which Autocompletion list should be appeared.
     self.pprovedAddress.autoCompleteShouldHideOnSelection= YES;
     self.pprovedAddress.maximumNumberOfAutoCompleteRows= 5;
@@ -149,11 +149,9 @@
                            @"ApproveAddress":_pprovedAddress.text,
                            };
     
-    
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveStreet";
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager1 POST:SaveStreet parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *jsonDict = responseObject;
         [SVProgressHUD dismiss];
         if ([jsonDict[@"Success"] boolValue])
@@ -177,11 +175,13 @@
     }];
 }
 
--(void)getUserProfile{
+-(void)getUserProfile
+{
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/GetProfile?UserId=";
-    NSString *URLToHit = [url stringByAppendingString:[NSString stringWithFormat:@"%@",[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]]];
+    
+    NSString *URLToHit = [NSString stringWithFormat:@"%@?UserId=%@",GetProfile,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
+    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     [manager1 GET: URLToHit parameters:nil progress:nil

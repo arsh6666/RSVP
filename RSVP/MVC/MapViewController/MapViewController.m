@@ -185,10 +185,13 @@ CLLocationManager *locationManager;
             IntDay = @"7";
         }
 
+      NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+        [outputFormatter setDateFormat:@"hh:mm a"];
+    NSString *time = [[outputFormatter stringFromDate:[NSDate date]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
         
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    NSString *url=[NSString  stringWithFormat:@"http://rsvp.rootflyinfo.com/api/Values/GetDriwayinfoList?UserId=&Day=%@",IntDay];
+    NSString *url=[NSString  stringWithFormat:@"%@?Day=%@&Time=%@",GetDriwayinfoList,IntDay,time];
     
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
@@ -210,6 +213,7 @@ CLLocationManager *locationManager;
         }
         NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
         [SVProgressHUD dismiss];
         NSLog(@"%@",error);
     }];

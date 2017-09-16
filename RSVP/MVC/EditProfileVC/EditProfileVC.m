@@ -113,16 +113,17 @@
 {
     [SVProgressHUD show];
     
-    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
+    NSDictionary *dict = @{
+                           @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"FirstName":_firstName.text,
                            @"LastName": _lastName.text,
                            @"NickName": _nickName.text,
                            @"PhoneNumber":_phoneNumber.text
                            };
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/EditProfile";
+   
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:EditProfile parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                NSDictionary *jsonDict = responseObject;
                [SVProgressHUD dismiss];

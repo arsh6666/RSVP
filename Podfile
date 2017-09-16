@@ -19,6 +19,7 @@ target 'RSVP' do
     pod 'KLCPopup'
     pod 'NTMonthYearPicker'
     pod 'AsyncImageView'
+    pod 'MWPhotoBrowser'
 # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
 

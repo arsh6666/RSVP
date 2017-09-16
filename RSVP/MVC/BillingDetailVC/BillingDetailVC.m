@@ -45,7 +45,8 @@
     [SVProgressHUD show];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
 
-    NSDictionary *dict = @{@"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
+    NSDictionary *dict = @{
+                           @"UserId":[NSUserDefaults.standardUserDefaults objectForKey:@"userId"],
                            @"Brand":_userCardDetail[@"Brand"],
                            @"Model": _userCardDetail[@"Model"],
                            @"Color":_userCardDetail[@"Color"],
@@ -54,11 +55,12 @@
                            @"ZelleEmail":_zellemail.text,
                            @"ChaseQuickpayEmail":_qickpayemail.text,
                            @"AddressMonthly":_monthlyChecks.text,
-                           @"State":_userCardDetail[@"State"]};
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveCar";
+                           @"State":_userCardDetail[@"State"]
+                           };
+        
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 POST:url parameters:dict progress:nil
+        [manager1 POST:SaveCar parameters:dict progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                    NSDictionary *jsonDict = responseObject;
                    [SVProgressHUD dismiss];

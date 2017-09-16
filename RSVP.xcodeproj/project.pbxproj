@@ -38,7 +38,6 @@
 		37AC9D7B1F442A0500751851 /* MyDrivewayListcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7A1F442A0500751851 /* MyDrivewayListcell.m */; };
 		37AC9D7F1F442AD700751851 /* MyDrivewayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AC9D7E1F442AD700751851 /* MyDrivewayList.m */; };
 		37AEFF811F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */; };
-		37B3E2271F50217A0092F778 /* AnetEMVSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */; };
 		37CE63D41F51CF2300D7E1F9 /* RatingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CE63D31F51CF2300D7E1F9 /* RatingVC.m */; };
 		37DD5A8B1F46BB3E0095F7E8 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8A1F46BB3E0095F7E8 /* ScheduleCell.m */; };
 		37DD5A8F1F46BBFB0095F7E8 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD5A8E1F46BBFB0095F7E8 /* ScheduleVC.m */; };
@@ -88,12 +87,13 @@
 		FC48ABA41F5C6A7200630E48 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = FC48ABA31F5C6A7200630E48 /* background.png */; };
 		FC48ABA81F5DDAEF00630E48 /* ShowActiveSessionDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48ABA71F5DDAEF00630E48 /* ShowActiveSessionDetail.m */; };
 		FC58C8E01F55F87600C23BC4 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58C8DF1F55F87600C23BC4 /* EditViewController.m */; };
+		FC77F3FF1F6DAB7400F6F9F2 /* libUSAePayLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77F3FD1F6DAB7400F6F9F2 /* libUSAePayLibrary.a */; };
+		FC77F4001F6DAB7400F6F9F2 /* MyLibraryBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC77F3FE1F6DAB7400F6F9F2 /* MyLibraryBundle.bundle */; };
 		FCAE95C41F4DE746006936BA /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */; };
 		FCAE95C51F4DE746006936BA /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95BD1F4DE746006936BA /* NSString+Levenshtein.m */; };
 		FCAE95C61F4DE746006936BA /* MVPlaceSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95BF1F4DE746006936BA /* MVPlaceSearchTextField.m */; };
 		FCAE95C71F4DE746006936BA /* PlaceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95C11F4DE746006936BA /* PlaceDetail.m */; };
 		FCAE95C81F4DE746006936BA /* PlaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE95C31F4DE746006936BA /* PlaceObject.m */; };
-		FCE6676F1F522A1A001FF5EC /* AnetEMVSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCE667741F522AC0001FF5EC /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE667731F522AC0001FF5EC /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +121,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FCE6676F1F522A1A001FF5EC /* AnetEMVSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +180,6 @@
 		37AC9D7D1F442AD700751851 /* MyDrivewayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDrivewayList.h; path = MyDrivewayList/MyDrivewayList.h; sourceTree = "<group>"; };
 		37AC9D7E1F442AD700751851 /* MyDrivewayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDrivewayList.m; path = MyDrivewayList/MyDrivewayList.m; sourceTree = "<group>"; };
 		37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Privacy-Policy-pdf-english.pdf"; sourceTree = "<group>"; };
-		37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AnetEMVSdk.framework; sourceTree = "<group>"; };
 		37CE63D21F51CF2300D7E1F9 /* RatingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingVC.h; path = RatingVC/RatingVC.h; sourceTree = "<group>"; };
 		37CE63D31F51CF2300D7E1F9 /* RatingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingVC.m; path = RatingVC/RatingVC.m; sourceTree = "<group>"; };
 		37DD5A891F46BB3E0095F7E8 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 		A2B753B9767D936FFA4A66B4 /* Pods-RSVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B8B6B40221E4A2223D6F36E1 /* Pods_RSVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA8C3E50DD4BEBA21C52AB7 /* Pods-RSVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.release.xcconfig"; sourceTree = "<group>"; };
-		FC16D65D1F39157F00A15C56 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FC2A054CCD00A1F9AA7CF406 /* Pods-RSVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC3EF42C1F2BB89F008D3BFD /* RSVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3EF4301F2BB89F008D3BFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -265,6 +262,27 @@
 		FC48ABA71F5DDAEF00630E48 /* ShowActiveSessionDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowActiveSessionDetail.m; path = ShowActiveSessionDetail/ShowActiveSessionDetail.m; sourceTree = "<group>"; };
 		FC58C8DE1F55F87600C23BC4 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = EditViewController/EditViewController.h; sourceTree = "<group>"; };
 		FC58C8DF1F55F87600C23BC4 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = EditViewController/EditViewController.m; sourceTree = "<group>"; };
+		FC77F3E81F6DAB4100F6F9F2 /* Constants2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants2.h; sourceTree = "<group>"; };
+		FC77F3EB1F6DAB7400F6F9F2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FC77F3EC1F6DAB7400F6F9F2 /* CreditCardPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardPayment.h; sourceTree = "<group>"; };
+		FC77F3ED1F6DAB7400F6F9F2 /* CreditCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardView.h; sourceTree = "<group>"; };
+		FC77F3EE1F6DAB7400F6F9F2 /* CurrencyAmount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyAmount.h; sourceTree = "<group>"; };
+		FC77F3EF1F6DAB7400F6F9F2 /* CustomUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUI.h; sourceTree = "<group>"; };
+		FC77F3F01F6DAB7400F6F9F2 /* ueConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ueConnection.h; sourceTree = "<group>"; };
+		FC77F3F11F6DAB7400F6F9F2 /* ueJsonToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ueJsonToken.h; sourceTree = "<group>"; };
+		FC77F3F21F6DAB7400F6F9F2 /* ueSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ueSession.h; sourceTree = "<group>"; };
+		FC77F3F31F6DAB7400F6F9F2 /* uesoapCreditCardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapCreditCardData.h; sourceTree = "<group>"; };
+		FC77F3F41F6DAB7400F6F9F2 /* uesoapGetReportResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapGetReportResponse.h; sourceTree = "<group>"; };
+		FC77F3F51F6DAB7400F6F9F2 /* uesoapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapObject.h; sourceTree = "<group>"; };
+		FC77F3F61F6DAB7400F6F9F2 /* uesoapSecurityToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapSecurityToken.h; sourceTree = "<group>"; };
+		FC77F3F71F6DAB7400F6F9F2 /* uesoapService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapService.h; sourceTree = "<group>"; };
+		FC77F3F81F6DAB7400F6F9F2 /* uesoapTransactionDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapTransactionDetail.h; sourceTree = "<group>"; };
+		FC77F3F91F6DAB7400F6F9F2 /* uesoapTransactionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapTransactionObject.h; sourceTree = "<group>"; };
+		FC77F3FA1F6DAB7400F6F9F2 /* uesoapTransactionRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapTransactionRequestObject.h; sourceTree = "<group>"; };
+		FC77F3FB1F6DAB7400F6F9F2 /* uesoapTransactionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uesoapTransactionResponse.h; sourceTree = "<group>"; };
+		FC77F3FC1F6DAB7400F6F9F2 /* ueTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ueTransaction.h; sourceTree = "<group>"; };
+		FC77F3FD1F6DAB7400F6F9F2 /* libUSAePayLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUSAePayLibrary.a; sourceTree = "<group>"; };
+		FC77F3FE1F6DAB7400F6F9F2 /* MyLibraryBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MyLibraryBundle.bundle; sourceTree = "<group>"; };
 		FCAE95B71F4DE746006936BA /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
 		FCAE95B81F4DE746006936BA /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
 		FCAE95B91F4DE746006936BA /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
@@ -290,7 +308,7 @@
 			files = (
 				FCE667741F522AC0001FF5EC /* libxml2.tbd in Frameworks */,
 				FC3EF4991F2BD41B008D3BFD /* MapKit.framework in Frameworks */,
-				37B3E2271F50217A0092F778 /* AnetEMVSdk.framework in Frameworks */,
+				FC77F3FF1F6DAB7400F6F9F2 /* libUSAePayLibrary.a in Frameworks */,
 				945579A999D187153828241E /* Pods_RSVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,7 +570,7 @@
 		FC16D65C1F39157F00A15C56 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				FC16D65D1F39157F00A15C56 /* Constants.h */,
+				FC77F3E81F6DAB4100F6F9F2 /* Constants2.h */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -676,7 +694,7 @@
 		FC3EF4641F2BBC45008D3BFD /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				37B3E2261F50217A0092F778 /* AnetEMVSdk.framework */,
+				FC77F3E91F6DAB7400F6F9F2 /* USAePay */,
 				FCAE95B51F4DE746006936BA /* MVPlaceSearchTextField */,
 				37AEFF801F4B1A9C00DD77C6 /* Privacy-Policy-pdf-english.pdf */,
 				37AC9D761F43EB7800751851 /* RSVP terms-conditions-pdf-english.pdf */,
@@ -884,6 +902,41 @@
 			name = EditViewController;
 			sourceTree = "<group>";
 		};
+		FC77F3E91F6DAB7400F6F9F2 /* USAePay */ = {
+			isa = PBXGroup;
+			children = (
+				FC77F3EA1F6DAB7400F6F9F2 /* include */,
+				FC77F3FD1F6DAB7400F6F9F2 /* libUSAePayLibrary.a */,
+				FC77F3FE1F6DAB7400F6F9F2 /* MyLibraryBundle.bundle */,
+			);
+			path = USAePay;
+			sourceTree = "<group>";
+		};
+		FC77F3EA1F6DAB7400F6F9F2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FC77F3EB1F6DAB7400F6F9F2 /* Constants.h */,
+				FC77F3EC1F6DAB7400F6F9F2 /* CreditCardPayment.h */,
+				FC77F3ED1F6DAB7400F6F9F2 /* CreditCardView.h */,
+				FC77F3EE1F6DAB7400F6F9F2 /* CurrencyAmount.h */,
+				FC77F3EF1F6DAB7400F6F9F2 /* CustomUI.h */,
+				FC77F3F01F6DAB7400F6F9F2 /* ueConnection.h */,
+				FC77F3F11F6DAB7400F6F9F2 /* ueJsonToken.h */,
+				FC77F3F21F6DAB7400F6F9F2 /* ueSession.h */,
+				FC77F3F31F6DAB7400F6F9F2 /* uesoapCreditCardData.h */,
+				FC77F3F41F6DAB7400F6F9F2 /* uesoapGetReportResponse.h */,
+				FC77F3F51F6DAB7400F6F9F2 /* uesoapObject.h */,
+				FC77F3F61F6DAB7400F6F9F2 /* uesoapSecurityToken.h */,
+				FC77F3F71F6DAB7400F6F9F2 /* uesoapService.h */,
+				FC77F3F81F6DAB7400F6F9F2 /* uesoapTransactionDetail.h */,
+				FC77F3F91F6DAB7400F6F9F2 /* uesoapTransactionObject.h */,
+				FC77F3FA1F6DAB7400F6F9F2 /* uesoapTransactionRequestObject.h */,
+				FC77F3FB1F6DAB7400F6F9F2 /* uesoapTransactionResponse.h */,
+				FC77F3FC1F6DAB7400F6F9F2 /* ueTransaction.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		FCAE95B51F4DE746006936BA /* MVPlaceSearchTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -1054,6 +1107,7 @@
 				FC3EF4731F2BBE34008D3BFD /* img1.jpg in Resources */,
 				FC3EF4A51F2BE723008D3BFD /* iconBack.png in Resources */,
 				FC3EF47A1F2BC785008D3BFD /* 29ltbukrabold.otf in Resources */,
+				FC77F4001F6DAB7400F6F9F2 /* MyLibraryBundle.bundle in Resources */,
 				FC3EF4A81F2BF1A7008D3BFD /* pass.png in Resources */,
 				378AE44E1F38A61C0037EE8B /* pencil.png in Resources */,
 				FC3EF47F1F2BC903008D3BFD /* login.png in Resources */,
@@ -1447,9 +1501,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RSVP/Libraries",
+					"$(PROJECT_DIR)/RSVP/Libraries/USAePay",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVP-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1483,9 +1538,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RSVP/Libraries",
+					"$(PROJECT_DIR)/RSVP/Libraries/USAePay",
 				);
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rootflyinfo.RSVP-Test";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";

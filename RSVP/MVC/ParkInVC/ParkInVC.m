@@ -35,11 +35,15 @@
         NSLog(@"%@",self.scheduleDict);
         
         [self.enableDisableSwitch setOn:[[NSNumber numberWithInteger:[[self.scheduleDict valueForKey:@"Enable"]integerValue]]boolValue]];
-        self.sunto.text = [self.scheduleDict valueForKey:@"EndTime"];
-        self.sunFrom.text =  [self.scheduleDict valueForKey:@"StartTime"];
+        NSString *toString = [self.scheduleDict valueForKey:@"EndTime"];
+        NSString *fromStr = [self.scheduleDict valueForKey:@"StartTime"];
+        self.sunto.text = toString;
+        self.sunFrom.text = fromStr;
         
-        NSDate *fromDate = [outputFormatter dateFromString:self.sunFrom.text];
-        NSDate *ToDate = [outputFormatter dateFromString:self.sunto.text];
+        NSDate *fromDate = [outputFormatter dateFromString:fromStr];
+        outputFormatter.timeZone = [NSTimeZone systemTimeZone];
+        NSDate *ToDate = [outputFormatter dateFromString:toString];
+        
         self.pickerTo.date = ToDate;
         self.pickerFrom.date = fromDate;
     
@@ -162,11 +166,9 @@
                            @"Type":IntParkingType
                            };
     
-    NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/SaveSchedule";
-    
     AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
     manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager1 POST:url parameters:dict progress:nil
+    [manager1 POST:SaveSchedule parameters:dict progress:nil
            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                [SVProgressHUD dismiss];
                NSDictionary *jsonDict = responseObject;
@@ -250,11 +252,9 @@
                                @"Type":IntParkingType
                                };
         
-        NSString *url=@"http://rsvp.rootflyinfo.com/api/Values/UpdateSchedule";
-        
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-        [manager1 POST:url parameters:dict progress:nil
+        [manager1 POST:UpdateSchedule parameters:dict progress:nil
                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                    [SVProgressHUD dismiss];
                    NSDictionary *jsonDict = responseObject;

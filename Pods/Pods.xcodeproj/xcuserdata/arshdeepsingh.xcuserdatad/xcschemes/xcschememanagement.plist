@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DatePickerDialog-ObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -35,6 +40,21 @@
 			<false/>
 		</dict>
 		<key>KLCPopup.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MWPhotoBrowser-MWPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MWPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -79,6 +99,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -97,7 +122,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E6F458F96437242A8A96C5492E16DCC</key>
+		<key>05569F3C10FD91BB981D7CEE83CBC732</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,12 +137,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CC21E8867E4D6B4A7F020FAE75D52A5</key>
+		<key>17CEAD1B3EC4E80098DF5F8AA00BE966</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>1E28CACF6D2C9CE7D96315852821A3FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1F53F7595893D76377F3658D46E42AA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +162,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>35336A80BF3CB5B686C15CEAC5005DBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>45FF4A7AFE5D8E17D01023C53AED87FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BE919DC15409F27286E0EEA6D7F699A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>60B6A040E4CB19C93966571A6197D229</key>
+		<key>502810574B7CE2F78D98604908D5A878</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,17 +182,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6B1714E816AE794962516E2ECBB40A5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7477EB33AF99CF4654FC551FDD2BBDAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF6293E5AF66094725F2B9C46236F876</key>
+		<key>76A37161D979D3717C4D79AC2C897413</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BEB448027894FADC6D34FFCAC855794A</key>
+		<key>7BAAEC1386420288825150BB5315CA52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E4FB2ECCC560027D83431C866DAE0B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3B3CA69641375F94D39F255650BF877</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFA78E08BC1056C836C5B7C516AC4A11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC4E7D5C392048AD503854E4DA9F7AAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,17 +227,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EED28939C2D4075F82BD26C2005B539B</key>
+		<key>E43FA73566391707803ED73EAB9ED0E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F55CF1ED3B0E3D4DF433984C934A5F18</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F57B04605ECE33603F36AAFD65072F82</key>
 		<dict>
 			<key>primary</key>
 			<true/>
