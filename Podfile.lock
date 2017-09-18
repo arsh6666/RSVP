@@ -19,7 +19,7 @@ PODS:
     - CLImageEditor/Core (= 0.2.0)
   - CLImageEditor/Core (0.2.0)
   - DACircularProgress (2.3.1)
-  - DatePickerDialog-ObjC (1.1.8)
+  - DatePickerDialog-ObjC (1.2)
   - GoogleMaps (2.4.0):
     - GoogleMaps/Maps (= 2.4.0)
   - GoogleMaps/Base (2.4.0)
@@ -43,7 +43,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SingleLineInput (1.0.7)
-  - SVProgressHUD (2.1.2)
+  - SVProgressHUD (2.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -68,7 +68,7 @@ SPEC CHECKSUMS:
   AsyncImageView: 416e99402e5b1f20571de70ad619ced90f56a7d9
   CLImageEditor: ec5ae50b3a54c9818c0bdb243b20665a1c6718e3
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  DatePickerDialog-ObjC: 4794403a051f326810ad7086ea41bfd983885d34
+  DatePickerDialog-ObjC: 63266ee38d3d7b8b7a3e03f7512693b940baaddd
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
   HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
@@ -82,7 +82,7 @@ SPEC CHECKSUMS:
   SCLAlertView-Objective-C: 0e54351fa4f98a5c7c6ad3727e6dbb46784534e5
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
 
 PODFILE CHECKSUM: 0e0cc47e4b7745e2f52c7e9a245ed02ac5606f94
 

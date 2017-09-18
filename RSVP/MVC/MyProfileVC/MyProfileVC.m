@@ -275,7 +275,7 @@
     NSLog(@"%@",response.Error);
     [SVProgressHUD dismiss];
     
-    if (![response.ResultCode isEqualToString:@"E"]) {
+    if ([response.Result isEqualToString:@"Approved"]) {
        
         /*
          * Use an alert to display the payment result status

@@ -1507,6 +1507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -1544,6 +1545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rootflyinfo.RSVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
