@@ -97,6 +97,11 @@ CLLocationManager *locationManager1;
 {
     DriveWayDict = _myProfileDetail[@"Driwayinfo"];
     
+    if ([DriveWayDict isEqual: [NSNull null]])
+    {
+        return;
+    }
+    
     [self GetUserImages];
     
     self.txtSpotName.text = [DriveWayDict valueForKey:@"Name"] ;

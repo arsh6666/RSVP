@@ -207,10 +207,8 @@ CLLocationManager *locationManager;
             [self setMarkerData];
           //  [self getMyDrivayList];
             
-        }else{
-            SCLAlertView *alert = [[SCLAlertView alloc] init];
-            [alert showWarning:self title:@"Alert" subTitle: [NSString stringWithFormat:@"%@", jsonDict[@"Message"]] closeButtonTitle:@"OK" duration:0.0f];
         }
+        
         NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
@@ -255,7 +253,7 @@ CLLocationManager *locationManager;
        
         if ([DrivewayDict[@"ParkingType"]  isEqual: @"Driway"] || [DrivewayDict[@"ParkingType"]  isEqual: @"Block"]){
              point.title = [NSString stringWithFormat:@"%@",DrivewayDict[@"Name"]];
-            point.subtitle = @"$10";
+            point.subtitle = @"$10/30min";
         }else{
              point.title = [NSString stringWithFormat:@"%@",DrivewayDict[@"UserName"]];
             point.subtitle = @"$1";

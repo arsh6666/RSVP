@@ -539,7 +539,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yas-ex-OIJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fkI-A1-kpB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Kyi-53-QnF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kyi-53-QnF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2328,7 +2328,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnf-tP-auu">
-                                        <rect key="frame" x="30" y="509.5" width="315" height="40"/>
+                                        <rect key="frame" x="30" y="485.5" width="315" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="a0j-Ta-JCz"/>
@@ -2382,10 +2382,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5v-my-W1U">
-                                        <rect key="frame" x="20" y="405" width="335" height="81.5"/>
-                                        <string key="text">Card info and Transactions are stored and Processed securely by Authorize.net one of the most trusted names in the payments industry</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card info and Transactions are stored and Processed securely by USAePay one of the most trusted names in the payments industry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5v-my-W1U">
+                                        <rect key="frame" x="20" y="405" width="335" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3020,7 +3019,7 @@
             <objects>
                 <navigationController storyboardIdentifier="mapNVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pox-RM-uDV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bqZ-12-bVl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqZ-12-bVl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

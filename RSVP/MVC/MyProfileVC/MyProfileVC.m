@@ -271,19 +271,30 @@
 
 -(void)finishProcessingPayment :(uesoapTransactionResponse *)response
 {
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
     NSLog(@"%@",response.Error);
     [SVProgressHUD dismiss];
     
-    /*
-     * Use an alert to display the payment result status
-     */
-    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    if (![response.ResultCode isEqualToString:@"E"]) {
+       
+        /*
+         * Use an alert to display the payment result status
+         */
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+        
+        
+        [alert showSuccess:self title:@"Alert" subTitle:[NSString stringWithFormat:@"%@",response.Result] closeButtonTitle:@"Ok" duration:0.0f];
+        [alert alertIsDismissed:^{
+            [self AddFundMethod];
+        }];
+
+        
+    }
+    else
+    {
+        [alert showError:self title:@"Alert" subTitle:response.Error closeButtonTitle:@"Ok" duration:1.0f];
+    }
     
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showSuccess:self title:@"Alert" subTitle:[NSString stringWithFormat:@"%@",response.Result] closeButtonTitle:@"Ok" duration:0.0f];
-    [alert alertIsDismissed:^{
-        [self AddFundMethod];
-    }];
     
 }
 

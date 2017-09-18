@@ -192,7 +192,7 @@
     -(void)webService
     {
         [SVProgressHUD show];
-        NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetDriwayinfoList,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
+        NSString *URL = [NSString stringWithFormat:@"%@?UserId=%@",GetActiveDriwayinfoList,[NSUserDefaults.standardUserDefaults objectForKey:@"userId"]];
         AFHTTPSessionManager *manager1 = [AFHTTPSessionManager manager];
         manager1.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
         [manager1 GET:URL parameters:Nil progress:nil

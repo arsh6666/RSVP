@@ -57,7 +57,8 @@
                if ([jsonDict[@"Success"] boolValue])
                {
                    SCLAlertView *alert = [[SCLAlertView alloc] init];
-                   [alert showSuccess:@"Message" subTitle:@"Password Sent on your register email Id" closeButtonTitle:@"Ok" duration:1.0f];
+                   [alert showSuccess:self title:@"Message" subTitle:@"Password Sent on your register email Id" closeButtonTitle:@"Ok" duration:0.0f];
+                   
                    
                    
                }else{
